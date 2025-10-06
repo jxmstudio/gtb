@@ -212,7 +212,7 @@ export default function Packages() {
                         </div>
                       </div>
                       
-                      <CardContent className="p-6">
+                      <div className="p-6">
                         <div className="flex items-center justify-between mb-2">
                           <h3 className="text-xl font-semibold text-gtb-navy">{pkg.title}</h3>
                           <span className={`px-2 py-1 rounded text-xs font-medium ${
@@ -257,7 +257,7 @@ export default function Packages() {
                             <ArrowRight className="ml-2 h-4 w-4" />
                           </Link>
                         </AnimatedButton>
-                      </CardContent>
+                      </div>
                     </Card>
                   </MotionDiv>
                 ))}
