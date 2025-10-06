@@ -89,7 +89,7 @@ export default function Testimonials() {
             What Our Clients Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it - hear from our satisfied clients who have built their dream homes and investment properties.
+            Don&apos;t just take our word for it - hear from our satisfied clients who have built their dream homes and investment properties.
           </p>
         </motion.div>
 
@@ -107,7 +107,7 @@ export default function Testimonials() {
 
                   {/* Quote */}
                   <blockquote className="text-gray-600 mb-6 italic">
-                    "{testimonial.quote}"
+                    &quot;{testimonial.quote}&quot;
                   </blockquote>
 
                   {/* Client Info */}

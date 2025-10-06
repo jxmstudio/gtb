@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
           <div className="space-y-4">
             <Logo size="lg" variant="inverted" />
             <p className="text-gray-300 text-sm leading-relaxed">
-              TofaGroup - Helping first-time home buyers and investors connect with Australia's most reputable builders in Western suburbs Melbourne.
+              TofaGroup - Helping first-time home buyers and investors connect with Australia&apos;s most reputable builders in Western suburbs Melbourne.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm text-gray-300">

@@ -1,12 +1,10 @@
 import React from 'react';
-import { Button } from './ui/button';
 import { AnimatedButton } from './motion/AnimatedButton';
 import { Card } from './ui/card';
 import { RevealOnScroll } from './motion/Reveals';
 import { MotionDiv, MotionH1, MotionP, staggerContainer, staggerItem } from './motion/MotionPrimitives';
 import HeroLeadForm from './lead/HeroLeadForm';
-import TrustStrip from './marketing/TrustStrip';
-import PartnerLogos from './marketing/PartnerLogos';
+// TrustStrip and PartnerLogos are used on pages, not directly inside this Hero now
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Star } from 'lucide-react';
 

@@ -72,7 +72,7 @@ export default function HeroLeadForm() {
       // Show success message (you could replace this with a toast)
       alert("Thanks! We'll be in touch within 24 hours to discuss your building project.");
       
-    } catch (error) {
+    } catch (err) {
       analytics.trackFormSubmit("hero_lead_form", false);
       alert("Something went wrong. Please try again or call us directly.");
     } finally {

@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Logo } from './Logo';
-import { Button } from './ui/button';
 import { AnimatedButton } from './motion/AnimatedButton';
 import { Menu, X } from 'lucide-react';
 

@@ -28,7 +28,7 @@ export default function PartnerLogos() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h3 className="text-lg font-semibold text-gray-700 mb-2">
-            Trusted by Australia's leading builders
+            Trusted by Australia&apos;s leading builders
           </h3>
           <p className="text-sm text-gray-500">
             We work with the most reputable builders in Melbourne

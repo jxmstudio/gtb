@@ -124,6 +124,6 @@ export function useAnalytics() {
 // Declare gtag for TypeScript
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag: (...args: unknown[]) => void;
   }
 }
