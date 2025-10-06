@@ -1,10 +1,9 @@
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { ServiceCard } from '@/components/ServiceCard';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
 import { RevealOnScroll, StaggerReveal } from '@/components/motion/Reveals';
-import { MotionDiv, MotionH2, MotionP, staggerContainer, staggerItem } from '@/components/motion/MotionPrimitives';
+import { MotionDiv, MotionH2, MotionP, staggerItem } from '@/components/motion/MotionPrimitives';
 import StickyHeader from '@/components/marketing/StickyHeader';
 import Testimonials from '@/components/marketing/Testimonials';
 import PartnerLogos from '@/components/marketing/PartnerLogos';
@@ -19,14 +18,13 @@ import {
   CheckCircle,
   ArrowRight,
   Phone,
-  Mail,
   Calendar
 } from 'lucide-react';
 
 const services = [
   {
     title: "Builder Connection & Matching",
-    description: "We connect you with Australia's most reputable builders based on your specific needs, budget, and location preferences.",
+    description: "We connect you with Australia&apos;s most reputable builders based on your specific needs, budget, and location preferences.",
     features: [
       "Personalized builder recommendations based on your requirements",
       "Access to exclusive deals and bulk pricing discounts",
@@ -82,7 +80,7 @@ const services = [
   },
   {
     title: "Investment Property Consultation",
-    description: "Strategic guidance for building a profitable property investment portfolio in Melbourne's Western suburbs.",
+    description: "Strategic guidance for building a profitable property investment portfolio in Melbourne&apos;s Western suburbs.",
     features: [
       "Market analysis and location recommendations",
       "Investment strategy development",
@@ -149,7 +147,7 @@ export default function Services() {
                   Our Services
                 </MotionH2>
                 <MotionP className="text-xl text-gray-600 mb-8">
-                  From builder matching to finance assistance, we provide comprehensive support for your building journey in Melbourne's Western suburbs.
+                  From builder matching to finance assistance, we provide comprehensive support for your building journey in Melbourne&apos;s Western suburbs.
                 </MotionP>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <AnimatedButton asChild size="lg" className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-8 py-4">
@@ -250,7 +248,7 @@ export default function Services() {
                       </div>
                       <div>
                         <h3 className="text-xl font-semibold text-gtb-navy mb-2">Expert Knowledge</h3>
-                        <p className="text-gray-600">15+ years of experience in Melbourne's building industry with deep knowledge of local builders and market conditions.</p>
+                        <p className="text-gray-600">15+ years of experience in Melbourne&apos;s building industry with deep knowledge of local builders and market conditions.</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">

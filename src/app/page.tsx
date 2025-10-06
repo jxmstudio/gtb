@@ -2,10 +2,10 @@ import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { Footer } from '@/components/Footer';
 import { ServiceCard } from '@/components/ServiceCard';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { RevealOnScroll, StaggerReveal } from '@/components/motion/Reveals';
-import { MotionDiv, MotionH2, MotionP, staggerContainer, staggerItem } from '@/components/motion/MotionPrimitives';
+import { MotionDiv, MotionH2, MotionP, staggerItem } from '@/components/motion/MotionPrimitives';
 import TrustStrip from '@/components/marketing/TrustStrip';
 import PartnerLogos from '@/components/marketing/PartnerLogos';
 import StickyHeader from '@/components/marketing/StickyHeader';
@@ -19,7 +19,6 @@ import {
   TrendingUp, 
   CheckCircle,
   ArrowRight,
-  Star,
   MessageCircle,
   Handshake,
   Wrench

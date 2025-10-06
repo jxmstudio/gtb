@@ -1,9 +1,8 @@
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
 import { RevealOnScroll, StaggerReveal } from '@/components/motion/Reveals';
-import { MotionDiv, MotionH2, MotionP, staggerContainer, staggerItem } from '@/components/motion/MotionPrimitives';
+import { MotionDiv, MotionH2, MotionP, staggerItem } from '@/components/motion/MotionPrimitives';
 import StickyHeader from '@/components/marketing/StickyHeader';
 import Testimonials from '@/components/marketing/Testimonials';
 import PartnerLogos from '@/components/marketing/PartnerLogos';
@@ -319,7 +318,7 @@ export default function Packages() {
                       <Star className="h-8 w-8 text-gtb-aero" />
                     </div>
                     <h3 className="text-xl font-semibold text-gtb-navy mb-2">Quality Assured</h3>
-                    <p className="text-gray-600">Only properties from Australia's most reputable builders.</p>
+                    <p className="text-gray-600">Only properties from Australia&apos;s most reputable builders.</p>
                   </Card>
                 </MotionDiv>
               </div>
