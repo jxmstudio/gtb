@@ -141,9 +141,9 @@ export default function Contact() {
               <Card>
                 <CardHeader>
                   <CardTitle className="text-2xl text-gtb-navy">Send us a message</CardTitle>
-                  <CardDescription>
-                    Fill out the form below and we'll get back to you within 24 hours.
-                  </CardDescription>
+                          <CardDescription>
+                            {"Fill out the form below and we'll get back to you within 24 hours."}
+                          </CardDescription>
                 </CardHeader>
                 <CardContent>
                   {isSubmitted ? (

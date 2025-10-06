@@ -104,7 +104,7 @@ export default function About() {
                   About George The Broker
                 </MotionH2>
                 <MotionP className="text-xl text-gray-600 mb-8">
-                  Your trusted partner in building your dream home or investment property in Melbourne's Western suburbs.
+                  {"Your trusted partner in building your dream home or investment property in Melbourne's Western suburbs."}
                 </MotionP>
               </div>
             </RevealOnScroll>
@@ -123,13 +123,13 @@ export default function About() {
                     Our Story
                   </MotionH2>
                   <MotionP className="text-lg text-gray-600">
-                    Founded in 2009, George The Broker was born from a simple belief: building your dream home or investment property shouldn't be complicated or expensive.
+                    {"Founded in 2009, George The Broker was born from a simple belief: building your dream home or investment property shouldn't be complicated or expensive."}
                   </MotionP>
                   <MotionP className="text-lg text-gray-600">
-                    After 15+ years in the Melbourne building industry, George Smith saw too many families and investors struggle with the complexity of finding the right builder, securing finance, and navigating government grants. He decided to create a service that would take the guesswork out of building.
+                    {"After 15+ years in the Melbourne building industry, George Smith saw too many families and investors struggle with the complexity of finding the right builder, securing finance, and navigating government grants. He decided to create a service that would take the guesswork out of building."}
                   </MotionP>
                   <MotionP className="text-lg text-gray-600">
-                    Today, we've helped over 500 families and investors save millions of dollars while building their dream properties. Our deep relationships with Australia's most reputable builders give our clients access to exclusive deals and pricing that simply isn't available to the general public.
+                    {"Today, we've helped over 500 families and investors save millions of dollars while building their dream properties. Our deep relationships with Australia's most reputable builders give our clients access to exclusive deals and pricing that simply isn't available to the general public."}
                   </MotionP>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <AnimatedButton asChild className="bg-gtb-aero hover:bg-gtb-aero-light text-white">

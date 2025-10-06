@@ -110,7 +110,7 @@ export default function FirstHomeBuyers() {
                   First Home Buyers
                 </MotionH2>
                 <MotionP className="text-xl text-gray-600 mb-8">
-                  Your complete guide to building your first home in Melbourne's Western suburbs. We'll help you navigate every step and maximize your savings.
+                  {"Your complete guide to building your first home in Melbourne's Western suburbs. We'll help you navigate every step and maximize your savings."}
                 </MotionP>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <AnimatedButton asChild size="lg" className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-8 py-4">

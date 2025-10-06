@@ -110,7 +110,7 @@ export default function Investors() {
                   Property Investment
                 </MotionH2>
                 <MotionP className="text-xl text-gray-600 mb-8">
-                  Build a profitable property investment portfolio with our turnkey solutions and expert guidance in Melbourne's Western suburbs.
+                  {"Build a profitable property investment portfolio with our turnkey solutions and expert guidance in Melbourne's Western suburbs."}
                 </MotionP>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <AnimatedButton asChild size="lg" className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-8 py-4">
