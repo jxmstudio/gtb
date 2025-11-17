@@ -28,7 +28,8 @@ export function RevealOnScroll({
   margin = "0px 0px -10% 0px"
 }: RevealOnScrollProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once, margin });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const isInView = useInView(ref, { once, ...(margin ? { margin: margin as any } : {}) });
 
   const getVariants = () => {
     switch (direction) {
@@ -82,7 +83,8 @@ export function StaggerReveal({
   margin = "0px 0px -10% 0px"
 }: StaggerRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once, margin });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const isInView = useInView(ref, { once, ...(margin ? { margin: margin as any } : {}) });
 
   return (
     <MotionDiv
@@ -128,7 +130,8 @@ export function FadeInWhenVisible({
   margin = "0px 0px -10% 0px"
 }: FadeInWhenVisibleProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once, margin });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const isInView = useInView(ref, { once, ...(margin ? { margin: margin as any } : {}) });
 
   return (
     <MotionDiv

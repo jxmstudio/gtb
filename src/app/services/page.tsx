@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from 'framer-motion';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { ServiceCard } from '@/components/ServiceCard';
@@ -33,7 +36,7 @@ const services = [
       "Builder performance tracking and feedback"
     ],
     href: "/contact",
-    ctaText: "Get Matched with a Builder",
+    ctaText: "Connect me to a builder",
     icon: <Building2 className="h-6 w-6 text-gtb-aero" />
   },
   {
@@ -47,7 +50,7 @@ const services = [
       "Government incentive program navigation"
     ],
     href: "/contact",
-    ctaText: "Get Finance Help",
+    ctaText: "Get me finance",
     icon: <DollarSign className="h-6 w-6 text-gtb-aero" />
   },
   {
@@ -75,7 +78,7 @@ const services = [
       "Portfolio diversification strategies"
     ],
     href: "/packages",
-    ctaText: "View Investment Packages",
+    ctaText: "Learn more about Packages",
     icon: <HomeIcon className="h-6 w-6 text-gtb-aero" />
   },
   {
@@ -139,24 +142,24 @@ export default function Services() {
       
       <main>
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-gray-50 to-white py-20">
+        <section className="section-padding bg-gradient-to-br from-gray-50/80 via-white to-blue-50/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <RevealOnScroll>
-              <div className="text-center max-w-4xl mx-auto">
-                <MotionH2 className="text-4xl lg:text-6xl font-bold text-gtb-navy mb-6">
+              <div className="text-center max-w-3xl mx-auto">
+                <MotionH2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gtb-navy mb-5 tracking-tight">
                   Our Services
                 </MotionH2>
-                <MotionP className="text-xl text-gray-600 mb-8">
+                <MotionP className="text-lg lg:text-xl text-gray-700 mb-10 leading-relaxed">
                   From builder matching to finance assistance, we provide comprehensive support for your building journey in Melbourne&apos;s Western suburbs.
                 </MotionP>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <AnimatedButton asChild size="lg" className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-8 py-4">
+                  <AnimatedButton asChild size="lg" className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-8 py-4 rounded-[15px] font-semibold shadow-lg">
                     <Link href="/contact">
                       Book Free Consultation
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </AnimatedButton>
-                  <AnimatedButton asChild variant="outline" size="lg" className="border-gtb-navy text-gtb-navy hover:bg-gtb-navy hover:text-white text-lg px-8 py-4">
+                  <AnimatedButton asChild variant="outline" size="lg" className="border-2 border-gtb-navy/20 text-gtb-navy hover:bg-gtb-navy hover:text-white hover:border-gtb-navy text-lg px-8 py-4 rounded-[15px] font-medium">
                     <Link href="/packages">View Packages</Link>
                   </AnimatedButton>
                 </div>
@@ -168,14 +171,14 @@ export default function Services() {
         <PartnerLogos />
 
         {/* Services Grid */}
-        <section className="py-20 bg-white">
+        <section className="section-padding bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <RevealOnScroll>
               <div className="text-center mb-16">
-                <MotionH2 className="text-3xl lg:text-4xl font-bold text-gtb-navy mb-4">
+                <MotionH2 className="text-4xl lg:text-5xl font-bold text-gtb-navy mb-4">
                   How We Help You Build
                 </MotionH2>
-                <MotionP className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <MotionP className="text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
                   Our comprehensive services cover every aspect of your building journey, from initial planning to final settlement.
                 </MotionP>
               </div>
@@ -201,29 +204,39 @@ export default function Services() {
         </section>
 
         {/* Process Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="section-padding bg-gradient-to-b from-gray-50/50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <RevealOnScroll>
               <div className="text-center mb-16">
-                <MotionH2 className="text-3xl lg:text-4xl font-bold text-gtb-navy mb-4">
+                <MotionH2 className="text-4xl lg:text-5xl font-bold text-gtb-navy mb-4">
                   Our Process
                 </MotionH2>
-                <MotionP className="text-xl text-gray-600">
+                <MotionP className="text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
                   A simple, step-by-step approach to building your dream home or investment property.
                 </MotionP>
               </div>
             </RevealOnScroll>
             
             <StaggerReveal staggerDelay={0.1}>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {processSteps.map((step, index) => (
                   <MotionDiv key={index} variants={staggerItem}>
-                    <Card className="text-center p-6">
-                      <div className="bg-gtb-aero text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                    <Card className="text-center p-6 border-gray-200/60">
+                      <motion.div 
+                        className="bg-gradient-to-br from-gtb-aero to-gtb-aero-light text-white w-12 h-12 rounded-[15px] flex items-center justify-center text-lg font-bold mx-auto mb-4 shadow-md"
+                        animate={{ 
+                          rotate: [0, 3],
+                          scale: [1, 1.05, 1]
+                        }}
+                        transition={{ 
+                          rotate: { duration: 3, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
+                          scale: { duration: 3, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }
+                        }}
+                      >
                         {step.step}
-                      </div>
-                      <h3 className="text-xl font-semibold text-gtb-navy mb-2">{step.title}</h3>
-                      <p className="text-gray-600">{step.description}</p>
+                      </motion.div>
+                      <h3 className="text-xl font-bold text-gtb-navy mb-2">{step.title}</h3>
+                      <p className="text-gray-600 text-[15px] leading-relaxed">{step.description}</p>
                     </Card>
                   </MotionDiv>
                 ))}
@@ -233,60 +246,76 @@ export default function Services() {
         </section>
 
         {/* Why Choose Us */}
-        <section className="py-20 bg-white">
+        <section className="section-padding bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <RevealOnScroll>
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-8">
-                  <MotionH2 className="text-3xl lg:text-4xl font-bold text-gtb-navy">
+                  <MotionH2 className="text-4xl lg:text-5xl font-bold text-gtb-navy">
                     Why Choose Our Services?
                   </MotionH2>
                   <div className="space-y-6">
                     <div className="flex items-start space-x-4">
-                      <div className="bg-gtb-aero/10 p-2 rounded-lg">
+                      <motion.div 
+                        className="bg-gradient-to-br from-gtb-aero/20 to-gtb-aero/8 p-2.5 rounded-[12px] border-2 border-gtb-aero/20 flex-shrink-0 shadow-md"
+                        whileHover={{ scale: 1.15, rotate: 5 }}
+                        animate={{ 
+                          y: [0, -3, 0],
+                          boxShadow: [
+                            "0 2px 4px rgba(107, 142, 35, 0.1)",
+                            "0 4px 8px rgba(107, 142, 35, 0.2)",
+                            "0 2px 4px rgba(107, 142, 35, 0.1)",
+                          ]
+                        }}
+                        transition={{ 
+                          y: { duration: 2.5, repeat: Infinity, ease: "easeInOut" },
+                          boxShadow: { duration: 2, repeat: Infinity },
+                          rotate: { duration: 0.6, type: "spring", stiffness: 400 }
+                        }}
+                      >
                         <CheckCircle className="h-6 w-6 text-gtb-aero" />
-                      </div>
+                      </motion.div>
                       <div>
-                        <h3 className="text-xl font-semibold text-gtb-navy mb-2">Expert Knowledge</h3>
-                        <p className="text-gray-600">15+ years of experience in Melbourne&apos;s building industry with deep knowledge of local builders and market conditions.</p>
+                        <h3 className="text-xl font-bold text-gtb-navy mb-2">Expert Knowledge</h3>
+                        <p className="text-gray-600 text-[15px] leading-relaxed">15+ years of experience in Melbourne&apos;s building industry with deep knowledge of local builders and market conditions.</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
-                      <div className="bg-gtb-aero/10 p-2 rounded-lg">
+                      <div className="bg-gradient-to-br from-gtb-aero/15 to-gtb-aero/5 p-2.5 rounded-[12px] border border-gtb-aero/10 flex-shrink-0">
                         <DollarSign className="h-6 w-6 text-gtb-aero" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold text-gtb-navy mb-2">Save Money</h3>
-                        <p className="text-gray-600">Access to exclusive builder deals and bulk pricing that typically saves our clients $20,000-$50,000 per project.</p>
+                        <h3 className="text-xl font-bold text-gtb-navy mb-2">Save Money</h3>
+                        <p className="text-gray-600 text-[15px] leading-relaxed">Access to exclusive builder deals and bulk pricing that typically saves our clients $20,000-$50,000 per project.</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
-                      <div className="bg-gtb-aero/10 p-2 rounded-lg">
+                      <div className="bg-gradient-to-br from-gtb-aero/15 to-gtb-aero/5 p-2.5 rounded-[12px] border border-gtb-aero/10 flex-shrink-0">
                         <Users className="h-6 w-6 text-gtb-aero" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold text-gtb-navy mb-2">Personal Service</h3>
-                        <p className="text-gray-600">Dedicated support throughout your entire journey with regular check-ins and proactive problem-solving.</p>
+                        <h3 className="text-xl font-bold text-gtb-navy mb-2">Personal Service</h3>
+                        <p className="text-gray-600 text-[15px] leading-relaxed">Dedicated support throughout your entire journey with regular check-ins and proactive problem-solving.</p>
                       </div>
                     </div>
                   </div>
                 </div>
               
-                <div className="space-y-6">
-                  <Card className="p-8 bg-gtb-navy text-white">
+                <div className="space-y-5">
+                  <Card className="p-8 bg-gtb-navy text-white border-0 rounded-[15px]">
                     <div className="text-center space-y-4">
                       <div className="text-4xl font-bold">500+</div>
-                      <div className="text-gray-300">Successful Projects</div>
+                      <div className="text-gray-300 text-[15px]">Successful Projects</div>
                     </div>
                   </Card>
                   <div className="grid grid-cols-2 gap-4">
-                    <Card className="p-6 text-center">
-                      <div className="text-2xl font-bold text-gtb-navy">$2M+</div>
-                      <div className="text-sm text-gray-600">Client Savings</div>
+                    <Card className="p-6 text-center bg-gtb-navy text-white border-0 rounded-[15px]">
+                      <div className="text-2xl font-bold">$2M+</div>
+                      <div className="text-sm text-gray-300 mt-1">Client Savings</div>
                     </Card>
-                    <Card className="p-6 text-center">
-                      <div className="text-2xl font-bold text-gtb-navy">15+</div>
-                      <div className="text-sm text-gray-600">Partner Builders</div>
+                    <Card className="p-6 text-center bg-gtb-navy text-white border-0 rounded-[15px]">
+                      <div className="text-2xl font-bold">15+</div>
+                      <div className="text-sm text-gray-300 mt-1">Partner Builders</div>
                     </Card>
                   </div>
                 </div>
@@ -299,23 +328,24 @@ export default function Services() {
         <Testimonials />
 
         {/* Contact CTA */}
-        <section className="py-20 bg-gtb-navy">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <section className="section-padding bg-gtb-navy relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-gtb-navy via-gtb-navy to-gtb-navy-light/50"></div>
+          <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <RevealOnScroll>
-              <MotionH2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              <MotionH2 className="text-4xl lg:text-5xl font-bold text-white mb-5">
                 Ready to Get Started?
               </MotionH2>
-              <MotionP className="text-xl text-gray-300 mb-8">
+              <MotionP className="text-lg lg:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto">
                 Book a free consultation to discuss your project and discover how we can help you save time and money.
               </MotionP>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <AnimatedButton asChild size="lg" className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-8 py-4">
+                <AnimatedButton asChild size="lg" className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-8 py-4 rounded-[15px] font-semibold shadow-lg">
                   <Link href="/contact">
                     <Calendar className="mr-2 h-5 w-5" />
                     Book Free Consultation
                   </Link>
                 </AnimatedButton>
-                <AnimatedButton asChild variant="outline" size="lg" className="border-white text-gtb-navy bg-white hover:bg-gray-100 text-lg px-8 py-4">
+                <AnimatedButton asChild variant="outline" size="lg" className="border-2 border-white/30 text-white bg-white/10 hover:bg-white hover:text-gtb-navy backdrop-blur-sm text-lg px-8 py-4 rounded-[15px] font-medium">
                   <Link href="tel:+61300000000">
                     <Phone className="mr-2 h-5 w-5" />
                     Call Now

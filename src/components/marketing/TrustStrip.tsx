@@ -60,7 +60,7 @@ export default function TrustStrip() {
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="bg-white/80 backdrop-blur-sm border-t border-gray-200 py-8"
+      className="bg-white/90 backdrop-blur-md border-t border-gray-200/60 py-10"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -76,10 +76,19 @@ export default function TrustStrip() {
               }}
               className="space-y-2"
             >
-              <div className="text-3xl md:text-4xl font-bold text-gtb-navy">
+              <motion.div 
+                className="text-3xl md:text-4xl font-bold text-gtb-navy"
+                animate={isInView ? { 
+                  scale: [1, 1.05, 1],
+                  transition: { 
+                    duration: 0.5,
+                    delay: index * 0.1 + 0.3
+                  }
+                } : {}}
+              >
                 {counters[index] !== undefined ? counters[index] : 0}
                 {stat.suffix || stat.value.replace(/[0-9]/g, '')}
-              </div>
+              </motion.div>
               <div className="text-sm text-gray-600 font-medium">
                 {stat.label}
               </div>

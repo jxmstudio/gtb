@@ -15,25 +15,22 @@ export const Logo: React.FC<LogoProps> = ({
   const sizeClasses = {
     sm: 'h-8 w-auto',
     md: 'h-10 w-auto',
-    lg: 'h-12 w-auto'
+    lg: 'h-16 w-auto'
   };
 
-  // For inverted variant, we might want to use a white version of the logo
-  // For now, using the same logo but with appropriate background handling
-  const logoSrc = variant === 'inverted' 
-    ? '/TofaGroup_Logo_Black_Web_1920px.png' // You might want to create a white version
-    : '/TofaGroup_Logo_Black_Web_1920px.png';
+  const logoSrc = '/logo.png';
 
   return (
     <div className={`flex items-center ${className}`}>
-      <div className={`${variant === 'inverted' ? 'bg-white/10 p-2 rounded-lg' : ''}`}>
+      <div className={`${variant === 'inverted' ? 'bg-white/10 p-2 rounded-[12px]' : ''}`}>
         <Image
           src={logoSrc}
-          alt="George The Broker - TofaGroup"
-          width={size === 'sm' ? 120 : size === 'md' ? 150 : 180}
-          height={size === 'sm' ? 32 : size === 'md' ? 40 : 48}
-          className={`${sizeClasses[size]} object-contain`}
+          alt="TofaGroup"
+          width={size === 'sm' ? 100 : size === 'md' ? 120 : size === 'lg' ? 180 : 140}
+          height={size === 'sm' ? 32 : size === 'md' ? 40 : size === 'lg' ? 64 : 48}
+          className={`${sizeClasses[size]} object-contain transition-all duration-300 hover:scale-105 drop-shadow-sm`}
           priority
+          suppressHydrationWarning
         />
       </div>
     </div>

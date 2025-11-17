@@ -248,7 +248,7 @@ export default function FirstHomeBuyers() {
                       </div>
                       <div>
                         <h3 className="text-xl font-semibold text-gtb-navy mb-2">Quality Assurance</h3>
-                        <p className="text-gray-600">We only work with Australia's most reputable builders who meet our strict quality standards.</p>
+                        <p className="text-gray-600">We only work with Australia&apos;s most reputable builders who meet our strict quality standards.</p>
                       </div>
                     </div>
                   </div>

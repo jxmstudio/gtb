@@ -10,13 +10,16 @@ import { Menu, X } from 'lucide-react';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
   { name: 'Packages', href: '/packages' },
-  { name: 'First-Home Buyers', href: '/first-home-buyers', highlight: true },
-  { name: 'Investors', href: '/investors' },
   { name: 'Contact', href: '/contact' },
-];
+] as const;
+
+type NavigationItem = {
+  name: string;
+  href: string;
+  highlight?: boolean;
+};
 
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -40,15 +43,22 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
-            <Logo size="md" />
-          </Link>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400 }}
+          >
+            <Link href="/" className="flex-shrink-0">
+              <Logo size="md" />
+            </Link>
+          </motion.div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
               {navigation.map((item) => {
                 const isActive = pathname === item.href;
+                const navItem = item as NavigationItem;
                 return (
                   <motion.div
                     key={item.name}
@@ -65,15 +75,25 @@ export const Navbar: React.FC = () => {
                     >
                       <span className="flex items-center gap-2">
                         {item.name}
-                        {item.highlight && (
-                          <span className="px-2 py-0.5 text-xs font-medium bg-gtb-aero/15 text-gtb-aero rounded-full">
+                        {navItem.highlight && (
+                          <motion.span 
+                            className="px-2 py-0.5 text-xs font-medium bg-gtb-aero/20 text-gtb-aero rounded-full"
+                            animate={{ 
+                              scale: [1, 1.05, 1],
+                              opacity: [0.8, 1, 0.8]
+                            }}
+                            transition={{ duration: 2, repeat: Infinity }}
+                          >
                             Popular
-                          </span>
+                          </motion.span>
                         )}
                       </span>
-                      <span className={`absolute bottom-0 left-0 h-0.5 bg-gtb-aero transition-all duration-200 ${
-                        isActive ? 'w-full' : 'w-0 group-hover:w-full'
-                      }`}></span>
+                      <motion.span 
+                        className={`absolute bottom-0 left-0 h-0.5 bg-gtb-aero transition-all duration-200 ${
+                          isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                        }`}
+                        whileHover={{ height: "2px" }}
+                      ></motion.span>
                     </Link>
                   </motion.div>
                 );
@@ -120,7 +140,7 @@ export const Navbar: React.FC = () => {
                   >
                     <span className="flex items-center gap-2">
                       {item.name}
-                      {item.highlight && (
+                      {(item as NavigationItem).highlight && (
                         <span className="px-1.5 py-0.5 text-xs font-medium bg-gtb-aero/10 text-gtb-aero rounded-full">
                           Popular
                         </span>

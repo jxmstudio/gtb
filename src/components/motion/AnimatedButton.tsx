@@ -2,7 +2,13 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Button, ButtonProps } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { VariantProps } from "class-variance-authority";
+
+type ButtonProps = React.ComponentProps<"button"> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+  };
 
 /**
  * AnimatedButton component that provides motion effects for buttons
@@ -15,20 +21,22 @@ export function AnimatedButton({
 }: ButtonProps) {
   const motionProps = {
     whileHover: { 
-      scale: 1.02,
+      scale: 1.05,
+      y: -2,
       transition: { 
-        type: "spring", 
-        stiffness: 300, 
-        damping: 20,
+        type: "spring" as const, 
+        stiffness: 400, 
+        damping: 15,
         duration: 0.2 
       } 
     },
     whileTap: { 
-      scale: 0.98,
+      scale: 0.95,
+      y: 0,
       transition: { 
-        type: "spring", 
-        stiffness: 400, 
-        damping: 25,
+        type: "spring" as const, 
+        stiffness: 500, 
+        damping: 20,
         duration: 0.1 
       } 
     }

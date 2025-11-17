@@ -12,17 +12,25 @@ function Card({ className, ...props }: React.ComponentProps<"div">) {
     <MotionCard
       data-slot="card"
       className={cn(
-        "bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm transition-all duration-200",
+        "bg-card text-card-foreground flex flex-col gap-6 rounded-[15px] border border-gray-100/50 py-6 card-shadow transition-all duration-300",
         className
       )}
       whileHover={{ 
-        y: -2, 
-        boxShadow: "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+        y: -8, 
+        scale: 1.02,
+        rotate: 2,
+        boxShadow: "0 20px 25px -5px rgba(107, 142, 35, 0.1), 0 10px 10px -5px rgba(107, 142, 35, 0.04)",
         transition: { 
-          duration: 0.2, 
-          ease: "easeOut" 
+          type: "spring",
+          stiffness: 400,
+          damping: 15,
+          duration: 0.3 
         } 
       }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
       {...props}
     />
   )

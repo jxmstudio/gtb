@@ -39,7 +39,7 @@ export default function HeroLeadForm() {
     const parsed = LeadSchema.safeParse(data);
     if (!parsed.success) {
       const fieldErrors: Partial<LeadFormData> = {};
-      parsed.error.errors.forEach((error) => {
+      parsed.error.issues.forEach((error) => {
         const field = error.path[0] as keyof LeadFormData;
         fieldErrors[field] = error.message;
       });
@@ -72,7 +72,7 @@ export default function HeroLeadForm() {
       // Show success message (you could replace this with a toast)
       alert("Thanks! We'll be in touch within 24 hours to discuss your building project.");
       
-    } catch (err) {
+    } catch {
       analytics.trackFormSubmit("hero_lead_form", false);
       alert("Something went wrong. Please try again or call us directly.");
     } finally {
@@ -160,7 +160,7 @@ export default function HeroLeadForm() {
         </Button>
         
         <p className="text-xs text-gray-600 md:col-span-5 text-center">
-          No obligation consultation. We'll only contact you about your enquiry.
+          No obligation consultation. We&apos;ll only contact you about your enquiry.
         </p>
       </form>
     </motion.div>

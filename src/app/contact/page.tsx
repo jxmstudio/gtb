@@ -3,14 +3,13 @@
 import { useState } from 'react';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Label } from '@/components/ui/label';
-import { RevealOnScroll, StaggerReveal } from '@/components/motion/Reveals';
-import { MotionDiv, MotionH2, MotionP, staggerContainer, staggerItem } from '@/components/motion/MotionPrimitives';
+import { RevealOnScroll } from '@/components/motion/Reveals';
+import { MotionH2, MotionP } from '@/components/motion/MotionPrimitives';
 import StickyHeader from '@/components/marketing/StickyHeader';
 import Testimonials from '@/components/marketing/Testimonials';
 import PartnerLogos from '@/components/marketing/PartnerLogos';
@@ -150,7 +149,7 @@ export default function Contact() {
                     <div className="text-center py-8">
                       <CheckCircle className="h-16 w-16 text-gtb-aero mx-auto mb-4" />
                       <h3 className="text-xl font-semibold text-gtb-navy mb-2">Message Sent!</h3>
-                      <p className="text-gray-600">Thank you for your inquiry. We'll be in touch soon.</p>
+                      <p className="text-gray-600">Thank you for your inquiry. We&apos;ll be in touch soon.</p>
                     </div>
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-6">

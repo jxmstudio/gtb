@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://georgethebroker.com.au/sitemap.xml
+

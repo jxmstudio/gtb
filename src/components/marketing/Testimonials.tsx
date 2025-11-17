@@ -76,7 +76,7 @@ const testimonials: Testimonial[] = [
 
 export default function Testimonials() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -85,10 +85,10 @@ export default function Testimonials() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-gtb-navy mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gtb-navy mb-4">
             What Our Clients Say
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Don&apos;t just take our word for it - hear from our satisfied clients who have built their dream homes and investment properties.
           </p>
         </motion.div>
@@ -97,39 +97,54 @@ export default function Testimonials() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial) => (
               <MotionDiv key={testimonial.id} variants={staggerItem}>
-                <Card className="p-6 h-full hover:shadow-lg transition-shadow duration-300">
-                  {/* Rating */}
-                  <div className="flex items-center space-x-1 mb-4">
+                <Card className="p-6 h-full border-gray-200/60 bg-white">
+                  {/* Rating - Only show on mobile */}
+                  <div className="flex items-center space-x-1 mb-5 md:hidden">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                      <Star key={i} className="h-4 w-4 text-gray-300 fill-current" />
                     ))}
                   </div>
 
                   {/* Quote */}
-                  <blockquote className="text-gray-600 mb-6 italic">
+                  <motion.blockquote 
+                    className="text-gray-700 mb-6 italic leading-relaxed text-[15px]"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2 }}
+                  >
                     &quot;{testimonial.quote}&quot;
-                  </blockquote>
+                  </motion.blockquote>
 
                   {/* Client Info */}
-                  <div className="flex items-center space-x-4">
-                    <div className="relative w-12 h-12 rounded-full overflow-hidden bg-gray-200">
+                  <div className="flex items-center space-x-4 pt-4 border-t border-gray-100">
+                    <motion.div 
+                      className="relative w-12 h-12 rounded-full overflow-hidden bg-gray-100 border-2 border-gray-200"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
                       <Image
                         src={testimonial.photo || "/api/placeholder/80/80"}
                         alt={`${testimonial.name} photo`}
                         fill
                         className="object-cover"
+                        suppressHydrationWarning
                       />
-                    </div>
-                    <div className="flex-1">
-                      <div className="font-semibold text-gtb-navy">
+                    </motion.div>
+                    <div className="flex-1 min-w-0">
+                      <div className="font-bold text-gtb-navy text-[15px]">
                         {testimonial.name}
                       </div>
-                      <div className="text-sm text-gray-500">
+                      <div className="text-sm text-gray-600">
                         {testimonial.suburb}
                       </div>
-                      <div className="text-xs text-gtb-aero font-medium mt-1">
+                      <motion.div 
+                        className="text-xs text-gtb-aero font-medium mt-0.5"
+                        animate={{ opacity: [0.7, 1, 0.7] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                      >
                         {testimonial.project}
-                      </div>
+                      </motion.div>
                     </div>
                   </div>
                 </Card>
@@ -151,9 +166,9 @@ export default function Testimonials() {
           </p>
           <motion.a
             href="/contact"
-            className="inline-flex items-center px-6 py-3 bg-gtb-navy text-white rounded-lg hover:bg-gtb-navy-light transition-colors duration-200"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center px-6 py-3 bg-gtb-navy text-white rounded-[15px] hover:bg-gtb-navy-light transition-colors duration-200 font-medium shadow-md"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
             Start Your Building Journey
           </motion.a>

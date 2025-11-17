@@ -58,12 +58,12 @@
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: #00B4CD; /* Aero Blue */
+  --accent: #6B8E23; /* Tofa Green */
   --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
-  --ring: #00B4CD; /* Aero Blue */
+  --ring: #6B8E23; /* Tofa Green */
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -80,9 +80,15 @@
   
   /* GTB Brand Colors */
   --gtb-navy: #0A3370;
-  --gtb-aero: #00B4CD;
+  --gtb-aero: #6B8E23; /* Changed to Tofa Green */
   --gtb-navy-light: #1a4a8a;
-  --gtb-aero-light: #33c4d6;
+  --gtb-aero-light: #8BA446; /* Changed to Tofa Green Light */
+  
+  /* Tofa Brand Colors - from logo */
+  --tofa-green: #6B8E23;
+  --tofa-green-light: #8BA446;
+  --tofa-green-dark: #556B1C;
+  --tofa-green-accent: #9ACD32;
 }
 
 .dark {
@@ -157,10 +163,69 @@
   .bg-gtb-aero {
     background-color: var(--gtb-aero);
   }
+  .hover\:bg-gtb-aero-light:hover {
+    background-color: var(--gtb-aero-light);
+  }
   .border-gtb-navy {
     border-color: var(--gtb-navy);
   }
   .border-gtb-aero {
     border-color: var(--gtb-aero);
+  }
+  .text-tofa-green {
+    color: var(--tofa-green);
+  }
+  .bg-tofa-green {
+    background-color: var(--tofa-green);
+  }
+  .bg-tofa-green-light {
+    background-color: var(--tofa-green-light);
+  }
+  .border-tofa-green {
+    border-color: var(--tofa-green);
+  }
+  
+  /* Dynamic animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(107, 142, 35, 0.4); }
+    50% { box-shadow: 0 0 20px 5px rgba(107, 142, 35, 0.2); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  /* Design System Utilities */
+  .card-radius {
+    border-radius: 15px;
+  }
+  .section-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+  .card-shadow {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  }
+  .card-shadow-hover {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+  .card-shadow-lg {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   }
 }

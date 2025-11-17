@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
     const parsed = LeadSchema.safeParse(body);
     if (!parsed.success) {
       return NextResponse.json(
-        { error: 'Invalid form data', details: parsed.error.errors },
+        { error: 'Invalid form data', details: parsed.error.issues },
         { status: 400 }
       );
     }
