@@ -1,6 +1,9 @@
-import { MotionConfig } from "framer-motion";
-import PageTransition from "@/components/motion/PageTransition";
 import "./globals.css";
+
+export const metadata = {
+  title: "George The Broker - TofaGroup | Wholesale Building Connector",
+  description: "Take the guesswork out of building your first home. Partnered with Australia's largest builders in Western suburbs Melbourne.",
+}
 
 export default function RootLayout({
   children,
@@ -9,16 +12,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className="antialiased"
-      >
-        <MotionConfig reducedMotion="user">
-          <PageTransition>
-            <div className="pt-16">
-              {children}
-            </div>
-          </PageTransition>
-        </MotionConfig>
+      <body className="antialiased">
+        <div className="pt-16">
+          {children}
+        </div>
       </body>
     </html>
   );

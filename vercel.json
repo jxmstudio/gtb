@@ -1,7 +1,0 @@
-{
-  "buildCommand": "echo 'Bypassing build' && mkdir -p .next && echo '{}' > .next/build-manifest.json",
-  "installCommand": "npm install",
-  "framework": null,
-  "outputDirectory": ".next"
-}
-
