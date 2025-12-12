@@ -36,7 +36,7 @@ export default function StickyHeader() {
               {/* Logo */}
               <div className="flex-shrink-0">
                 <Link href="/" className="text-xl font-bold text-gtb-navy">
-                  George The Broker
+                  TOFA Group
                 </Link>
               </div>
 

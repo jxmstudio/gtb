@@ -11,9 +11,9 @@ interface TrustStat {
 }
 
 const stats: TrustStat[] = [
-  { value: "500+", label: "homeowners connected" },
-  { value: "15+", label: "partner builders" },
-  { value: "$2M+", label: "saved via deals" },
+  { value: "500+", label: "projects delivered" },
+  { value: "15+", label: "years experience" },
+  { value: "$2M+", label: "in project value" },
 ];
 
 export default function TrustStrip() {

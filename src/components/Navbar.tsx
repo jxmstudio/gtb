@@ -10,8 +10,12 @@ import { Menu, X } from 'lucide-react';
 
 const navigation = [
   { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
-  { name: 'Packages', href: '/packages' },
+  { name: 'Our Projects', href: '/projects' },
+  { name: 'Build Now, Pay Later', href: '/build-now-pay-later', highlight: true },
+  { name: 'Team', href: '/team' },
+  { name: 'FAQs', href: '/faqs' },
   { name: 'Contact', href: '/contact' },
 ] as const;
 

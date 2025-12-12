@@ -66,22 +66,22 @@ const benefits = [
   {
     icon: <TrendingUp className="h-8 w-8 text-gtb-aero" />,
     title: "High Rental Yields",
-    description: "Average 6-7% rental yields with strong capital growth potential in Melbourne's Western suburbs."
+    description: "Quality investment properties delivering strong rental returns and capital growth potential across Australia."
   },
   {
     icon: <DollarSign className="h-8 w-8 text-gtb-aero" />,
-    title: "Exclusive Pricing",
-    description: "Access to bulk pricing and exclusive deals that save investors thousands on each property."
+    title: "Competitive Pricing",
+    description: "Quality construction delivered at competitive market rates for maximum investment returns."
   },
   {
     icon: <HomeIcon className="h-8 w-8 text-gtb-aero" />,
-    title: "Quality Properties",
-    description: "Only properties from Australia's most reputable builders with quality guarantees."
+    title: "Quality Construction",
+    description: "Every investment property built to strict quality and compliance standards."
   },
   {
     icon: <BarChart3 className="h-8 w-8 text-gtb-aero" />,
     title: "Market Expertise",
-    description: "Deep knowledge of Melbourne's property market and emerging investment opportunities."
+    description: "Deep knowledge of Australia's property markets and emerging investment opportunities."
   }
 ];
 
@@ -110,7 +110,7 @@ export default function Investors() {
                   Property Investment
                 </MotionH2>
                 <MotionP className="text-xl text-gray-600 mb-8">
-                  {"Build a profitable property investment portfolio with our turnkey solutions and expert guidance in Melbourne's Western suburbs."}
+                  {"Build a profitable property investment portfolio with quality construction and strategic project delivery across Australia."}
                 </MotionP>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <AnimatedButton asChild size="lg" className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-8 py-4">
@@ -233,7 +233,7 @@ export default function Investors() {
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-start space-x-2">
                       <CheckCircle className="h-4 w-4 text-gtb-aero mt-0.5" />
-                      <span>Prime Western suburbs locations</span>
+                      <span>Prime growth locations across Australia</span>
                     </li>
                     <li className="flex items-start space-x-2">
                       <CheckCircle className="h-4 w-4 text-gtb-aero mt-0.5" />

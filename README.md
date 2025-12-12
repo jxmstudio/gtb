@@ -1,6 +1,6 @@
-# George The Broker Website
+# TOFA Group Website
 
-A modern, production-ready website for George The Broker - Wholesale Building Connector, built with Next.js, shadcn/ui, and Tailwind CSS.
+A modern, production-ready website for TOFA Group - Residential & Commercial Construction, built with Next.js, shadcn/ui, and Tailwind CSS.
 
 ## Features
 

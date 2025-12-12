@@ -30,61 +30,61 @@ import {
 const howItWorks = [
   {
     step: "1",
-    title: "Consult",
-    description: "Book a free consultation to discuss your needs, budget, and goals.",
+    title: "Plan",
+    description: "Initial consultation to understand your vision, budget, and project requirements.",
     icon: <MessageCircle className="h-8 w-8 text-gtb-aero" />
   },
   {
     step: "2", 
-    title: "Match Builder",
-    description: "We connect you with the perfect builder based on your requirements.",
-    icon: <Handshake className="h-8 w-8 text-gtb-aero" />
+    title: "Build",
+    description: "We manage the full construction lifecycle with quality oversight and compliance.",
+    icon: <Wrench className="h-8 w-8 text-gtb-aero" />
   },
   {
     step: "3",
-    title: "Build",
-    description: "We support you throughout the entire building process to completion.",
-    icon: <Wrench className="h-8 w-8 text-gtb-aero" />
+    title: "Deliver",
+    description: "On-time project completion with quality assurance and final handover.",
+    icon: <CheckCircle className="h-8 w-8 text-gtb-aero" />
   }
 ];
 
 const benefits = [
   {
-    title: "Exclusive Deals",
-    description: "Access to bulk pricing and exclusive deals not available to the public.",
-    icon: <DollarSign className="h-8 w-8 text-gtb-aero" />
-  },
-  {
-    title: "Finance Assistance", 
-    description: "Expert guidance on grants, loans, and KiwiSaver rollovers.",
-    icon: <TrendingUp className="h-8 w-8 text-gtb-aero" />
-  },
-  {
-    title: "Trusted Partners",
-    description: "Only work with Australia's most reputable and quality-assured builders.",
+    title: "Quality Construction",
+    description: "Every project meets strict quality, safety, and compliance standards.",
     icon: <Building2 className="h-8 w-8 text-gtb-aero" />
   },
   {
-    title: "Personal Service",
-    description: "Dedicated support throughout your entire building journey.",
+    title: "Flexible Financing", 
+    description: "Build Now, Pay Later options available for eligible clients.",
+    icon: <TrendingUp className="h-8 w-8 text-gtb-aero" />
+  },
+  {
+    title: "End-to-End Management",
+    description: "Full project oversight from planning through to completion.",
+    icon: <CheckCircle className="h-8 w-8 text-gtb-aero" />
+  },
+  {
+    title: "Transparent Process",
+    description: "Clear communication and updates throughout your build.",
     icon: <Users className="h-8 w-8 text-gtb-aero" />
   },
   {
-    title: "Save Money",
-    description: "Average savings of $20,000-$50,000 per project through our deals.",
+    title: "Competitive Pricing",
+    description: "Quality construction delivered at competitive market rates.",
     icon: <DollarSign className="h-8 w-8 text-gtb-aero" />
   },
   {
-    title: "Zero Hassle",
-    description: "We handle the complexity so you can focus on your new home.",
-    icon: <CheckCircle className="h-8 w-8 text-gtb-aero" />
+    title: "On-Time Delivery",
+    description: "We manage timelines to ensure your project stays on schedule.",
+    icon: <Wrench className="h-8 w-8 text-gtb-aero" />
   }
 ];
 
 const services = [
   {
-    title: "Builder Connection & Matching",
-    description: "We connect you with Australia's most reputable builders based on your specific needs and budget.",
+    title: "Residential Construction",
+    description: "Quality residential construction managed from planning through to completion with full project oversight.",
     features: [
       "Personalized builder recommendations",
       "Access to exclusive deals",

@@ -1,24 +1,27 @@
 import React from 'react';
 import Link from 'next/link';
 import { Logo } from './Logo';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const footerLinks = {
   services: [
-    { name: 'Builder Connection', href: '/services#builder-connection' },
-    { name: 'Finance Assistance', href: '/services#finance' },
-    { name: 'KiwiSaver Rollover', href: '/services#kiwisaver' },
-    { name: 'Turnkey Packages', href: '/packages' },
-    { name: 'Investment Properties', href: '/investors' },
+    { name: 'Residential Construction', href: '/services' },
+    { name: 'Commercial Construction', href: '/services' },
+    { name: 'Project Management', href: '/services' },
+    { name: 'Design & Build', href: '/services' },
+    { name: 'Build Now, Pay Later', href: '/build-now-pay-later' },
   ],
   company: [
     { name: 'About Us', href: '/about' },
-    { name: 'Our Process', href: '/about#process' },
-    { name: 'Testimonials', href: '/about#testimonials' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Our Projects', href: '/projects' },
+    { name: 'Meet the Team', href: '/team' },
+    { name: 'FAQs', href: '/faqs' },
     { name: 'Contact', href: '/contact' },
+  ],
+  resources: [
+    { name: 'First Home Buyers', href: '/first-home-buyers' },
+    { name: 'Investors', href: '/investors' },
+    { name: 'Services', href: '/services' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },
@@ -36,23 +39,27 @@ export const Footer: React.FC = () => {
           <div className="space-y-4">
             <Logo size="lg" variant="inverted" />
             <p className="text-gray-300 text-sm leading-relaxed">
-              TofaGroup - Helping first-time home buyers and investors connect with Australia&apos;s most reputable builders in Western suburbs Melbourne.
+              TOFA Group delivers high-quality residential and commercial construction projects across Australia.
+            </p>
+            <p className="text-gtb-aero text-sm font-medium">
+              Delivering projects Australia-wide
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm text-gray-300">
-                <MapPin className="h-4 w-4" />
-                <span>Western Suburbs, Melbourne</span>
+                <MapPin className="h-4 w-4 flex-shrink-0" />
+                <span>Australia-wide</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-300">
-                <Phone className="h-4 w-4" />
+                <Phone className="h-4 w-4 flex-shrink-0" />
                 <a href="tel:+61300000000" className="hover:text-white transition-colors duration-200">
                   +61 3 0000 0000
                 </a>
-                <span className="text-xs text-gray-400">(Open 9-5 Mon-Fri)</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-300">
-                <Mail className="h-4 w-4" />
-                <span>hello@georgethebroker.com.au</span>
+                <Mail className="h-4 w-4 flex-shrink-0" />
+                <a href="mailto:contact@tofagroup.com.au" className="hover:text-white transition-colors duration-200">
+                  contact@tofagroup.com.au
+                </a>
               </div>
             </div>
           </div>
@@ -91,56 +98,80 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Newsletter & Contact */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Get the First-Home Buyer Guide</h3>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Download our free guide with tips, grants, and everything you need to know about building your first home.
-            </p>
-            <div className="space-y-2">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
-              />
-              <Button className="w-full bg-gtb-aero hover:bg-gtb-aero-light text-white rounded-lg">
-                Get Free Guide
-              </Button>
-            </div>
-            
-            {/* Social Links */}
-            <div className="flex space-x-4 pt-4">
-              <a href="#" className="text-gray-300 hover:text-white transition-colors duration-200">
+          {/* Resources & Legal */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2 mb-6">
+              {footerLinks.resources.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="text-lg font-semibold mb-4">Legal</h3>
+            <ul className="space-y-2">
+              {footerLinks.legal.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Social Links */}
+        <div className="mt-12 pt-8 border-t border-white/10">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="flex space-x-6">
+              <a
+                href="#"
+                className="text-gray-300 hover:text-white transition-colors duration-200"
+                aria-label="Facebook"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors duration-200">
+              <a
+                href="#"
+                className="text-gray-300 hover:text-white transition-colors duration-200"
+                aria-label="Instagram"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors duration-200">
+              <a
+                href="#"
+                className="text-gray-300 hover:text-white transition-colors duration-200"
+                aria-label="LinkedIn"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
+            </div>
+            <div className="text-sm text-gray-300 text-center">
+              <p>
+                &copy; {new Date().getFullYear()} TOFA Group. All rights reserved.
+              </p>
+              <p className="mt-1">
+                ABN: XX XXX XXX XXX
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-white/20 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex flex-wrap space-x-6">
-              {footerLinks.legal.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-            <p className="text-gray-300 text-sm">
-              © 2025 George The Broker - TofaGroup. All rights reserved.
-            </p>
-          </div>
+        {/* Disclaimer */}
+        <div className="mt-8 pt-8 border-t border-white/10">
+          <p className="text-xs text-gray-400 leading-relaxed text-center max-w-4xl mx-auto">
+            <strong>Disclaimer:</strong> All projects are subject to contract and are delivered in accordance with Australian building standards and regulations. Information provided is general in nature and should not be considered financial or legal advice. TOFA Group recommends consulting with appropriate professionals for advice specific to your circumstances.
+          </p>
         </div>
       </div>
     </footer>

@@ -58,7 +58,7 @@ const testimonials: Testimonial[] = [
     id: "5",
     name: "Maria Santos",
     suburb: "Truganina, VIC",
-    quote: "The builder matching service was spot on. We got exactly what we wanted within our budget and timeline.",
+    quote: "TOFA Group delivered exactly what we wanted within our budget and timeline. Professional service from start to finish.",
     rating: 5,
     project: "First Home - 3BR Townhouse",
     photo: "/api/placeholder/80/80"

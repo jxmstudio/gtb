@@ -34,9 +34,9 @@ const steps = [
   },
   {
     step: "3",
-    title: "Builder Selection",
-    description: "We match you with the perfect builder based on your needs and budget.",
-    details: "Our network of trusted builders ensures you get the best quality and value for your investment."
+    title: "Project Planning",
+    description: "We develop a comprehensive construction plan tailored to your needs and budget.",
+    details: "Our proven systems ensure you get the best quality and value for your investment."
   },
   {
     step: "4",
@@ -110,7 +110,7 @@ export default function FirstHomeBuyers() {
                   First Home Buyers
                 </MotionH2>
                 <MotionP className="text-xl text-gray-600 mb-8">
-                  {"Your complete guide to building your first home in Melbourne's Western suburbs. We'll help you navigate every step and maximize your savings."}
+                  {"Your complete guide to building your first home with TOFA Group. We'll help you navigate every step from planning to completion."}
                 </MotionP>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <AnimatedButton asChild size="lg" className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-8 py-4">

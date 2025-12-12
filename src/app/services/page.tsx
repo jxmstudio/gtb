@@ -9,128 +9,149 @@ import { RevealOnScroll, StaggerReveal } from '@/components/motion/Reveals';
 import { MotionDiv, MotionH2, MotionP, staggerItem } from '@/components/motion/MotionPrimitives';
 import StickyHeader from '@/components/marketing/StickyHeader';
 import Testimonials from '@/components/marketing/Testimonials';
-import PartnerLogos from '@/components/marketing/PartnerLogos';
 import { AnimatedButton } from '@/components/motion/AnimatedButton';
 import Link from 'next/link';
 import { 
   Building2, 
-  DollarSign, 
   Home as HomeIcon, 
   TrendingUp, 
-  Users, 
   CheckCircle,
   ArrowRight,
-  Phone,
-  Calendar
+  Wrench,
+  ClipboardList,
+  Wallet
 } from 'lucide-react';
 
 const services = [
   {
-    title: "Builder Connection & Matching",
-    description: "We connect you with Australia&apos;s most reputable builders based on your specific needs, budget, and location preferences.",
+    title: "Residential Construction",
+    description: "Quality residential builds across Australia. We manage the full construction lifecycle for single and multi-unit residential projects.",
     features: [
-      "Personalized builder recommendations based on your requirements",
-      "Access to exclusive deals and bulk pricing discounts",
-      "Quality assurance guarantee on all recommended builders",
-      "Ongoing project support throughout construction",
-      "Builder performance tracking and feedback"
+      "Single-family home construction",
+      "Multi-unit residential developments",
+      "Custom home design and build",
+      "Quality assurance throughout construction",
+      "On-time project delivery"
     ],
     href: "/contact",
-    ctaText: "Connect me to a builder",
-    icon: <Building2 className="h-6 w-6 text-gtb-aero" />
-  },
-  {
-    title: "Finance Assistance & First Home Buyer Grants",
-    description: "Navigate the complex world of home financing with our expert guidance and comprehensive grant assistance.",
-    features: [
-      "First Home Buyer Grant application assistance",
-      "KiwiSaver rollover support and guidance",
-      "Loan pre-approval process optimization",
-      "Investment property financing strategies",
-      "Government incentive program navigation"
-    ],
-    href: "/contact",
-    ctaText: "Get me finance",
-    icon: <DollarSign className="h-6 w-6 text-gtb-aero" />
-  },
-  {
-    title: "KiwiSaver Rollover Services",
-    description: "Specialized assistance for New Zealand citizens looking to use their KiwiSaver funds for Australian property purchases.",
-    features: [
-      "KiwiSaver withdrawal process guidance",
-      "Australian tax implications consultation",
-      "Cross-border financial planning",
-      "Documentation and compliance support",
-      "Timeline optimization for fund transfers"
-    ],
-    href: "/contact",
-    ctaText: "Start KiwiSaver Process",
-    icon: <TrendingUp className="h-6 w-6 text-gtb-aero" />
-  },
-  {
-    title: "Turnkey Investment Packages",
-    description: "Complete investment packages ready for immediate rental income with guaranteed returns and professional management.",
-    features: [
-      "Fully furnished and tenant-ready properties",
-      "Professional tenant placement services",
-      "Ongoing property management included",
-      "Detailed ROI projections and analysis",
-      "Portfolio diversification strategies"
-    ],
-    href: "/packages",
-    ctaText: "Learn more about Packages",
+    ctaText: "Start Your Project",
     icon: <HomeIcon className="h-6 w-6 text-gtb-aero" />
   },
   {
-    title: "Investment Property Consultation",
-    description: "Strategic guidance for building a profitable property investment portfolio in Melbourne&apos;s Western suburbs.",
+    title: "Commercial Construction",
+    description: "Commercial construction projects managed from design through to completion with full project oversight.",
     features: [
-      "Market analysis and location recommendations",
-      "Investment strategy development",
-      "Cash flow projections and analysis",
-      "Tax optimization strategies",
-      "Portfolio growth planning"
+      "Office and retail construction",
+      "Commercial fit-outs",
+      "Industrial buildings",
+      "Compliance and safety management",
+      "Timeline and budget control"
     ],
-    href: "/investors",
-    ctaText: "Plan Your Investment",
-    icon: <TrendingUp className="h-6 w-6 text-gtb-aero" />
+    href: "/contact",
+    ctaText: "Discuss Your Project",
+    icon: <Building2 className="h-6 w-6 text-gtb-aero" />
   },
   {
-    title: "First-Home Buyer Guidance",
-    description: "Comprehensive support for first-time home buyers navigating the entire process from planning to settlement.",
+    title: "Project Management",
+    description: "End-to-end project management ensuring quality, compliance, and on-time delivery from planning to handover.",
     features: [
-      "Step-by-step process guidance",
-      "Budget planning and affordability assessment",
-      "Builder selection and comparison",
-      "Contract review and negotiation",
-      "Settlement support and coordination"
+      "Full project lifecycle oversight",
+      "Quality and compliance management",
+      "Timeline and milestone tracking",
+      "Transparent communication and reporting",
+      "Risk management and mitigation"
     ],
-    href: "/first-home-buyers",
-    ctaText: "Start Your Journey",
-    icon: <Users className="h-6 w-6 text-gtb-aero" />
+    href: "/contact",
+    ctaText: "Learn More",
+    icon: <ClipboardList className="h-6 w-6 text-gtb-aero" />
+  },
+  {
+    title: "Design & Build",
+    description: "Integrated design and construction services bringing your vision to life with seamless coordination.",
+    features: [
+      "Architectural design collaboration",
+      "Planning and permit coordination",
+      "Material selection guidance",
+      "Budget optimization",
+      "Construction documentation"
+    ],
+    href: "/contact",
+    ctaText: "Start Design Process",
+    icon: <Wrench className="h-6 w-6 text-gtb-aero" />
+  },
+  {
+    title: "Renovations & Extensions",
+    description: "Transform and expand existing properties with expert renovation and extension services.",
+    features: [
+      "Home renovations and upgrades",
+      "Property extensions",
+      "Kitchen and bathroom remodels",
+      "Structural modifications",
+      "Heritage and period property work"
+    ],
+    href: "/contact",
+    ctaText: "Plan Your Renovation",
+    icon: <HomeIcon className="h-6 w-6 text-gtb-aero" />
+  },
+  {
+    title: "Build Now, Pay Later",
+    description: "Flexible construction payment solutions allowing eligible clients to commence projects now and manage payments over time.",
+    features: [
+      "No upfront lump sum required",
+      "Flexible payment structures",
+      "Suitable for residential & commercial",
+      "Subject to eligibility criteria",
+      "Maintain same quality standards"
+    ],
+    href: "/build-now-pay-later",
+    ctaText: "Check Eligibility",
+    icon: <Wallet className="h-6 w-6 text-gtb-aero" />
   }
 ];
 
-const processSteps = [
+const process = [
   {
-    step: "01",
+    step: "1",
     title: "Initial Consultation",
-    description: "We discuss your needs, budget, and goals to understand your requirements."
+    description: "We start with a detailed consultation to understand your vision, requirements, and budget."
   },
   {
-    step: "02", 
-    title: "Builder Matching",
-    description: "We identify and connect you with the most suitable builders for your project."
+    step: "2",
+    title: "Planning & Design",
+    description: "Develop comprehensive plans, obtain necessary permits, and finalize design specifications."
   },
   {
-    step: "03",
-    title: "Finance Setup",
-    description: "We assist with loan applications, grants, and financial planning."
+    step: "3",
+    title: "Construction Phase",
+    description: "Execute the build with quality oversight, regular updates, and compliance management."
   },
   {
-    step: "04",
-    title: "Project Management",
-    description: "We provide ongoing support throughout the construction process."
+    step: "4",
+    title: "Quality Completion",
+    description: "Final inspections, quality assurance checks, and handover of your completed project."
+  }
+];
+
+const whyChoose = [
+  {
+    icon: <CheckCircle className="h-8 w-8 text-gtb-aero" />,
+    title: "Quality Assured",
+    description: "Every project meets strict quality and compliance standards"
+  },
+  {
+    icon: <TrendingUp className="h-8 w-8 text-gtb-aero" />,
+    title: "Transparent Process",
+    description: "Clear communication and regular updates throughout your build"
+  },
+  {
+    icon: <Building2 className="h-8 w-8 text-gtb-aero" />,
+    title: "Australia-Wide",
+    description: "Delivering projects across Australia with consistent standards"
+  },
+  {
+    icon: <Wallet className="h-8 w-8 text-gtb-aero" />,
+    title: "Flexible Financing",
+    description: "Build Now, Pay Later options available for eligible clients"
   }
 ];
 
@@ -142,60 +163,45 @@ export default function Services() {
       
       <main>
         {/* Hero Section */}
-        <section className="section-padding bg-gradient-to-br from-gray-50/80 via-white to-blue-50/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative bg-gradient-to-br from-gray-50 via-white to-blue-50/20 py-20 overflow-hidden">
+          <motion.div 
+            className="absolute inset-0"
+            animate={{
+              background: [
+                "radial-gradient(ellipse at top right, rgba(107, 142, 35, 0.08), transparent)",
+                "radial-gradient(ellipse at top right, rgba(107, 142, 35, 0.04), transparent)",
+                "radial-gradient(ellipse at top right, rgba(107, 142, 35, 0.08), transparent)",
+              ]
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <RevealOnScroll>
-              <div className="text-center max-w-3xl mx-auto">
-                <MotionH2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gtb-navy mb-5 tracking-tight">
-                  Our Services
-                </MotionH2>
-                <MotionP className="text-lg lg:text-xl text-gray-700 mb-10 leading-relaxed">
-                  From builder matching to finance assistance, we provide comprehensive support for your building journey in Melbourne&apos;s Western suburbs.
-                </MotionP>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <AnimatedButton asChild size="lg" className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-8 py-4 rounded-[15px] font-semibold shadow-lg">
-                    <Link href="/contact">
-                      Book Free Consultation
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                  </AnimatedButton>
-                  <AnimatedButton asChild variant="outline" size="lg" className="border-2 border-gtb-navy/20 text-gtb-navy hover:bg-gtb-navy hover:text-white hover:border-gtb-navy text-lg px-8 py-4 rounded-[15px] font-medium">
-                    <Link href="/packages">View Packages</Link>
-                  </AnimatedButton>
-                </div>
+              <div className="text-center mb-12">
+                <h1 className="text-4xl md:text-5xl font-bold text-gtb-navy mb-6">
+                  Our Construction Services
+                </h1>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  TOFA Group delivers comprehensive construction services across Australia. From planning to completion, we manage every stage of your project.
+                </p>
               </div>
             </RevealOnScroll>
           </div>
         </section>
 
-        <PartnerLogos />
-
         {/* Services Grid */}
-        <section className="section-padding bg-white">
+        <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <RevealOnScroll>
-              <div className="text-center mb-16">
-                <MotionH2 className="text-4xl lg:text-5xl font-bold text-gtb-navy mb-4">
-                  How We Help You Build
-                </MotionH2>
-                <MotionP className="text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                  Our comprehensive services cover every aspect of your building journey, from initial planning to final settlement.
-                </MotionP>
-              </div>
-            </RevealOnScroll>
-            
-            <StaggerReveal staggerDelay={0.1}>
+            <StaggerReveal>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.map((service, index) => (
                   <MotionDiv key={index} variants={staggerItem}>
-                    <ServiceCard
-                      title={service.title}
-                      description={service.description}
-                      features={service.features}
-                      href={service.href}
-                      ctaText={service.ctaText}
-                      icon={service.icon}
-                    />
+                    <ServiceCard {...service} />
                   </MotionDiv>
                 ))}
               </div>
@@ -203,41 +209,36 @@ export default function Services() {
           </div>
         </section>
 
-        {/* Process Section */}
-        <section className="section-padding bg-gradient-to-b from-gray-50/50 to-white">
+        {/* Our Process */}
+        <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <RevealOnScroll>
-              <div className="text-center mb-16">
-                <MotionH2 className="text-4xl lg:text-5xl font-bold text-gtb-navy mb-4">
-                  Our Process
-                </MotionH2>
-                <MotionP className="text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                  A simple, step-by-step approach to building your dream home or investment property.
-                </MotionP>
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-gtb-navy mb-4">
+                  Our Construction Process
+                </h2>
+                <p className="text-gray-600 max-w-2xl mx-auto">
+                  A proven approach to delivering quality construction projects
+                </p>
               </div>
             </RevealOnScroll>
-            
-            <StaggerReveal staggerDelay={0.1}>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {processSteps.map((step, index) => (
+
+            <StaggerReveal>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {process.map((item, index) => (
                   <MotionDiv key={index} variants={staggerItem}>
-                    <Card className="text-center p-6 border-gray-200/60">
-                      <motion.div 
-                        className="bg-gradient-to-br from-gtb-aero to-gtb-aero-light text-white w-12 h-12 rounded-[15px] flex items-center justify-center text-lg font-bold mx-auto mb-4 shadow-md"
-                        animate={{ 
-                          rotate: [0, 3],
-                          scale: [1, 1.05, 1]
-                        }}
-                        transition={{ 
-                          rotate: { duration: 3, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
-                          scale: { duration: 3, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }
-                        }}
-                      >
-                        {step.step}
-                      </motion.div>
-                      <h3 className="text-xl font-bold text-gtb-navy mb-2">{step.title}</h3>
-                      <p className="text-gray-600 text-[15px] leading-relaxed">{step.description}</p>
-                    </Card>
+                    <div className="relative">
+                      <div className="bg-white rounded-[20px] p-6 shadow-md hover:shadow-lg transition-shadow h-full">
+                        <div className="w-12 h-12 bg-gtb-aero/10 rounded-full flex items-center justify-center mb-4">
+                          <span className="text-2xl font-bold text-gtb-aero">{item.step}</span>
+                        </div>
+                        <h3 className="text-xl font-bold text-gtb-navy mb-3">{item.title}</h3>
+                        <p className="text-gray-600">{item.description}</p>
+                      </div>
+                      {index < process.length - 1 && (
+                        <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gtb-aero/30 transform -translate-y-1/2" />
+                      )}
+                    </div>
                   </MotionDiv>
                 ))}
               </div>
@@ -245,110 +246,74 @@ export default function Services() {
           </div>
         </section>
 
-        {/* Why Choose Us */}
-        <section className="section-padding bg-white">
+        {/* Why Choose TOFA Group */}
+        <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <RevealOnScroll>
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div className="space-y-8">
-                  <MotionH2 className="text-4xl lg:text-5xl font-bold text-gtb-navy">
-                    Why Choose Our Services?
-                  </MotionH2>
-                  <div className="space-y-6">
-                    <div className="flex items-start space-x-4">
-                      <motion.div 
-                        className="bg-gradient-to-br from-gtb-aero/20 to-gtb-aero/8 p-2.5 rounded-[12px] border-2 border-gtb-aero/20 flex-shrink-0 shadow-md"
-                        whileHover={{ scale: 1.15, rotate: 5 }}
-                        animate={{ 
-                          y: [0, -3, 0],
-                          boxShadow: [
-                            "0 2px 4px rgba(107, 142, 35, 0.1)",
-                            "0 4px 8px rgba(107, 142, 35, 0.2)",
-                            "0 2px 4px rgba(107, 142, 35, 0.1)",
-                          ]
-                        }}
-                        transition={{ 
-                          y: { duration: 2.5, repeat: Infinity, ease: "easeInOut" },
-                          boxShadow: { duration: 2, repeat: Infinity },
-                          rotate: { duration: 0.6, type: "spring", stiffness: 400 }
-                        }}
-                      >
-                        <CheckCircle className="h-6 w-6 text-gtb-aero" />
-                      </motion.div>
-                      <div>
-                        <h3 className="text-xl font-bold text-gtb-navy mb-2">Expert Knowledge</h3>
-                        <p className="text-gray-600 text-[15px] leading-relaxed">15+ years of experience in Melbourne&apos;s building industry with deep knowledge of local builders and market conditions.</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="bg-gradient-to-br from-gtb-aero/15 to-gtb-aero/5 p-2.5 rounded-[12px] border border-gtb-aero/10 flex-shrink-0">
-                        <DollarSign className="h-6 w-6 text-gtb-aero" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-gtb-navy mb-2">Save Money</h3>
-                        <p className="text-gray-600 text-[15px] leading-relaxed">Access to exclusive builder deals and bulk pricing that typically saves our clients $20,000-$50,000 per project.</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="bg-gradient-to-br from-gtb-aero/15 to-gtb-aero/5 p-2.5 rounded-[12px] border border-gtb-aero/10 flex-shrink-0">
-                        <Users className="h-6 w-6 text-gtb-aero" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-gtb-navy mb-2">Personal Service</h3>
-                        <p className="text-gray-600 text-[15px] leading-relaxed">Dedicated support throughout your entire journey with regular check-ins and proactive problem-solving.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              
-                <div className="space-y-5">
-                  <Card className="p-8 bg-gtb-navy text-white border-0 rounded-[15px]">
-                    <div className="text-center space-y-4">
-                      <div className="text-4xl font-bold">500+</div>
-                      <div className="text-gray-300 text-[15px]">Successful Projects</div>
-                    </div>
-                  </Card>
-                  <div className="grid grid-cols-2 gap-4">
-                    <Card className="p-6 text-center bg-gtb-navy text-white border-0 rounded-[15px]">
-                      <div className="text-2xl font-bold">$2M+</div>
-                      <div className="text-sm text-gray-300 mt-1">Client Savings</div>
-                    </Card>
-                    <Card className="p-6 text-center bg-gtb-navy text-white border-0 rounded-[15px]">
-                      <div className="text-2xl font-bold">15+</div>
-                      <div className="text-sm text-gray-300 mt-1">Partner Builders</div>
-                    </Card>
-                  </div>
-                </div>
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-gtb-navy mb-4">
+                  Why Choose TOFA Group
+                </h2>
+                <p className="text-gray-600 max-w-2xl mx-auto">
+                  Trusted construction delivery across Australia
+                </p>
               </div>
             </RevealOnScroll>
+
+            <StaggerReveal>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {whyChoose.map((item, index) => (
+                  <MotionDiv key={index} variants={staggerItem}>
+                    <Card className="text-center p-6 h-full hover:shadow-lg transition-shadow">
+                      <div className="flex justify-center mb-4">{item.icon}</div>
+                      <h3 className="text-xl font-bold text-gtb-navy mb-2">{item.title}</h3>
+                      <p className="text-gray-600">{item.description}</p>
+                    </Card>
+                  </MotionDiv>
+                ))}
+              </div>
+            </StaggerReveal>
           </div>
         </section>
 
         {/* Testimonials */}
-        <Testimonials />
-
-        {/* Contact CTA */}
-        <section className="section-padding bg-gtb-navy relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-gtb-navy via-gtb-navy to-gtb-navy-light/50"></div>
-          <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <RevealOnScroll>
-              <MotionH2 className="text-4xl lg:text-5xl font-bold text-white mb-5">
-                Ready to Get Started?
-              </MotionH2>
-              <MotionP className="text-lg lg:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto">
-                Book a free consultation to discuss your project and discover how we can help you save time and money.
-              </MotionP>
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-gtb-navy mb-4">
+                  Client Testimonials
+                </h2>
+                <p className="text-gray-600 max-w-2xl mx-auto">
+                  See what our clients say about their projects
+                </p>
+              </div>
+            </RevealOnScroll>
+            
+            <Testimonials />
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 bg-gradient-to-br from-gtb-navy to-gtb-navy/90 text-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <RevealOnScroll>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Start Your Construction Project?
+              </h2>
+              <p className="text-xl mb-8 text-white/90">
+                Contact TOFA Group today for a consultation on your residential or commercial construction needs
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <AnimatedButton asChild size="lg" className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-8 py-4 rounded-[15px] font-semibold shadow-lg">
-                  <Link href="/contact">
-                    <Calendar className="mr-2 h-5 w-5" />
-                    Book Free Consultation
+                <AnimatedButton asChild size="lg">
+                  <Link href="/contact" className="inline-flex items-center">
+                    Get Started
+                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </AnimatedButton>
-                <AnimatedButton asChild variant="outline" size="lg" className="border-2 border-white/30 text-white bg-white/10 hover:bg-white hover:text-gtb-navy backdrop-blur-sm text-lg px-8 py-4 rounded-[15px] font-medium">
-                  <Link href="tel:+61300000000">
-                    <Phone className="mr-2 h-5 w-5" />
-                    Call Now
+                <AnimatedButton asChild variant="outline" size="lg">
+                  <Link href="/build-now-pay-later" className="bg-white/10 border-white/20 text-white hover:bg-white hover:text-gtb-navy">
+                    Build Now, Pay Later
                   </Link>
                 </AnimatedButton>
               </div>

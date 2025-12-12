@@ -17,8 +17,8 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({
-  headline = "We Connect You With Builders & Help You Finance Your Property",
-  subline = "TofaGroup matches first-home buyers and investors with Australia's best builders in Melbourne's Western suburbs. Get exclusive deals and expert finance assistance.",
+  headline = "Building Quality Projects Across Australia",
+  subline = "TOFA Group delivers residential and commercial construction with confidence. From planning to completion, we manage every stage of your build to ensure quality, transparency, and on-time delivery.",
   showTrustIndicators = true
 }) => {
   return (
@@ -245,7 +245,7 @@ export const Hero: React.FC<HeroProps> = ({
               <div className="grid grid-cols-2 gap-4">
                 <Card className="p-6 text-center bg-white border-gray-200/60">
                   <h4 className="text-2xl font-bold text-gtb-navy">15+</h4>
-                  <p className="text-sm text-gray-600 font-medium mt-1">Partner Builders</p>
+                  <p className="text-sm text-gray-600 font-medium mt-1">Projects Delivered</p>
                 </Card>
                 <Card className="p-6 text-center bg-white border-gray-200/60">
                   <h4 className="text-2xl font-bold text-gtb-navy">$2M+</h4>

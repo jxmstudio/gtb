@@ -46,14 +46,14 @@ const contactInfo = [
   {
     icon: <Mail className="h-6 w-6 text-gtb-aero" />,
     title: "Email", 
-    details: "hello@georgethebroker.com.au",
+    details: "contact@tofagroup.com.au",
     description: "Send us your questions anytime"
   },
   {
     icon: <MapPin className="h-6 w-6 text-gtb-aero" />,
     title: "Location",
-    details: "Western Suburbs, Melbourne",
-    description: "Serving all Melbourne areas"
+    details: "Australia-wide",
+    description: "Delivering projects across Australia"
   },
   {
     icon: <Clock className="h-6 w-6 text-gtb-aero" />,
@@ -311,7 +311,7 @@ export default function Contact() {
                     </a>
                   </AnimatedButton>
                   <AnimatedButton asChild variant="outline" className="w-full border-gtb-aero text-gtb-aero hover:bg-gtb-aero hover:text-white">
-                    <a href="mailto:hello@georgethebroker.com.au">
+                    <a href="mailto:contact@tofagroup.com.au">
                       <Mail className="mr-2 h-4 w-4" />
                       Send Email
                     </a>
