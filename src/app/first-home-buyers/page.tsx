@@ -4,7 +4,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { RevealOnScroll, StaggerReveal } from '@/components/motion/Reveals';
 import { MotionDiv, MotionH2, MotionP, staggerContainer, staggerItem } from '@/components/motion/MotionPrimitives';
-import StickyHeader from '@/components/marketing/StickyHeader';
 import Testimonials from '@/components/marketing/Testimonials';
 import PartnerLogos from '@/components/marketing/PartnerLogos';
 import { AnimatedButton } from '@/components/motion/AnimatedButton';
@@ -98,7 +97,6 @@ export default function FirstHomeBuyers() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <StickyHeader />
       
       <main>
         {/* Hero Section */}

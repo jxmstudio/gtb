@@ -7,7 +7,6 @@ import { ServiceCard } from '@/components/ServiceCard';
 import { Card } from '@/components/ui/card';
 import { RevealOnScroll, StaggerReveal } from '@/components/motion/Reveals';
 import { MotionDiv, MotionH2, MotionP, staggerItem } from '@/components/motion/MotionPrimitives';
-import StickyHeader from '@/components/marketing/StickyHeader';
 import Testimonials from '@/components/marketing/Testimonials';
 import { AnimatedButton } from '@/components/motion/AnimatedButton';
 import Link from 'next/link';
@@ -159,7 +158,6 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <StickyHeader />
       
       <main>
         {/* Hero Section */}

@@ -10,7 +10,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Label } from '@/components/ui/label';
 import { RevealOnScroll } from '@/components/motion/Reveals';
 import { MotionH2, MotionP } from '@/components/motion/MotionPrimitives';
-import StickyHeader from '@/components/marketing/StickyHeader';
 import Testimonials from '@/components/marketing/Testimonials';
 import PartnerLogos from '@/components/marketing/PartnerLogos';
 import { AnimatedButton } from '@/components/motion/AnimatedButton';
@@ -112,7 +111,6 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <StickyHeader />
       
       <main>
         {/* Hero Section */}

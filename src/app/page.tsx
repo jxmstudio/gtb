@@ -10,7 +10,6 @@ import { RevealOnScroll, StaggerReveal } from '@/components/motion/Reveals';
 import { MotionDiv, MotionH2, MotionP, staggerItem } from '@/components/motion/MotionPrimitives';
 import TrustStrip from '@/components/marketing/TrustStrip';
 import PartnerLogos from '@/components/marketing/PartnerLogos';
-import StickyHeader from '@/components/marketing/StickyHeader';
 import Testimonials from '@/components/marketing/Testimonials';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -127,7 +126,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <StickyHeader />
       
       <main>
         {/* Hero Section */}
