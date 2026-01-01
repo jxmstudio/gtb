@@ -8,7 +8,6 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { RevealOnScroll, StaggerReveal } from '@/components/motion/Reveals';
 import { MotionDiv, MotionH2, MotionP, staggerItem } from '@/components/motion/MotionPrimitives';
-import TrustStrip from '@/components/marketing/TrustStrip';
 import PartnerLogos from '@/components/marketing/PartnerLogos';
 import Testimonials from '@/components/marketing/Testimonials';
 import { motion } from 'framer-motion';
@@ -130,7 +129,6 @@ export default function Home() {
       <main>
         {/* Hero Section */}
         <Hero />
-        <TrustStrip />
         <PartnerLogos />
         
         {/* How It Works Section */}
