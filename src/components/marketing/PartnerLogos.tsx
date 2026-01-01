@@ -58,6 +58,7 @@ export default function PartnerLogos() {
                 ease: "linear",
               },
             }}
+            suppressHydrationWarning
           >
             {duplicatedPartners.map((partner, index) => (
               <motion.div
@@ -67,13 +68,15 @@ export default function PartnerLogos() {
                   scale: 1.1,
                   transition: { type: "spring", stiffness: 300 }
                 }}
+                suppressHydrationWarning
               >
-                <div className="relative w-32 h-16 transition-all duration-300 opacity-80 group-hover:opacity-100">
+                <div className="relative w-32 h-16 transition-all duration-300 opacity-80 group-hover:opacity-100" suppressHydrationWarning>
                   <Image
                     src={partner.logo}
                     alt={`${partner.name} logo`}
                     fill
                     className="object-contain"
+                    suppressHydrationWarning
                   />
                 </div>
               </motion.div>
