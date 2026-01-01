@@ -68,13 +68,12 @@ export default function PartnerLogos() {
                   transition: { type: "spring", stiffness: 300 }
                 }}
               >
-                <div className="relative w-32 h-16 grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100">
+                <div className="relative w-32 h-16 transition-all duration-300 opacity-80 group-hover:opacity-100">
                   <Image
                     src={partner.logo}
                     alt={`${partner.name} logo`}
                     fill
                     className="object-contain"
-                    style={{ filter: 'brightness(0) invert(1)' }}
                   />
                 </div>
               </motion.div>
