@@ -74,7 +74,7 @@ export const Footer: React.FC = () => {
             >
               <Logo size="lg" variant="inverted" />
             </motion.div>
-            <p className="text-gray-300 text-sm leading-relaxed">
+            <p className="text-gray-200 text-sm leading-relaxed">
               TOFA Group delivers high-quality residential and commercial construction projects across Australia.
             </p>
             <motion.p 
@@ -92,7 +92,7 @@ export const Footer: React.FC = () => {
             </motion.p>
             <div className="space-y-2">
               <motion.div 
-                className="flex items-center space-x-2 text-sm text-gray-300 group"
+                className="flex items-center space-x-2 text-sm text-gray-200 group"
                 whileHover={{ x: 4, color: "#ffffff" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -100,23 +100,23 @@ export const Footer: React.FC = () => {
                 <span>Australia-wide</span>
               </motion.div>
               <motion.div 
-                className="flex items-center space-x-2 text-sm text-gray-300 group"
+                className="flex items-center space-x-2 text-sm text-gray-200 group"
                 whileHover={{ x: 4 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <Phone className="h-4 w-4 flex-shrink-0 text-gtb-aero" />
-                <a href="tel:+61300000000" className="hover:text-white transition-colors duration-200">
-                  +61 3 0000 0000
+                <a href="tel:1300000685" className="hover:text-white transition-colors duration-200">
+                  1300 000 685
                 </a>
               </motion.div>
               <motion.div 
-                className="flex items-center space-x-2 text-sm text-gray-300 group"
+                className="flex items-center space-x-2 text-sm text-gray-200 group"
                 whileHover={{ x: 4 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <Mail className="h-4 w-4 flex-shrink-0 text-gtb-aero" />
-                <a href="mailto:contact@tofagroup.com.au" className="hover:text-white transition-colors duration-200">
-                  contact@tofagroup.com.au
+                <a href="mailto:info@tofagroup.com.au" className="hover:text-white transition-colors duration-200">
+                  info@tofagroup.com.au
                 </a>
               </motion.div>
             </div>
@@ -142,9 +142,9 @@ export const Footer: React.FC = () => {
                 >
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-gtb-aero text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
+                    className="text-gray-200 hover:text-gtb-aero text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-gray-500 rounded-full group-hover:bg-gtb-aero transition-colors duration-200"></span>
+                    <span className="w-1 h-1 bg-gray-400 rounded-full group-hover:bg-gtb-aero transition-colors duration-200"></span>
                     {link.name}
                   </Link>
                 </motion.li>
@@ -172,9 +172,9 @@ export const Footer: React.FC = () => {
                 >
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-gtb-aero text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
+                    className="text-gray-200 hover:text-gtb-aero text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-gray-500 rounded-full group-hover:bg-gtb-aero transition-colors duration-200"></span>
+                    <span className="w-1 h-1 bg-gray-400 rounded-full group-hover:bg-gtb-aero transition-colors duration-200"></span>
                     {link.name}
                   </Link>
                 </motion.li>
@@ -202,9 +202,9 @@ export const Footer: React.FC = () => {
                 >
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-gtb-aero text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
+                    className="text-gray-200 hover:text-gtb-aero text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-gray-500 rounded-full group-hover:bg-gtb-aero transition-colors duration-200"></span>
+                    <span className="w-1 h-1 bg-gray-400 rounded-full group-hover:bg-gtb-aero transition-colors duration-200"></span>
                     {link.name}
                   </Link>
                 </motion.li>
@@ -224,9 +224,9 @@ export const Footer: React.FC = () => {
                 >
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-gtb-aero text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
+                    className="text-gray-200 hover:text-gtb-aero text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-gray-500 rounded-full group-hover:bg-gtb-aero transition-colors duration-200"></span>
+                    <span className="w-1 h-1 bg-gray-400 rounded-full group-hover:bg-gtb-aero transition-colors duration-200"></span>
                     {link.name}
                   </Link>
                 </motion.li>
@@ -247,7 +247,7 @@ export const Footer: React.FC = () => {
             <div className="flex space-x-6">
               <motion.a
                 href="#"
-                className="text-gray-300 hover:text-gtb-aero transition-colors duration-200 p-2 rounded-lg hover:bg-white/5"
+                className="text-gray-200 hover:text-gtb-aero transition-colors duration-200 p-2 rounded-lg hover:bg-white/5"
                 aria-label="Facebook"
                 whileHover={{ scale: 1.2, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
@@ -256,7 +256,7 @@ export const Footer: React.FC = () => {
               </motion.a>
               <motion.a
                 href="#"
-                className="text-gray-300 hover:text-gtb-aero transition-colors duration-200 p-2 rounded-lg hover:bg-white/5"
+                className="text-gray-200 hover:text-gtb-aero transition-colors duration-200 p-2 rounded-lg hover:bg-white/5"
                 aria-label="Instagram"
                 whileHover={{ scale: 1.2, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
@@ -265,7 +265,7 @@ export const Footer: React.FC = () => {
               </motion.a>
               <motion.a
                 href="#"
-                className="text-gray-300 hover:text-gtb-aero transition-colors duration-200 p-2 rounded-lg hover:bg-white/5"
+                className="text-gray-200 hover:text-gtb-aero transition-colors duration-200 p-2 rounded-lg hover:bg-white/5"
                 aria-label="LinkedIn"
                 whileHover={{ scale: 1.2, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
@@ -273,12 +273,9 @@ export const Footer: React.FC = () => {
                 <Linkedin className="h-5 w-5" />
               </motion.a>
             </div>
-            <div className="text-sm text-gray-300 text-center">
+            <div className="text-sm text-white text-center">
               <p className="font-medium">
                 &copy; {new Date().getFullYear()} TOFA Group. All rights reserved.
-              </p>
-              <p className="mt-1 text-gray-400">
-                ABN: XX XXX XXX XXX
               </p>
             </div>
           </div>
@@ -286,8 +283,8 @@ export const Footer: React.FC = () => {
 
         {/* Disclaimer */}
         <div className="mt-8 pt-8 border-t border-white/10">
-          <p className="text-xs text-gray-400 leading-relaxed text-center max-w-4xl mx-auto">
-            <strong>Disclaimer:</strong> All projects are subject to contract and are delivered in accordance with Australian building standards and regulations. Information provided is general in nature and should not be considered financial or legal advice. TOFA Group recommends consulting with appropriate professionals for advice specific to your circumstances.
+          <p className="text-xs text-gray-300 leading-relaxed text-center max-w-4xl mx-auto">
+            <strong className="text-white">Disclaimer:</strong> All projects are subject to contract and are delivered in accordance with Australian building standards and regulations. Information provided is general in nature and should not be considered financial or legal advice. TOFA Group recommends consulting with appropriate professionals for advice specific to your circumstances.
           </p>
         </div>
       </div>
