@@ -35,243 +35,129 @@ const footerLinks = {
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-gradient-to-br from-gtb-navy via-gtb-navy to-gtb-navy-light text-white relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 blueprint-grid"></div>
-      </div>
-      
-      {/* Gradient overlay */}
-      <motion.div
-        className="absolute inset-0 pointer-events-none"
-        animate={{
-          background: [
-            "radial-gradient(circle at 20% 80%, rgba(107, 142, 35, 0.1), transparent)",
-            "radial-gradient(circle at 80% 80%, rgba(107, 142, 35, 0.15), transparent)",
-            "radial-gradient(circle at 20% 80%, rgba(107, 142, 35, 0.1), transparent)",
-          ]
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="bg-gtb-navy text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <motion.div 
-            className="space-y-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <Logo size="lg" variant="inverted" />
-            </motion.div>
-            <p className="text-gray-200 text-sm leading-relaxed">
+          <div className="space-y-4">
+            <Logo size="lg" variant="inverted" />
+            <p className="text-white text-sm leading-relaxed">
               TOFA Group delivers high-quality residential and commercial construction projects across Australia.
             </p>
-            <motion.p 
-              className="text-gtb-aero text-sm font-semibold flex items-center gap-2"
-              animate={{ 
-                opacity: [0.8, 1, 0.8]
-              }}
-              transition={{ 
-                duration: 3,
-                repeat: Infinity
-              }}
-            >
-              <span className="w-2 h-2 bg-gtb-aero rounded-full animate-pulse"></span>
+            <p className="text-gtb-aero text-sm font-semibold">
               Delivering projects Australia-wide
-            </motion.p>
+            </p>
             <div className="space-y-2">
-              <motion.div 
-                className="flex items-center space-x-2 text-sm text-gray-200 group"
-                whileHover={{ x: 4, color: "#ffffff" }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
+              <div className="flex items-center space-x-2 text-sm text-white">
                 <MapPin className="h-4 w-4 flex-shrink-0 text-gtb-aero" />
                 <span>Australia-wide</span>
-              </motion.div>
-              <motion.div 
-                className="flex items-center space-x-2 text-sm text-gray-200 group"
-                whileHover={{ x: 4 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-white">
                 <Phone className="h-4 w-4 flex-shrink-0 text-gtb-aero" />
-                <a href="tel:1300000685" className="hover:text-white transition-colors duration-200">
+                <a href="tel:1300000685" className="hover:text-gtb-aero transition-colors duration-200">
                   1300 000 685
                 </a>
-              </motion.div>
-              <motion.div 
-                className="flex items-center space-x-2 text-sm text-gray-200 group"
-                whileHover={{ x: 4 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-white">
                 <Mail className="h-4 w-4 flex-shrink-0 text-gtb-aero" />
-                <a href="mailto:info@tofagroup.com.au" className="hover:text-white transition-colors duration-200">
+                <a href="mailto:info@tofagroup.com.au" className="hover:text-gtb-aero transition-colors duration-200">
                   info@tofagroup.com.au
                 </a>
-              </motion.div>
+              </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Services */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
+          <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Services</h3>
             <ul className="space-y-2">
-              {footerLinks.services.map((link, index) => (
-                <motion.li 
-                  key={link.name}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  whileHover={{ x: 4 }}
-                >
+              {footerLinks.services.map((link) => (
+                <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-200 hover:text-gtb-aero text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
+                    className="text-white hover:text-gtb-aero text-sm transition-colors duration-200"
                   >
-                    <span className="w-1 h-1 bg-gray-400 rounded-full group-hover:bg-gtb-aero transition-colors duration-200"></span>
                     {link.name}
                   </Link>
-                </motion.li>
+                </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Company */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
+          <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
             <ul className="space-y-2">
-              {footerLinks.company.map((link, index) => (
-                <motion.li 
-                  key={link.name}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  whileHover={{ x: 4 }}
-                >
+              {footerLinks.company.map((link) => (
+                <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-200 hover:text-gtb-aero text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
+                    className="text-white hover:text-gtb-aero text-sm transition-colors duration-200"
                   >
-                    <span className="w-1 h-1 bg-gray-400 rounded-full group-hover:bg-gtb-aero transition-colors duration-200"></span>
                     {link.name}
                   </Link>
-                </motion.li>
+                </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Resources & Legal */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
+          <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Resources</h3>
             <ul className="space-y-2 mb-6">
-              {footerLinks.resources.map((link, index) => (
-                <motion.li 
-                  key={link.name}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  whileHover={{ x: 4 }}
-                >
+              {footerLinks.resources.map((link) => (
+                <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-200 hover:text-gtb-aero text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
+                    className="text-white hover:text-gtb-aero text-sm transition-colors duration-200"
                   >
-                    <span className="w-1 h-1 bg-gray-400 rounded-full group-hover:bg-gtb-aero transition-colors duration-200"></span>
                     {link.name}
                   </Link>
-                </motion.li>
+                </li>
               ))}
             </ul>
 
             <h3 className="text-lg font-semibold mb-4 text-white">Legal</h3>
             <ul className="space-y-2">
-              {footerLinks.legal.map((link, index) => (
-                <motion.li 
-                  key={link.name}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  whileHover={{ x: 4 }}
-                >
+              {footerLinks.legal.map((link) => (
+                <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-200 hover:text-gtb-aero text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
+                    className="text-white hover:text-gtb-aero text-sm transition-colors duration-200"
                   >
-                    <span className="w-1 h-1 bg-gray-400 rounded-full group-hover:bg-gtb-aero transition-colors duration-200"></span>
                     {link.name}
                   </Link>
-                </motion.li>
+                </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
         </div>
 
         {/* Social Links */}
-        <motion.div 
-          className="mt-12 pt-8 border-t border-white/10"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
+        <div className="mt-12 pt-8 border-t border-white/20">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex space-x-6">
-              <motion.a
+              <a
                 href="#"
-                className="text-gray-200 hover:text-gtb-aero transition-colors duration-200 p-2 rounded-lg hover:bg-white/5"
+                className="text-white hover:text-gtb-aero transition-colors duration-200"
                 aria-label="Facebook"
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                whileTap={{ scale: 0.9 }}
               >
                 <Facebook className="h-5 w-5" />
-              </motion.a>
-              <motion.a
+              </a>
+              <a
                 href="#"
-                className="text-gray-200 hover:text-gtb-aero transition-colors duration-200 p-2 rounded-lg hover:bg-white/5"
+                className="text-white hover:text-gtb-aero transition-colors duration-200"
                 aria-label="Instagram"
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                whileTap={{ scale: 0.9 }}
               >
                 <Instagram className="h-5 w-5" />
-              </motion.a>
-              <motion.a
+              </a>
+              <a
                 href="#"
-                className="text-gray-200 hover:text-gtb-aero transition-colors duration-200 p-2 rounded-lg hover:bg-white/5"
+                className="text-white hover:text-gtb-aero transition-colors duration-200"
                 aria-label="LinkedIn"
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                whileTap={{ scale: 0.9 }}
               >
                 <Linkedin className="h-5 w-5" />
-              </motion.a>
+              </a>
             </div>
             <div className="text-sm text-white text-center">
               <p className="font-medium">
@@ -279,12 +165,12 @@ export const Footer: React.FC = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Disclaimer */}
-        <div className="mt-8 pt-8 border-t border-white/10">
-          <p className="text-xs text-gray-300 leading-relaxed text-center max-w-4xl mx-auto">
-            <strong className="text-white">Disclaimer:</strong> All projects are subject to contract and are delivered in accordance with Australian building standards and regulations. Information provided is general in nature and should not be considered financial or legal advice. TOFA Group recommends consulting with appropriate professionals for advice specific to your circumstances.
+        <div className="mt-8 pt-8 border-t border-white/20">
+          <p className="text-sm text-white leading-relaxed text-center max-w-4xl mx-auto">
+            <strong>Disclaimer:</strong> All projects are subject to contract and are delivered in accordance with Australian building standards and regulations. Information provided is general in nature and should not be considered financial or legal advice. TOFA Group recommends consulting with appropriate professionals for advice specific to your circumstances.
           </p>
         </div>
       </div>
