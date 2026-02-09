@@ -3,113 +3,20 @@
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { Footer } from '@/components/Footer';
-import { ServiceCard } from '@/components/ServiceCard';
 import PartnerLogos from '@/components/marketing/PartnerLogos';
-import Testimonials from '@/components/marketing/Testimonials';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
-  DollarSign, 
-  Building2, 
+  ArrowRight,
   CheckCircle,
-  MessageCircle,
-  Wrench
+  Building2,
+  Shield,
+  Clock,
+  Award,
+  Phone,
+  Mail,
+  MapPin
 } from 'lucide-react';
-
-const howItWorks = [
-  {
-    step: "1",
-    title: "Plan",
-    description: "Initial consultation to understand your vision, budget, and project requirements.",
-    icon: <MessageCircle className="h-8 w-8 text-gtb-aero" />
-  },
-  {
-    step: "2", 
-    title: "Build",
-    description: "We manage the full construction lifecycle with quality oversight and compliance.",
-    icon: <Wrench className="h-8 w-8 text-gtb-aero" />
-  },
-  {
-    step: "3",
-    title: "Deliver",
-    description: "On-time project completion with quality assurance and final handover.",
-    icon: <CheckCircle className="h-8 w-8 text-gtb-aero" />
-  }
-];
-
-const benefits = [
-  {
-    title: "Licensed & Insured",
-    description: "Fully licensed construction with comprehensive insurance coverage and warranty protection.",
-    icon: <CheckCircle className="h-8 w-8 text-gtb-aero" />
-  },
-  {
-    title: "Flexible Financing", 
-    description: "Build Now, Pay Later options available for eligible clients to help manage cash flow.",
-    icon: <DollarSign className="h-8 w-8 text-gtb-aero" />
-  },
-  {
-    title: "Full Project Management",
-    description: "Complete oversight from initial consultation through to final handover and completion.",
-    icon: <Wrench className="h-8 w-8 text-gtb-aero" />
-  },
-  {
-    title: "Quality Assurance",
-    description: "Rigorous quality control processes ensure every project meets building standards.",
-    icon: <Building2 className="h-8 w-8 text-gtb-aero" />
-  },
-  {
-    title: "Transparent Communication",
-    description: "Regular updates and clear documentation throughout your construction journey.",
-    icon: <MessageCircle className="h-8 w-8 text-gtb-aero" />
-  },
-  {
-    title: "On-Schedule Delivery",
-    description: "Proven track record of completing projects on time with minimal delays.",
-    icon: <CheckCircle className="h-8 w-8 text-gtb-aero" />
-  }
-];
-
-const services = [
-  {
-    title: "Residential Construction",
-    description: "Quality residential construction managed from planning through to completion with full project oversight.",
-    features: [
-      "Custom home design & build",
-      "Multi-dwelling developments",
-      "Quality assurance guarantee",
-      "Full project documentation"
-    ],
-    href: "/services",
-    ctaText: "View residential services",
-    icon: <Building2 className="h-6 w-6 text-gtb-aero" />
-  },
-  {
-    title: "Commercial Projects",
-    description: "Professional commercial construction services for businesses across Australia with proven project delivery.",
-    features: [
-      "Retail & office spaces",
-      "Industrial facilities",
-      "Project compliance management",
-      "Timeline & budget control"
-    ],
-    href: "/services",
-    ctaText: "View commercial services",
-    icon: <Building2 className="h-6 w-6 text-gtb-aero" />
-  },
-  {
-    title: "Build Now, Pay Later",
-    description: "Flexible construction payment solutions allowing you to commence your project now and manage payments over time.",
-    features: [
-      "No upfront lump sum required",
-      "Flexible payment structures",
-      "Suitable for all project types",
-      "Subject to eligibility"
-    ],
-    href: "/build-now-pay-later",
-    ctaText: "Learn about financing",
-    icon: <DollarSign className="h-6 w-6 text-gtb-aero" />
-  }
-];
 
 export default function Home() {
   return (
@@ -119,130 +26,339 @@ export default function Home() {
       <main>
         {/* Hero Section */}
         <Hero />
+        
+        {/* Construction Excellence Partners */}
         <PartnerLogos />
         
-        {/* How It Works Section */}
-        <section className="section-padding bg-white">
+        {/* Featured Project Showcase */}
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gtb-navy mb-4">
-                Our Construction Process
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Three clear stages from concept to completion
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8 relative">
-              {/* Connecting line for desktop */}
-              <div className="hidden md:block absolute top-14 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gtb-aero/30 to-transparent" style={{zIndex: 0}}></div>
-              
-              {howItWorks.map((step, index) => (
-                <div key={index} className="relative">
-                  <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-gtb-aero/50 transition-all duration-300 hover:shadow-xl relative z-10">
-                    {/* Step number badge */}
-                    <div className="absolute -top-4 left-8 bg-gtb-navy text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg shadow-md">
-                      {step.step}
-                    </div>
-                    
-                    <div className="mt-4 space-y-4">
-                      <div className="flex justify-center">
-                        <div className="bg-gtb-aero/10 p-4 rounded-xl">
-                          {step.icon}
-                        </div>
-                      </div>
-                      <h3 className="text-2xl font-bold text-gtb-navy text-center">{step.title}</h3>
-                      <p className="text-gray-600 leading-relaxed text-center">{step.description}</p>
-                    </div>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Image Side */}
+              <div className="relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-gtb-navy/80 to-gtb-navy/40 z-10"></div>
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80')] bg-cover bg-center"></div>
+                <div className="absolute bottom-8 left-8 z-20 text-white">
+                  <div className="bg-gtb-aero text-white px-4 py-2 rounded-lg inline-block mb-4 font-bold">
+                    RESIDENTIAL CONSTRUCTION
                   </div>
+                  <h3 className="text-3xl font-bold mb-2">Modern Family Homes</h3>
+                  <p className="text-white/90">Quality builds across Australia</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="section-padding bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gtb-navy mb-4">
-                Why Build with TOFA Group
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Experience the difference of working with a construction partner committed to excellence
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-gtb-aero/10 p-3 rounded-lg flex-shrink-0">
-                      {benefit.icon}
+              </div>
+              
+              {/* Content Side */}
+              <div>
+                <div className="text-sm font-bold text-gtb-aero mb-4 tracking-wider uppercase">Our Expertise</div>
+                <h2 className="text-4xl lg:text-5xl font-bold text-gtb-navy mb-6 leading-tight">
+                  Building Excellence Across Australia
+                </h2>
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                  TOFA Group delivers comprehensive construction solutions for residential and commercial projects. 
+                  From initial consultation to final handover, we manage every aspect of your build with unwavering 
+                  commitment to quality and timeline delivery.
+                </p>
+                
+                <div className="grid sm:grid-cols-2 gap-6 mb-10">
+                  <div className="flex items-start space-x-3">
+                    <div className="bg-gtb-aero/10 p-2 rounded-lg flex-shrink-0">
+                      <Shield className="h-6 w-6 text-gtb-aero" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-gtb-navy mb-2">{benefit.title}</h3>
-                      <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+                      <h4 className="font-bold text-gtb-navy mb-1">Licensed & Insured</h4>
+                      <p className="text-sm text-gray-600">Full compliance and warranty coverage</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="bg-gtb-aero/10 p-2 rounded-lg flex-shrink-0">
+                      <Clock className="h-6 w-6 text-gtb-aero" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gtb-navy mb-1">On-Time Delivery</h4>
+                      <p className="text-sm text-gray-600">Proven track record of completion</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="bg-gtb-aero/10 p-2 rounded-lg flex-shrink-0">
+                      <Award className="h-6 w-6 text-gtb-aero" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gtb-navy mb-1">Quality Assured</h4>
+                      <p className="text-sm text-gray-600">Rigorous standards and inspections</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="bg-gtb-aero/10 p-2 rounded-lg flex-shrink-0">
+                      <Building2 className="h-6 w-6 text-gtb-aero" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gtb-navy mb-1">Full Project Management</h4>
+                      <p className="text-sm text-gray-600">End-to-end construction oversight</p>
                     </div>
                   </div>
                 </div>
-              ))}
+                
+                <Link 
+                  href="/projects"
+                  className="inline-flex items-center bg-gtb-navy hover:bg-gtb-navy-light text-white px-8 py-4 rounded-lg font-semibold transition-colors group"
+                >
+                  View Our Projects
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Services Section */}
-        <section className="section-padding bg-white">
+        {/* Services Grid - Modern Layout */}
+        <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gtb-navy mb-4">
-                Our Services
+              <div className="text-sm font-bold text-gtb-aero mb-4 tracking-wider uppercase">What We Do</div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-gtb-navy mb-6">
+                Construction Services
               </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Complete construction solutions tailored to your project needs
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Comprehensive construction solutions tailored to your project requirements
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <ServiceCard
-                  key={index}
-                  title={service.title}
-                  description={service.description}
-                  features={service.features}
-                  href={service.href}
-                  ctaText={service.ctaText}
-                  icon={service.icon}
-                />
-              ))}
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Residential Construction */}
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group">
+                <div className="h-56 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80')] bg-cover bg-center group-hover:scale-110 transition-transform duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-gtb-navy/90 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <div className="bg-gtb-aero text-white px-3 py-1 rounded text-xs font-bold inline-block mb-2">RESIDENTIAL</div>
+                    <h3 className="text-2xl font-bold">Custom Homes</h3>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex items-center text-gray-700">
+                      <CheckCircle className="h-5 w-5 text-gtb-aero mr-3 flex-shrink-0" />
+                      <span>Design & Build Services</span>
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <CheckCircle className="h-5 w-5 text-gtb-aero mr-3 flex-shrink-0" />
+                      <span>Multi-Dwelling Developments</span>
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <CheckCircle className="h-5 w-5 text-gtb-aero mr-3 flex-shrink-0" />
+                      <span>Renovations & Extensions</span>
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <CheckCircle className="h-5 w-5 text-gtb-aero mr-3 flex-shrink-0" />
+                      <span>Full Compliance Management</span>
+                    </li>
+                  </ul>
+                  <Link 
+                    href="/services"
+                    className="text-gtb-aero font-semibold flex items-center group/link hover:text-gtb-navy transition-colors"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Commercial Construction */}
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group">
+                <div className="h-56 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80')] bg-cover bg-center group-hover:scale-110 transition-transform duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-gtb-navy/90 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <div className="bg-gtb-aero text-white px-3 py-1 rounded text-xs font-bold inline-block mb-2">COMMERCIAL</div>
+                    <h3 className="text-2xl font-bold">Business Projects</h3>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex items-center text-gray-700">
+                      <CheckCircle className="h-5 w-5 text-gtb-aero mr-3 flex-shrink-0" />
+                      <span>Office & Retail Spaces</span>
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <CheckCircle className="h-5 w-5 text-gtb-aero mr-3 flex-shrink-0" />
+                      <span>Industrial Facilities</span>
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <CheckCircle className="h-5 w-5 text-gtb-aero mr-3 flex-shrink-0" />
+                      <span>Fit-Outs & Refurbishments</span>
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <CheckCircle className="h-5 w-5 text-gtb-aero mr-3 flex-shrink-0" />
+                      <span>Timeline & Budget Control</span>
+                    </li>
+                  </ul>
+                  <Link 
+                    href="/services"
+                    className="text-gtb-aero font-semibold flex items-center group/link hover:text-gtb-navy transition-colors"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Build Now, Pay Later */}
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group">
+                <div className="h-56 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=80')] bg-cover bg-center group-hover:scale-110 transition-transform duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-gtb-navy/90 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <div className="bg-gtb-aero text-white px-3 py-1 rounded text-xs font-bold inline-block mb-2">FINANCING</div>
+                    <h3 className="text-2xl font-bold">Flexible Payments</h3>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex items-center text-gray-700">
+                      <CheckCircle className="h-5 w-5 text-gtb-aero mr-3 flex-shrink-0" />
+                      <span>Build Now, Pay Later Options</span>
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <CheckCircle className="h-5 w-5 text-gtb-aero mr-3 flex-shrink-0" />
+                      <span>Flexible Payment Structures</span>
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <CheckCircle className="h-5 w-5 text-gtb-aero mr-3 flex-shrink-0" />
+                      <span>Subject to Eligibility</span>
+                    </li>
+                    <li className="flex items-center text-gray-700">
+                      <CheckCircle className="h-5 w-5 text-gtb-aero mr-3 flex-shrink-0" />
+                      <span>All Project Types Welcome</span>
+                    </li>
+                  </ul>
+                  <Link 
+                    href="/build-now-pay-later"
+                    className="text-gtb-aero font-semibold flex items-center group/link hover:text-gtb-navy transition-colors"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <Testimonials />
+        {/* Stats Banner */}
+        <section className="py-16 bg-gtb-navy text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-5xl font-bold text-gtb-aero mb-2">500+</div>
+                <div className="text-white/80">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-5xl font-bold text-gtb-aero mb-2">15+</div>
+                <div className="text-white/80">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-5xl font-bold text-gtb-aero mb-2">$75M+</div>
+                <div className="text-white/80">Projects Delivered</div>
+              </div>
+              <div className="text-center">
+                <div className="text-5xl font-bold text-gtb-aero mb-2">98%</div>
+                <div className="text-white/80">Client Satisfaction</div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        {/* Final CTA Section */}
-        <section className="section-padding bg-gtb-navy">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        {/* Testimonials - Clean Modern Design */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <div className="text-sm font-bold text-gtb-aero mb-4 tracking-wider uppercase">Client Feedback</div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-gtb-navy mb-6">
+                Trusted by Australians Nationwide
+              </h2>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-gray-50 rounded-xl p-8 border-l-4 border-gtb-aero">
+                <div className="mb-6">
+                  <svg className="h-8 w-8 text-gtb-aero mb-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                </div>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  TOFA Group delivered our residential project on time and within budget. The quality exceeded our expectations and the team was professional throughout.
+                </p>
+                <div>
+                  <div className="font-bold text-gtb-navy">Sarah & Michael Chen</div>
+                  <div className="text-sm text-gray-600">Melbourne, VIC</div>
+                  <div className="text-xs text-gtb-aero font-medium mt-1">Custom 4BR Family Home</div>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-8 border-l-4 border-gtb-aero">
+                <div className="mb-6">
+                  <svg className="h-8 w-8 text-gtb-aero mb-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                </div>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Outstanding construction management from start to finish. Every stage was completed to the highest standard with excellent communication throughout.
+                </p>
+                <div>
+                  <div className="font-bold text-gtb-navy">David Rodriguez</div>
+                  <div className="text-sm text-gray-600">Sydney, NSW</div>
+                  <div className="text-xs text-gtb-aero font-medium mt-1">Commercial Renovation</div>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-8 border-l-4 border-gtb-aero">
+                <div className="mb-6">
+                  <svg className="h-8 w-8 text-gtb-aero mb-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                </div>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  The Build Now, Pay Later option made our dream home possible. Professional service from consultation through to handover.
+                </p>
+                <div>
+                  <div className="font-bold text-gtb-navy">Emma Thompson</div>
+                  <div className="text-sm text-gray-600">Brisbane, QLD</div>
+                  <div className="text-xs text-gtb-aero font-medium mt-1">New Residential Build</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section - Bold & Direct */}
+        <section className="py-20 bg-gradient-to-br from-gtb-navy to-gtb-navy-light relative overflow-hidden">
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=80')] bg-cover bg-center"></div>
+          </div>
+          <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Build Your Dream Project?
+              Ready to Start Your Build?
             </h2>
-            <p className="text-lg text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto">
-              Let's discuss your construction project and how TOFA Group can bring your vision to life
+            <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+              Get a free consultation and discover how TOFA Group can bring your construction project to life
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
-                className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-10 py-4 rounded-lg font-semibold shadow-lg transition-all duration-200"
+                className="bg-gtb-aero hover:bg-gtb-aero-light text-white px-10 py-5 rounded-lg text-lg font-bold shadow-xl transition-colors inline-flex items-center justify-center group"
               >
                 Book Free Consultation
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
-                href="/projects"
-                className="border-2 border-white/40 text-white bg-white/10 hover:bg-white hover:text-gtb-navy backdrop-blur-sm text-lg px-10 py-4 rounded-lg font-medium transition-all duration-200"
+              <Link 
+                href="tel:1300000685"
+                className="bg-white text-gtb-navy hover:bg-gray-100 px-10 py-5 rounded-lg text-lg font-bold shadow-xl transition-colors inline-flex items-center justify-center"
               >
-                View Our Projects
+                <Phone className="mr-2 h-5 w-5" />
+                1300 000 685
               </Link>
             </div>
           </div>
