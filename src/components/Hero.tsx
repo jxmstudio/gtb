@@ -142,69 +142,18 @@ export const Hero: React.FC<HeroProps> = ({
             {/* Trust Indicators */}
             {showTrustIndicators && (
               <MotionDiv className="space-y-3 pt-2" variants={staggerItem}>
-                <motion.div 
-                  className="flex items-center space-x-3 text-sm text-gray-700"
-                  whileHover={{ x: 4 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <motion.div
-                    animate={{ 
-                      scale: [1, 1.2, 1],
-                      rotate: [0, 5]
-                    }}
-                    transition={{ 
-                      duration: 2,
-                      repeat: Infinity,
-                      repeatType: "reverse",
-                      delay: 0
-                    }}
-                  >
-                    <CheckCircle className="h-5 w-5 text-gtb-aero flex-shrink-0" />
-                  </motion.div>
-                  <span>No obligation consultation</span>
-                </motion.div>
-                <motion.div 
-                  className="flex items-center space-x-3 text-sm text-gray-700"
-                  whileHover={{ x: 4 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <motion.div
-                    animate={{ 
-                      scale: [1, 1.2, 1],
-                      rotate: [0, 5]
-                    }}
-                    transition={{ 
-                      duration: 2,
-                      repeat: Infinity,
-                      repeatType: "reverse",
-                      delay: 0.3
-                    }}
-                  >
-                    <CheckCircle className="h-5 w-5 text-gtb-aero flex-shrink-0" />
-                  </motion.div>
-                  <span>Access to exclusive builder deals</span>
-                </motion.div>
-                <motion.div 
-                  className="flex items-center space-x-3 text-sm text-gray-700"
-                  whileHover={{ x: 4 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <motion.div
-                    animate={{ 
-                      scale: [1, 1.2, 1],
-                      rotate: [0, 5]
-                    }}
-                    transition={{ 
-                      duration: 2,
-                      repeat: Infinity,
-                      repeatType: "reverse",
-                      delay: 0.6
-                    }}
-                  >
-                    <CheckCircle className="h-5 w-5 text-gtb-aero flex-shrink-0" />
-                  </motion.div>
-                  <span>Finance assistance available</span>
-                </motion.div>
+                <div className="flex items-center space-x-3 text-sm text-gray-700">
+                  <CheckCircle className="h-5 w-5 text-gtb-aero flex-shrink-0" />
+                  <span>Free project consultation & quote</span>
+                </div>
+                <div className="flex items-center space-x-3 text-sm text-gray-700">
+                  <CheckCircle className="h-5 w-5 text-gtb-aero flex-shrink-0" />
+                  <span>Full compliance & warranty coverage</span>
+                </div>
+                <div className="flex items-center space-x-3 text-sm text-gray-700">
+                  <CheckCircle className="h-5 w-5 text-gtb-aero flex-shrink-0" />
+                  <span>Flexible payment options available</span>
+                </div>
               </MotionDiv>
             )}
           </MotionDiv>
