@@ -4,6 +4,7 @@ import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { Footer } from '@/components/Footer';
 import PartnerLogos from '@/components/marketing/PartnerLogos';
+import Testimonials from '@/components/marketing/Testimonials';
 import Link from 'next/link';
 import Image from 'next/image';
 import { 
@@ -271,67 +272,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Testimonials - Clean Modern Design */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <div className="text-sm font-bold text-gtb-aero mb-4 tracking-wider uppercase">Client Feedback</div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-gtb-navy mb-6">
-                Trusted by Australians Nationwide
-              </h2>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-gray-50 rounded-xl p-8 border-l-4 border-gtb-aero">
-                <div className="mb-6">
-                  <svg className="h-8 w-8 text-gtb-aero mb-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                  </svg>
-                </div>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  TOFA Group delivered our residential project on time and within budget. The quality exceeded our expectations and the team was professional throughout.
-                </p>
-                <div>
-                  <div className="font-bold text-gtb-navy">Sarah & Michael Chen</div>
-                  <div className="text-sm text-gray-600">Melbourne, VIC</div>
-                  <div className="text-xs text-gtb-aero font-medium mt-1">Custom 4BR Family Home</div>
-                </div>
-              </div>
-
-              <div className="bg-gray-50 rounded-xl p-8 border-l-4 border-gtb-aero">
-                <div className="mb-6">
-                  <svg className="h-8 w-8 text-gtb-aero mb-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                  </svg>
-                </div>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  Outstanding construction management from start to finish. Every stage was completed to the highest standard with excellent communication throughout.
-                </p>
-                <div>
-                  <div className="font-bold text-gtb-navy">David Rodriguez</div>
-                  <div className="text-sm text-gray-600">Sydney, NSW</div>
-                  <div className="text-xs text-gtb-aero font-medium mt-1">Commercial Renovation</div>
-                </div>
-              </div>
-
-              <div className="bg-gray-50 rounded-xl p-8 border-l-4 border-gtb-aero">
-                <div className="mb-6">
-                  <svg className="h-8 w-8 text-gtb-aero mb-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                  </svg>
-                </div>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  The Build Now, Pay Later option made our dream home possible. Professional service from consultation through to handover.
-                </p>
-                <div>
-                  <div className="font-bold text-gtb-navy">Emma Thompson</div>
-                  <div className="text-sm text-gray-600">Brisbane, QLD</div>
-                  <div className="text-xs text-gtb-aero font-medium mt-1">New Residential Build</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Testimonials Carousel */}
+        <Testimonials />
 
         {/* CTA Section - Bold & Direct */}
         <section className="py-20 bg-gradient-to-br from-gtb-navy to-gtb-navy-light relative overflow-hidden">

@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 interface Testimonial {
@@ -70,45 +71,88 @@ const testimonials: Testimonial[] = [
 ];
 
 export default function Testimonials() {
+  // Duplicate testimonials array for seamless infinite scroll
+  const duplicatedTestimonials = [...testimonials, ...testimonials];
+
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="py-20 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gtb-navy mb-4">
-            Client Success Stories
+          <div className="text-sm font-bold text-gtb-aero mb-4 tracking-wider uppercase">Client Feedback</div>
+          <h2 className="text-4xl lg:text-5xl font-bold text-gtb-navy mb-6">
+            Trusted by Australians Nationwide
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Hear from clients who have completed their construction projects with TOFA Group
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
-              {/* Quote */}
-              <blockquote className="text-gray-700 mb-6 leading-relaxed">
-                &quot;{testimonial.quote}&quot;
-              </blockquote>
+        {/* Rotating Carousel */}
+        <div className="relative">
+          {/* Gradient overlays for fade effect */}
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+          
+          {/* Scrolling container */}
+          <motion.div
+            className="flex gap-6"
+            animate={{
+              x: [0, -testimonials.length * 400],
+            }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 60,
+                ease: "linear",
+              },
+            }}
+            suppressHydrationWarning
+          >
+            {duplicatedTestimonials.map((testimonial, index) => (
+              <motion.div
+                key={`${testimonial.id}-${index}`}
+                className="flex-shrink-0 w-[380px]"
+                whileHover={{ 
+                  scale: 1.02,
+                  transition: { type: "spring", stiffness: 300 }
+                }}
+                suppressHydrationWarning
+              >
+                <div className="bg-gray-50 rounded-xl p-8 h-full border-l-4 border-gtb-aero hover:shadow-lg transition-shadow">
+                  {/* Quote Icon */}
+                  <div className="mb-6">
+                    <svg className="h-8 w-8 text-gtb-aero mb-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                    </svg>
+                  </div>
+                  
+                  {/* Quote */}
+                  <blockquote className="text-gray-700 leading-relaxed mb-6 min-h-[120px]">
+                    {testimonial.quote}
+                  </blockquote>
 
-              {/* Client Info */}
-              <div className="flex items-center space-x-3 pt-4 border-t border-gray-100">
-                <div className="w-12 h-12 rounded-full bg-gtb-navy flex items-center justify-center text-white font-bold text-lg">
-                  {testimonial.name.charAt(0)}
+                  {/* Client Info */}
+                  <div className="flex items-center space-x-3 pt-4 border-t border-gray-200">
+                    <div className="w-12 h-12 rounded-full bg-gtb-navy flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                      {testimonial.name.charAt(0)}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="font-bold text-gtb-navy">
+                        {testimonial.name}
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        {testimonial.suburb}
+                      </div>
+                      <div className="text-xs text-gtb-aero font-medium mt-0.5">
+                        {testimonial.project}
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex-1">
-                  <div className="font-bold text-gtb-navy">
-                    {testimonial.name}
-                  </div>
-                  <div className="text-sm text-gray-600">
-                    {testimonial.suburb}
-                  </div>
-                  <div className="text-xs text-gtb-aero font-medium mt-0.5">
-                    {testimonial.project}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
 
         {/* CTA */}
