@@ -39,20 +39,20 @@ const contactInfo = [
   {
     icon: <Phone className="h-6 w-6 text-gtb-aero" />,
     title: "Phone",
-    details: "+61 3 0000 0000",
+    details: "1300 000 685",
     description: "Call us for immediate assistance"
   },
   {
     icon: <Mail className="h-6 w-6 text-gtb-aero" />,
     title: "Email", 
-    details: "contact@tofagroup.com.au",
+    details: "info@tofagroup.com.au",
     description: "Send us your questions anytime"
   },
   {
     icon: <MapPin className="h-6 w-6 text-gtb-aero" />,
-    title: "Location",
-    details: "Australia-wide",
-    description: "Delivering projects across Australia"
+    title: "Office",
+    details: "PO BOX 256, Avondale Heights, VIC 3034",
+    description: "Delivering projects Australia-wide"
   },
   {
     icon: <Clock className="h-6 w-6 text-gtb-aero" />,
@@ -303,13 +303,13 @@ export default function Contact() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <AnimatedButton asChild className="w-full bg-gtb-navy hover:bg-gtb-navy-light text-white">
-                    <a href="tel:+61300000000">
+                    <a href="tel:1300000685">
                       <Phone className="mr-2 h-4 w-4" />
-                      Call Now
+                      Call 1300 000 685
                     </a>
                   </AnimatedButton>
                   <AnimatedButton asChild variant="outline" className="w-full border-gtb-aero text-gtb-aero hover:bg-gtb-aero hover:text-white">
-                    <a href="mailto:contact@tofagroup.com.au">
+                    <a href="mailto:info@tofagroup.com.au">
                       <Mail className="mr-2 h-4 w-4" />
                       Send Email
                     </a>

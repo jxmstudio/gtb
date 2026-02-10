@@ -18,7 +18,7 @@ export const Logo: React.FC<LogoProps> = ({
     lg: 'h-16 w-auto'
   };
 
-  const logoSrc = '/logo.png';
+  const logoSrc = '/TofaGroup_Logo_Green_Web_1920px.png';
 
   return (
     <div className={`flex items-center ${className}`}>

@@ -48,9 +48,12 @@ export const Footer: React.FC = () => {
               Delivering projects Australia-wide
             </p>
             <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-sm text-white">
-                <MapPin className="h-4 w-4 flex-shrink-0 text-gtb-aero" />
-                <span>Australia-wide</span>
+              <div className="flex items-start space-x-2 text-sm text-white">
+                <MapPin className="h-4 w-4 flex-shrink-0 text-gtb-aero mt-0.5" />
+                <div>
+                  <p>PO BOX 256</p>
+                  <p>Avondale Heights, VIC 3034</p>
+                </div>
               </div>
               <div className="flex items-center space-x-2 text-sm text-white">
                 <Phone className="h-4 w-4 flex-shrink-0 text-gtb-aero" />
