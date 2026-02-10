@@ -239,22 +239,21 @@ export default function FAQs() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16">
+        <section className="py-20 bg-gradient-to-br from-gtb-navy to-gtb-navy-light text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <RevealOnScroll>
-              <h2 className="text-3xl font-bold text-gtb-navy mb-6">
-                Ready to Start Your Project?
-              </h2>
-              <p className="text-xl text-gray-600 mb-8">
-                Contact TOFA Group today for a consultation on your residential or commercial construction needs
-              </p>
-              <AnimatedButton asChild size="lg">
-                <Link href="/contact" className="inline-flex items-center">
-                  Get Started
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </AnimatedButton>
-            </RevealOnScroll>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Ready to Start Your Project?
+            </h2>
+            <p className="text-xl mb-10 text-white/90 max-w-2xl mx-auto">
+              Contact TOFA Group today for a consultation on your residential or commercial construction needs
+            </p>
+            <Link
+              href="/contact"
+              className="bg-gtb-aero hover:bg-gtb-aero-light text-white px-10 py-5 rounded-lg text-lg font-bold shadow-xl transition-colors inline-flex items-center justify-center group"
+            >
+              Book Free Consultation
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </section>
       </main>

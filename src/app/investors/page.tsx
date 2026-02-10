@@ -351,27 +351,29 @@ export default function Investors() {
         <Testimonials />
 
         {/* CTA Section */}
-        <section className="py-20 bg-gtb-navy">
+        <section className="py-20 bg-gradient-to-br from-gtb-navy to-gtb-navy-light text-white">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <RevealOnScroll>
-              <MotionH2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Ready to Start Investing?
-              </MotionH2>
-              <MotionP className="text-xl text-gray-300 mb-8">
-                Book a consultation to discuss your investment goals and discover the best opportunities for your portfolio.
-              </MotionP>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <AnimatedButton asChild size="lg" className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-8 py-4">
-                  <Link href="/contact">
-                    <Calendar className="mr-2 h-5 w-5" />
-                    Book Investment Consultation
-                  </Link>
-                </AnimatedButton>
-                <AnimatedButton asChild variant="outline" size="lg" className="border-white text-gtb-navy bg-white hover:bg-gray-100 text-lg px-8 py-4">
-                  <Link href="/packages">View Available Properties</Link>
-                </AnimatedButton>
-              </div>
-            </RevealOnScroll>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Ready to Start Investing?
+            </h2>
+            <p className="text-xl mb-10 text-white/90 max-w-2xl mx-auto">
+              Book a consultation to discuss your investment goals and discover the best opportunities for your portfolio
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact"
+                className="bg-gtb-aero hover:bg-gtb-aero-light text-white px-10 py-5 rounded-lg text-lg font-bold shadow-xl transition-colors inline-flex items-center justify-center group"
+              >
+                <Calendar className="mr-2 h-5 w-5" />
+                Book Investment Consultation
+              </Link>
+              <Link 
+                href="/packages"
+                className="bg-white text-gtb-navy hover:bg-gray-100 px-10 py-5 rounded-lg text-lg font-bold shadow-xl transition-colors inline-flex items-center justify-center"
+              >
+                View Available Properties
+              </Link>
+            </div>
           </div>
         </section>
       </main>

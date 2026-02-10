@@ -279,30 +279,30 @@ export default function FirstHomeBuyers() {
         <Testimonials />
 
         {/* CTA Section */}
-        <section className="py-20 bg-gtb-navy">
+        <section className="py-20 bg-gradient-to-br from-gtb-navy to-gtb-navy-light text-white">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <RevealOnScroll>
-              <MotionH2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Ready to Build Your First Home?
-              </MotionH2>
-              <MotionP className="text-xl text-gray-300 mb-8">
-                Book a free consultation and discover how we can help you save money and build your dream home.
-              </MotionP>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <AnimatedButton asChild size="lg" className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-8 py-4">
-                  <Link href="/contact">
-                    <Calendar className="mr-2 h-5 w-5" />
-                    Book Free Consultation
-                  </Link>
-                </AnimatedButton>
-                <AnimatedButton asChild variant="outline" size="lg" className="border-white text-gtb-navy bg-white hover:bg-gray-100 text-lg px-8 py-4">
-                  <Link href="tel:+61300000000">
-                    <Phone className="mr-2 h-5 w-5" />
-                    Call Now
-                  </Link>
-                </AnimatedButton>
-              </div>
-            </RevealOnScroll>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Ready to Build Your First Home?
+            </h2>
+            <p className="text-xl mb-10 text-white/90 max-w-2xl mx-auto">
+              Book a free consultation and discover how we can help you save money and build your dream home
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact"
+                className="bg-gtb-aero hover:bg-gtb-aero-light text-white px-10 py-5 rounded-lg text-lg font-bold shadow-xl transition-colors inline-flex items-center justify-center group"
+              >
+                <Calendar className="mr-2 h-5 w-5" />
+                Book Free Consultation
+              </Link>
+              <Link 
+                href="tel:1300000685"
+                className="bg-white text-gtb-navy hover:bg-gray-100 px-10 py-5 rounded-lg text-lg font-bold shadow-xl transition-colors inline-flex items-center justify-center"
+              >
+                <Phone className="mr-2 h-5 w-5" />
+                1300 000 685
+              </Link>
+            </div>
           </div>
         </section>
       </main>

@@ -205,27 +205,29 @@ export default function Team() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-20 bg-gradient-to-br from-gtb-navy to-gtb-navy-light text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <RevealOnScroll>
-              <h2 className="text-3xl md:text-4xl font-bold text-gtb-navy mb-6">
-                Ready to Start Your Project?
-              </h2>
-              <p className="text-xl text-gray-600 mb-8">
-                Contact TOFA Group to discuss your residential or commercial construction needs
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <AnimatedButton asChild size="lg">
-                  <Link href="/contact" className="inline-flex items-center">
-                    Get Started
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </AnimatedButton>
-                <Button asChild variant="outline" size="lg">
-                  <Link href="/services">View Our Services</Link>
-                </Button>
-              </div>
-            </RevealOnScroll>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Ready to Start Your Project?
+            </h2>
+            <p className="text-xl mb-10 text-white/90 max-w-2xl mx-auto">
+              Contact TOFA Group to discuss your residential or commercial construction needs
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact"
+                className="bg-gtb-aero hover:bg-gtb-aero-light text-white px-10 py-5 rounded-lg text-lg font-bold shadow-xl transition-colors inline-flex items-center justify-center group"
+              >
+                Book Free Consultation
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link 
+                href="/services"
+                className="bg-white/10 border-2 border-white/30 text-white hover:bg-white hover:text-gtb-navy px-10 py-5 rounded-lg text-lg font-bold shadow-xl transition-all inline-flex items-center justify-center"
+              >
+                View Our Services
+              </Link>
+            </div>
           </div>
         </section>
       </main>

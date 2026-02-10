@@ -156,13 +156,13 @@ export default function Testimonials() {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">
+        <div className="text-center mt-16">
+          <p className="text-gray-700 text-lg mb-6">
             Ready to start your construction project?
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center px-8 py-3 bg-gtb-aero hover:bg-gtb-aero-light text-white rounded-lg transition-colors duration-200 font-medium shadow-md"
+            className="inline-flex items-center justify-center px-8 py-4 bg-gtb-aero hover:bg-gtb-aero-light text-white rounded-lg transition-colors duration-200 font-semibold shadow-lg text-lg"
           >
             Get Your Free Consultation
           </Link>

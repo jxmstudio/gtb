@@ -343,27 +343,28 @@ export default function Contact() {
         <Testimonials />
 
         {/* CTA Section */}
-        <section className="py-20 bg-gtb-navy">
+        <section className="py-20 bg-gradient-to-br from-gtb-navy to-gtb-navy-light text-white">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <RevealOnScroll>
-              <MotionH2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Ready to Start Building?
-              </MotionH2>
-              <MotionP className="text-xl text-gray-300 mb-8">
-                Book a free consultation to discuss your project and discover how we can help you save time and money.
-              </MotionP>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <AnimatedButton asChild size="lg" className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-8 py-4">
-                  <a href="/contact">
-                    <Calendar className="mr-2 h-5 w-5" />
-                    Book Free Consultation
-                  </a>
-                </AnimatedButton>
-                <AnimatedButton asChild variant="outline" size="lg" className="border-white text-gtb-navy bg-white hover:bg-gray-100 text-lg px-8 py-4">
-                  <a href="/packages">View Our Packages</a>
-                </AnimatedButton>
-              </div>
-            </RevealOnScroll>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Ready to Start Building?
+            </h2>
+            <p className="text-xl mb-10 text-white/90 max-w-2xl mx-auto">
+              Book a free consultation to discuss your project and discover how we can help you save time and money
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/services"
+                className="bg-gtb-aero hover:bg-gtb-aero-light text-white px-10 py-5 rounded-lg text-lg font-bold shadow-xl transition-colors inline-flex items-center justify-center group"
+              >
+                View Our Services
+              </Link>
+              <Link 
+                href="/projects"
+                className="bg-white text-gtb-navy hover:bg-gray-100 px-10 py-5 rounded-lg text-lg font-bold shadow-xl transition-colors inline-flex items-center justify-center"
+              >
+                View Our Projects
+              </Link>
+            </div>
           </div>
         </section>
       </main>
