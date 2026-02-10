@@ -333,7 +333,7 @@ export default function Packages() {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
               Ready to Invest?
             </h2>
-            <p className="text-xl mb-10 text-white/90 max-w-2xl mx-auto">
+            <p className="text-xl mb-10 text-white max-w-2xl mx-auto">
               Book a consultation to discuss your investment goals and find the perfect property package
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

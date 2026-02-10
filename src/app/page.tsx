@@ -277,14 +277,16 @@ export default function Home() {
 
         {/* CTA Section - Bold & Direct */}
         <section className="py-20 bg-gradient-to-br from-gtb-navy to-gtb-navy-light relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 opacity-20">
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=80')] bg-cover bg-center"></div>
           </div>
-          <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+          {/* Dark overlay for better text contrast */}
+          <div className="absolute inset-0 bg-gtb-navy/60"></div>
+          <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 drop-shadow-lg">
               Ready to Start Your Build?
             </h2>
-            <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+            <p className="text-xl text-white mb-10 max-w-2xl mx-auto drop-shadow-md">
               Get a free consultation and discover how TOFA Group can bring your construction project to life
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

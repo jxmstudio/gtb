@@ -235,7 +235,7 @@ export default function About() {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
               Ready to Start Your Project?
             </h2>
-            <p className="text-xl mb-10 text-white/90 max-w-2xl mx-auto">
+            <p className="text-xl mb-10 text-white max-w-2xl mx-auto">
               Contact TOFA Group today to discuss your residential or commercial construction needs
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -348,7 +348,7 @@ export default function Contact() {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
               Ready to Start Building?
             </h2>
-            <p className="text-xl mb-10 text-white/90 max-w-2xl mx-auto">
+            <p className="text-xl mb-10 text-white max-w-2xl mx-auto">
               Book a free consultation to discuss your project and discover how we can help you save time and money
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
