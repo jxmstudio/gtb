@@ -44,7 +44,7 @@ export default function Home() {
                     RESIDENTIAL CONSTRUCTION
                   </div>
                   <h3 className="text-3xl font-bold mb-2">Modern Family Homes</h3>
-                  <p className="text-white/90">Quality builds across Australia</p>
+                  <p className="text-white">Quality builds across Australia</p>
                 </div>
               </div>
               

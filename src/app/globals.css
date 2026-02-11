@@ -42,6 +42,16 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* GTB / TOFA Brand Colors — enables from-*, to-*, hover:bg-*, etc. */
+  --color-gtb-navy: #0A3370;
+  --color-gtb-navy-light: #1a4a8a;
+  --color-gtb-aero: #6B8E23;
+  --color-gtb-aero-light: #8BA446;
+  --color-tofa-green: #6B8E23;
+  --color-tofa-green-light: #8BA446;
+  --color-tofa-green-dark: #556B1C;
+  --color-tofa-green-accent: #9ACD32;
 }
 
 :root {

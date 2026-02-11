@@ -145,7 +145,7 @@ export default function BuildNowPayLater() {
                   <span className="text-gtb-aero">Pay Later.</span>
                 </h1>
 
-                <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-10 max-w-xl">
+                <p className="text-xl md:text-2xl text-white leading-relaxed mb-10 max-w-xl">
                   Start your construction project today with flexible payment options. No large upfront costs — just quality building, on your terms.
                 </p>
 

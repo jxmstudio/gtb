@@ -217,7 +217,7 @@ export default function FAQs() {
               <Card className="bg-gradient-to-br from-gtb-navy to-gtb-navy/90 text-white p-8 md:p-12">
                 <div className="text-center">
                   <h2 className="text-3xl font-bold mb-4">Still Have Questions?</h2>
-                  <p className="text-xl mb-8 text-white/90">
+                  <p className="text-xl mb-8 text-white">
                     Our team is here to help. Contact TOFA Group to discuss your project or get answers to any questions.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
