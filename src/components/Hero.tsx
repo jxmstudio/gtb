@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { AnimatedButton } from './motion/AnimatedButton';
 import { Card } from './ui/card';
 import { RevealOnScroll } from './motion/Reveals';
 import { MotionDiv, MotionH1, MotionP, staggerContainer, staggerItem } from './motion/MotionPrimitives';
@@ -118,25 +117,19 @@ export const Hero: React.FC<HeroProps> = ({
 
             {/* Single Primary CTA */}
             <MotionDiv className="flex flex-col sm:flex-row gap-4" variants={staggerItem}>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <Link 
+                href="/contact"
+                className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-8 py-4 shadow-lg rounded-lg font-bold transition-colors inline-flex items-center justify-center group"
               >
-                <AnimatedButton asChild size="lg" className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-8 py-4 shadow-lg rounded-[15px] font-semibold animate-pulse-glow">
-                  <Link href="/contact">
-                    Book Free Consultation
-                    <motion.span
-                      animate={{ x: [0, 4, 0] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
-                    >
-                      <ArrowRight className="ml-2 h-5 w-5 inline-block" />
-                    </motion.span>
-                  </Link>
-                </AnimatedButton>
-              </motion.div>
-              <AnimatedButton asChild variant="outline" size="lg" className="border-2 border-gtb-aero/30 text-gtb-aero hover:bg-gtb-aero hover:text-white hover:border-gtb-aero text-lg px-8 py-4 rounded-[15px] font-medium">
-                <Link href="/services">View Our Services</Link>
-              </AnimatedButton>
+                Book Free Consultation
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link 
+                href="/services"
+                className="border-2 border-gtb-aero/30 text-gtb-aero hover:bg-gtb-aero hover:text-white hover:border-gtb-aero text-lg px-8 py-4 rounded-lg font-semibold transition-all inline-flex items-center justify-center"
+              >
+                View Our Services
+              </Link>
             </MotionDiv>
 
             {/* Trust Indicators */}

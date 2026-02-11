@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Logo } from './Logo';
@@ -37,7 +37,9 @@ export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
   const pathname = usePathname();
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,6 +47,20 @@ export const Navbar: React.FC = () => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleMouseEnter = useCallback((name: string) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setActiveDropdown(name);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    timeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 150);
   }, []);
 
   return (
@@ -56,9 +72,9 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-            <Link href="/" className="flex-shrink-0">
-              <Logo size="md" />
-            </Link>
+          <Link href="/" className="flex-shrink-0">
+            <Logo size="md" />
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
@@ -71,8 +87,8 @@ export const Navbar: React.FC = () => {
                   <div 
                     key={item.name}
                     className="relative"
-                    onMouseEnter={() => hasDropdown && setActiveDropdown(item.name)}
-                    onMouseLeave={() => setActiveDropdown(null)}
+                    onMouseEnter={() => hasDropdown ? handleMouseEnter(item.name) : undefined}
+                    onMouseLeave={handleMouseLeave}
                   >
                     <Link
                       href={item.href}
@@ -82,25 +98,30 @@ export const Navbar: React.FC = () => {
                           : 'text-gray-700 hover:text-gtb-navy'
                       }`}
                     >
-                        {item.name}
-                      {hasDropdown && <ChevronDown className="h-4 w-4" />}
+                      {item.name}
+                      {hasDropdown && (
+                        <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
+                      )}
                       {isActive && (
                         <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gtb-aero"></span>
                       )}
                     </Link>
                     
-                    {/* Dropdown Menu */}
+                    {/* Dropdown Menu — no gap, uses pt for visual spacing */}
                     {hasDropdown && activeDropdown === item.name && (
-                      <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
-                        {item.dropdown.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            href={subItem.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gtb-aero/10 hover:text-gtb-navy transition-colors"
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
+                      <div className="absolute top-full left-0 pt-2 z-50">
+                        <div className="w-56 bg-white rounded-lg shadow-xl border border-gray-200 py-2">
+                          {item.dropdown.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              href={subItem.href}
+                              className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gtb-aero/10 hover:text-gtb-navy transition-colors"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>
@@ -145,28 +166,42 @@ export const Navbar: React.FC = () => {
                 
                 return (
                   <div key={item.name}>
-                  <Link
-                    href={item.href}
-                      className={`block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-lg ${
-                        isActive ? 'text-gtb-navy bg-gtb-aero/10' : 'text-gray-700 hover:text-gtb-navy hover:bg-gray-50'
-                    }`}
-                      onClick={() => !hasDropdown && setMobileMenuOpen(false)}
-                  >
-                      {item.name}
-                    </Link>
-                    {hasDropdown && (
-                      <div className="pl-4 space-y-1 mt-1">
-                        {item.dropdown.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            href={subItem.href}
-                            className="block px-3 py-1.5 text-sm text-gray-600 hover:text-gtb-navy hover:bg-gray-50 rounded-lg"
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
-                      </div>
+                    {hasDropdown ? (
+                      <>
+                        <button
+                          onClick={() => setMobileDropdown(mobileDropdown === item.name ? null : item.name)}
+                          className={`w-full flex items-center justify-between px-3 py-2 text-base font-medium transition-colors duration-200 rounded-lg ${
+                            isActive ? 'text-gtb-navy bg-gtb-aero/10' : 'text-gray-700 hover:text-gtb-navy hover:bg-gray-50'
+                          }`}
+                        >
+                          {item.name}
+                          <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${mobileDropdown === item.name ? 'rotate-180' : ''}`} />
+                        </button>
+                        {mobileDropdown === item.name && (
+                          <div className="pl-4 space-y-1 mt-1">
+                            {item.dropdown.map((subItem) => (
+                              <Link
+                                key={subItem.name}
+                                href={subItem.href}
+                                className="block px-3 py-2 text-sm text-gray-600 hover:text-gtb-navy hover:bg-gray-50 rounded-lg"
+                                onClick={() => setMobileMenuOpen(false)}
+                              >
+                                {subItem.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className={`block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-lg ${
+                          isActive ? 'text-gtb-navy bg-gtb-aero/10' : 'text-gray-700 hover:text-gtb-navy hover:bg-gray-50'
+                        }`}
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
                     )}
                   </div>
                 );

@@ -8,7 +8,6 @@ import { Card } from '@/components/ui/card';
 import { RevealOnScroll, StaggerReveal } from '@/components/motion/Reveals';
 import { MotionDiv, MotionH2, MotionP, staggerItem } from '@/components/motion/MotionPrimitives';
 import Testimonials from '@/components/marketing/Testimonials';
-import { AnimatedButton } from '@/components/motion/AnimatedButton';
 import Link from 'next/link';
 import { 
   Building2, 

@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { RevealOnScroll, StaggerReveal } from '@/components/motion/Reveals';
 import { MotionDiv, staggerItem } from '@/components/motion/MotionPrimitives';
-import { AnimatedButton } from '@/components/motion/AnimatedButton';
 import Link from 'next/link';
 import Image from 'next/image';
 import { 

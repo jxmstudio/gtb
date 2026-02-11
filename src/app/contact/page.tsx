@@ -12,7 +12,6 @@ import { RevealOnScroll } from '@/components/motion/Reveals';
 import { MotionH2, MotionP } from '@/components/motion/MotionPrimitives';
 import Testimonials from '@/components/marketing/Testimonials';
 import PartnerLogos from '@/components/marketing/PartnerLogos';
-import { AnimatedButton } from '@/components/motion/AnimatedButton';
 import { 
   Phone, 
   Mail, 
@@ -244,10 +243,10 @@ export default function Contact() {
                         </Label>
                       </div>
 
-                      <AnimatedButton
+                      <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full bg-gtb-aero hover:bg-gtb-aero-light text-white"
+                        className="w-full bg-gtb-aero hover:bg-gtb-aero-light text-white rounded-lg px-6 py-3 font-semibold transition-colors shadow-md hover:shadow-lg inline-flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         {isSubmitting ? (
                           <>
@@ -260,7 +259,7 @@ export default function Contact() {
                             Send Message
                           </>
                         )}
-                      </AnimatedButton>
+                      </button>
                     </form>
                   )}
                 </CardContent>
@@ -302,24 +301,27 @@ export default function Contact() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <AnimatedButton asChild className="w-full bg-gtb-navy hover:bg-gtb-navy-light text-white">
-                    <a href="tel:1300000685">
-                      <Phone className="mr-2 h-4 w-4" />
-                      Call 1300 000 685
-                    </a>
-                  </AnimatedButton>
-                  <AnimatedButton asChild variant="outline" className="w-full border-gtb-aero text-gtb-aero hover:bg-gtb-aero hover:text-white">
-                    <a href="mailto:info@tofagroup.com.au">
-                      <Mail className="mr-2 h-4 w-4" />
-                      Send Email
-                    </a>
-                  </AnimatedButton>
-                  <AnimatedButton asChild variant="outline" className="w-full border-gtb-navy text-gtb-navy hover:bg-gtb-navy hover:text-white">
-                    <a href="/services">
-                      <MessageCircle className="mr-2 h-4 w-4" />
-                      View Services
-                    </a>
-                  </AnimatedButton>
+                  <a 
+                    href="tel:1300000685"
+                    className="w-full bg-gtb-navy hover:bg-gtb-navy-light text-white rounded-lg px-6 py-3 font-semibold transition-colors inline-flex items-center justify-center"
+                  >
+                    <Phone className="mr-2 h-4 w-4" />
+                    Call 1300 000 685
+                  </a>
+                  <a 
+                    href="mailto:info@tofagroup.com.au"
+                    className="w-full border-2 border-gtb-aero text-gtb-aero hover:bg-gtb-aero hover:text-white rounded-lg px-6 py-3 font-semibold transition-all inline-flex items-center justify-center"
+                  >
+                    <Mail className="mr-2 h-4 w-4" />
+                    Send Email
+                  </a>
+                  <a 
+                    href="/services"
+                    className="w-full border-2 border-gtb-navy text-gtb-navy hover:bg-gtb-navy hover:text-white rounded-lg px-6 py-3 font-semibold transition-all inline-flex items-center justify-center"
+                  >
+                    <MessageCircle className="mr-2 h-4 w-4" />
+                    View Services
+                  </a>
                 </CardContent>
               </Card>
 

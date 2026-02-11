@@ -5,7 +5,6 @@ import { RevealOnScroll, StaggerReveal } from '@/components/motion/Reveals';
 import { MotionDiv, MotionH2, MotionP, staggerItem } from '@/components/motion/MotionPrimitives';
 import Testimonials from '@/components/marketing/Testimonials';
 import PartnerLogos from '@/components/marketing/PartnerLogos';
-import { AnimatedButton } from '@/components/motion/AnimatedButton';
 import Link from 'next/link';
 import { 
   Home as HomeIcon, 
@@ -108,15 +107,19 @@ export default function Packages() {
                   Turnkey investment properties ready for immediate rental income. No hassle, maximum returns.
                 </MotionP>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <AnimatedButton asChild size="lg" className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-8 py-4">
-                    <Link href="/contact">
-                      Get Investment Advice
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                  </AnimatedButton>
-                  <AnimatedButton asChild variant="outline" size="lg" className="border-gtb-navy text-gtb-navy hover:bg-gtb-navy hover:text-white text-lg px-8 py-4">
-                    <Link href="/investors">Investment Guide</Link>
-                  </AnimatedButton>
+                  <Link 
+                    href="/contact"
+                    className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-8 py-4 rounded-lg font-bold shadow-lg transition-colors inline-flex items-center justify-center group"
+                  >
+                    Get Investment Advice
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  <Link 
+                    href="/investors"
+                    className="border-2 border-gtb-navy text-gtb-navy hover:bg-gtb-navy hover:text-white text-lg px-8 py-4 rounded-lg font-bold shadow-lg transition-all inline-flex items-center justify-center"
+                  >
+                    Investment Guide
+                  </Link>
                 </div>
               </div>
             </RevealOnScroll>
@@ -174,10 +177,13 @@ export default function Packages() {
                     ))}
                   </ul>
                   
-                  <AnimatedButton className="w-full bg-gtb-aero hover:bg-gtb-aero-light text-white">
+                  <Link 
+                    href="/contact"
+                    className="w-full bg-gtb-aero hover:bg-gtb-aero-light text-white rounded-lg px-6 py-3 font-semibold transition-colors shadow-md hover:shadow-lg inline-flex items-center justify-center"
+                  >
                     Register Interest
                     <Calendar className="ml-2 h-4 w-4" />
-                  </AnimatedButton>
+                  </Link>
                 </div>
               </div>
             </Card>
@@ -249,12 +255,13 @@ export default function Packages() {
                           ))}
                         </ul>
                         
-                        <AnimatedButton asChild className="w-full" variant="outline">
-                          <Link href="/contact">
-                            {pkg.cta}
-                            <ArrowRight className="ml-2 h-4 w-4" />
-                          </Link>
-                        </AnimatedButton>
+                        <Link 
+                          href="/contact"
+                          className="w-full border-2 border-gtb-navy text-gtb-navy hover:bg-gtb-navy hover:text-white rounded-lg px-6 py-3 font-semibold transition-all inline-flex items-center justify-center"
+                        >
+                          {pkg.cta}
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
                       </div>
                     </Card>
                   </MotionDiv>

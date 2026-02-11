@@ -6,7 +6,6 @@ import { RevealOnScroll, StaggerReveal } from '@/components/motion/Reveals';
 import { MotionDiv, MotionH2, MotionP, staggerContainer, staggerItem } from '@/components/motion/MotionPrimitives';
 import Testimonials from '@/components/marketing/Testimonials';
 import PartnerLogos from '@/components/marketing/PartnerLogos';
-import { AnimatedButton } from '@/components/motion/AnimatedButton';
 import Link from 'next/link';
 import { 
   CheckCircle, 
@@ -111,15 +110,19 @@ export default function FirstHomeBuyers() {
                   {"Your complete guide to building your first home with TOFA Group. We'll help you navigate every step from planning to completion."}
                 </MotionP>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <AnimatedButton asChild size="lg" className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-8 py-4">
-                    <Link href="/contact">
-                      Start Your Journey
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                  </AnimatedButton>
-                  <AnimatedButton asChild variant="outline" size="lg" className="border-gtb-navy text-gtb-navy hover:bg-gtb-navy hover:text-white text-lg px-8 py-4">
-                    <Link href="/services">Our Services</Link>
-                  </AnimatedButton>
+                  <Link 
+                    href="/contact"
+                    className="bg-gtb-aero hover:bg-gtb-aero-light text-white text-lg px-8 py-4 rounded-lg font-bold shadow-lg transition-colors inline-flex items-center justify-center group"
+                  >
+                    Start Your Journey
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  <Link 
+                    href="/services"
+                    className="border-2 border-gtb-navy text-gtb-navy hover:bg-gtb-navy hover:text-white text-lg px-8 py-4 rounded-lg font-bold shadow-lg transition-all inline-flex items-center justify-center"
+                  >
+                    Our Services
+                  </Link>
                 </div>
               </div>
             </RevealOnScroll>
