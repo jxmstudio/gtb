@@ -45,20 +45,20 @@ export default function PartnerLogos() {
           <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-50 to-transparent z-10"></div>
           
           {/* Scrolling container */}
-          <motion.div
+            <motion.div
             className="flex gap-12 items-center"
-            animate={{
+                animate={{ 
               x: [0, -partners.length * 180],
-            }}
-            transition={{
+                }}
+                transition={{ 
               x: {
-                repeat: Infinity,
+                  repeat: Infinity,
                 repeatType: "loop",
                 duration: 30,
                 ease: "linear",
               },
             }}
-            suppressHydrationWarning
+                  suppressHydrationWarning
           >
             {duplicatedPartners.map((partner, index) => (
               <motion.div

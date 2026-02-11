@@ -134,9 +134,9 @@ export const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-        </div>
-
-        {/* Social Links */}
+            </div>
+            
+            {/* Social Links */}
         <div className="mt-12 pt-8 border-t border-white/20">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex space-x-6">
@@ -178,7 +178,7 @@ export const Footer: React.FC = () => {
         <div className="mt-8 pt-8 border-t border-white/20">
           <p className="text-sm text-white leading-relaxed text-center max-w-4xl mx-auto">
             <strong>Disclaimer:</strong> All projects are subject to contract and are delivered in accordance with Australian building standards and regulations. Information provided is general in nature and should not be considered financial or legal advice. TOFA Group recommends consulting with appropriate professionals for advice specific to your circumstances.
-          </p>
+            </p>
         </div>
       </div>
     </footer>

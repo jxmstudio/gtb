@@ -46,7 +46,7 @@ export const Hero: React.FC<HeroProps> = ({
         }}
       ></motion.div>
       
-      <motion.div 
+      <motion.div
         className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full"
         style={{
           background: "radial-gradient(circle, rgba(10, 51, 112, 0.08), transparent)"
@@ -143,15 +143,15 @@ export const Hero: React.FC<HeroProps> = ({
             {showTrustIndicators && (
               <MotionDiv className="space-y-3 pt-2" variants={staggerItem}>
                 <div className="flex items-center space-x-3 text-sm text-gray-700">
-                  <CheckCircle className="h-5 w-5 text-gtb-aero flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-gtb-aero flex-shrink-0" />
                   <span>Free project consultation & quote</span>
                 </div>
                 <div className="flex items-center space-x-3 text-sm text-gray-700">
-                  <CheckCircle className="h-5 w-5 text-gtb-aero flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-gtb-aero flex-shrink-0" />
                   <span>Full compliance & warranty coverage</span>
                 </div>
                 <div className="flex items-center space-x-3 text-sm text-gray-700">
-                  <CheckCircle className="h-5 w-5 text-gtb-aero flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-gtb-aero flex-shrink-0" />
                   <span>Flexible payment options available</span>
                 </div>
               </MotionDiv>
@@ -169,15 +169,15 @@ export const Hero: React.FC<HeroProps> = ({
               >
                 <Card className="p-8 bg-gradient-to-br from-white via-emerald-50/20 to-white border-2 border-gtb-aero/20 shadow-xl overflow-hidden">
                   {/* Animated background shimmer */}
-                  <motion.div
+                  <motion.div 
                     className="absolute inset-0 opacity-0 group-hover:opacity-100"
                     style={{
                       background: "linear-gradient(90deg, transparent, rgba(107, 142, 35, 0.1), transparent)"
                     }}
-                    animate={{
+                    animate={{ 
                       x: ["-100%", "100%"]
                     }}
-                    transition={{
+                    transition={{ 
                       duration: 2,
                       repeat: Infinity,
                       ease: "linear"
@@ -200,17 +200,17 @@ export const Hero: React.FC<HeroProps> = ({
                       <div className="relative">
                         <motion.div 
                           className="bg-gradient-to-br from-gtb-aero via-tofa-green-light to-gtb-aero p-4 rounded-2xl shadow-lg"
-                          animate={{ 
+                    animate={{ 
                             boxShadow: [
                               "0 10px 30px -10px rgba(107, 142, 35, 0.3)",
                               "0 15px 40px -10px rgba(107, 142, 35, 0.5)",
                               "0 10px 30px -10px rgba(107, 142, 35, 0.3)"
                             ]
-                          }}
-                          transition={{ 
-                            duration: 3,
-                            repeat: Infinity,
-                            ease: "easeInOut"
+                    }}
+                    transition={{ 
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut"
                           }}
                         >
                           <CheckCircle className="h-8 w-8 text-white" />
@@ -258,15 +258,15 @@ export const Hero: React.FC<HeroProps> = ({
                         }}
                         style={{
                           backgroundSize: "200% 200%"
-                        }}
-                      >
-                        500+
-                      </motion.h3>
+                    }}
+                  >
+                    500+
+                  </motion.h3>
                       <p className="text-gray-700 font-semibold text-base">Happy homeowners connected</p>
                       <p className="text-sm text-gray-500">Across Australia</p>
                     </div>
-                  </div>
-                </Card>
+                </div>
+              </Card>
               </motion.div>
 
               {/* Side Stats */}
@@ -287,7 +287,7 @@ export const Hero: React.FC<HeroProps> = ({
                       </motion.h4>
                       <p className="text-sm text-gray-600 font-medium mt-2">Projects Delivered</p>
                     </div>
-                  </Card>
+                </Card>
                 </motion.div>
                 
                 <motion.div
@@ -306,7 +306,7 @@ export const Hero: React.FC<HeroProps> = ({
                       </motion.h4>
                       <p className="text-sm text-gray-600 font-medium mt-2">Saved by Clients</p>
                     </div>
-                  </Card>
+                </Card>
                 </motion.div>
               </div>
             </div>

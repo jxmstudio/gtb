@@ -282,27 +282,27 @@ export default function FirstHomeBuyers() {
         <section className="py-20 bg-gradient-to-br from-gtb-navy to-gtb-navy-light text-white">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Ready to Build Your First Home?
+                Ready to Build Your First Home?
             </h2>
             <p className="text-xl mb-10 text-white max-w-2xl mx-auto">
               Book a free consultation and discover how we can help you save money and build your dream home
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
                 className="bg-gtb-aero hover:bg-gtb-aero-light text-white px-10 py-5 rounded-lg text-lg font-bold shadow-xl transition-colors inline-flex items-center justify-center group"
               >
-                <Calendar className="mr-2 h-5 w-5" />
-                Book Free Consultation
-              </Link>
+                    <Calendar className="mr-2 h-5 w-5" />
+                    Book Free Consultation
+                  </Link>
               <Link 
                 href="tel:1300000685"
                 className="bg-white text-gtb-navy hover:bg-gray-100 px-10 py-5 rounded-lg text-lg font-bold shadow-xl transition-colors inline-flex items-center justify-center"
               >
-                <Phone className="mr-2 h-5 w-5" />
+                    <Phone className="mr-2 h-5 w-5" />
                 1300 000 685
-              </Link>
-            </div>
+                  </Link>
+              </div>
           </div>
         </section>
       </main>

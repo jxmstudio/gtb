@@ -331,26 +331,26 @@ export default function Packages() {
         <section className="py-20 bg-gradient-to-br from-gtb-navy to-gtb-navy-light text-white">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Ready to Invest?
+                Ready to Invest?
             </h2>
             <p className="text-xl mb-10 text-white max-w-2xl mx-auto">
               Book a consultation to discuss your investment goals and find the perfect property package
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
                 className="bg-gtb-aero hover:bg-gtb-aero-light text-white px-10 py-5 rounded-lg text-lg font-bold shadow-xl transition-colors inline-flex items-center justify-center group"
               >
-                <Calendar className="mr-2 h-5 w-5" />
-                Book Investment Consultation
-              </Link>
+                    <Calendar className="mr-2 h-5 w-5" />
+                    Book Investment Consultation
+                  </Link>
               <Link 
                 href="/investors"
                 className="bg-white text-gtb-navy hover:bg-gray-100 px-10 py-5 rounded-lg text-lg font-bold shadow-xl transition-colors inline-flex items-center justify-center"
               >
                 Investment Guide
               </Link>
-            </div>
+              </div>
           </div>
         </section>
       </main>

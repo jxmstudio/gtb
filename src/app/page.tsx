@@ -117,7 +117,7 @@ export default function Home() {
         {/* Services Grid - Modern Layout */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+              <div className="text-center mb-16">
               <div className="text-sm font-bold text-gtb-aero mb-4 tracking-wider uppercase">What We Do</div>
               <h2 className="text-4xl lg:text-5xl font-bold text-gtb-navy mb-6">
                 Construction Services
@@ -242,7 +242,7 @@ export default function Home() {
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
-                </div>
+                      </div>
               </div>
             </div>
           </div>
@@ -289,22 +289,22 @@ export default function Home() {
             <p className="text-xl text-white mb-10 max-w-2xl mx-auto drop-shadow-md">
               Get a free consultation and discover how TOFA Group can bring your construction project to life
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
                 className="bg-gtb-aero hover:bg-gtb-aero-light text-white px-10 py-5 rounded-lg text-lg font-bold shadow-xl transition-colors inline-flex items-center justify-center group"
               >
-                Book Free Consultation
+                      Book Free Consultation
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
                 href="tel:1300000685"
                 className="bg-white text-gtb-navy hover:bg-gray-100 px-10 py-5 rounded-lg text-lg font-bold shadow-xl transition-colors inline-flex items-center justify-center"
-              >
+                      >
                 <Phone className="mr-2 h-5 w-5" />
                 1300 000 685
-              </Link>
-            </div>
+                    </Link>
+              </div>
           </div>
         </section>
       </main>

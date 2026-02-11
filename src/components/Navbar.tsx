@@ -56,9 +56,9 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
-            <Logo size="md" />
-          </Link>
+            <Link href="/" className="flex-shrink-0">
+              <Logo size="md" />
+            </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
@@ -82,7 +82,7 @@ export const Navbar: React.FC = () => {
                           : 'text-gray-700 hover:text-gtb-navy'
                       }`}
                     >
-                      {item.name}
+                        {item.name}
                       {hasDropdown && <ChevronDown className="h-4 w-4" />}
                       {isActive && (
                         <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gtb-aero"></span>
@@ -145,13 +145,13 @@ export const Navbar: React.FC = () => {
                 
                 return (
                   <div key={item.name}>
-                    <Link
-                      href={item.href}
+                  <Link
+                    href={item.href}
                       className={`block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-lg ${
                         isActive ? 'text-gtb-navy bg-gtb-aero/10' : 'text-gray-700 hover:text-gtb-navy hover:bg-gray-50'
-                      }`}
+                    }`}
                       onClick={() => !hasDropdown && setMobileMenuOpen(false)}
-                    >
+                  >
                       {item.name}
                     </Link>
                     {hasDropdown && (

@@ -346,12 +346,12 @@ export default function Contact() {
         <section className="py-20 bg-gradient-to-br from-gtb-navy to-gtb-navy-light text-white">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Ready to Start Building?
+                Ready to Start Building?
             </h2>
             <p className="text-xl mb-10 text-white max-w-2xl mx-auto">
               Book a free consultation to discuss your project and discover how we can help you save time and money
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/services"
                 className="bg-gtb-aero hover:bg-gtb-aero-light text-white px-10 py-5 rounded-lg text-lg font-bold shadow-xl transition-colors inline-flex items-center justify-center group"
@@ -364,7 +364,7 @@ export default function Contact() {
               >
                 View Our Projects
               </Link>
-            </div>
+              </div>
           </div>
         </section>
       </main>

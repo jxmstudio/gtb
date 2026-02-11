@@ -220,7 +220,7 @@ export default function Services() {
                 </p>
               </div>
             </RevealOnScroll>
-
+            
             <StaggerReveal>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {process.map((item, index) => (
@@ -255,7 +255,7 @@ export default function Services() {
                 <p className="text-gray-600 max-w-2xl mx-auto">
                   Trusted construction delivery across Australia
                 </p>
-              </div>
+                      </div>
             </RevealOnScroll>
 
             <StaggerReveal>

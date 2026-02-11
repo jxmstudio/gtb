@@ -91,7 +91,7 @@ export default function About() {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <RevealOnScroll>
+            <RevealOnScroll>
                 <div>
                   <h2 className="text-3xl font-bold text-gtb-navy mb-6">
                     Construction-Focused Delivery
@@ -137,7 +137,7 @@ export default function About() {
                   </ul>
                 </div>
               </RevealOnScroll>
-            </div>
+              </div>
           </div>
         </section>
 
@@ -154,7 +154,7 @@ export default function About() {
                 </p>
               </div>
             </RevealOnScroll>
-
+            
             <StaggerReveal>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {values.map((value, index) => (
@@ -165,7 +165,7 @@ export default function About() {
                         <CardTitle className="text-xl">{value.title}</CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <p className="text-gray-600">{value.description}</p>
+                      <p className="text-gray-600">{value.description}</p>
                       </CardContent>
                     </Card>
                   </MotionDiv>
@@ -188,7 +188,7 @@ export default function About() {
                 </p>
               </div>
             </RevealOnScroll>
-
+            
             <StaggerReveal>
               <div className="grid md:grid-cols-2 gap-6">
                 {capabilities.map((capability, index) => (
@@ -198,7 +198,7 @@ export default function About() {
                         <div className="flex items-center mb-2">
                           {capability.icon}
                           <CardTitle className="text-xl ml-3">{capability.title}</CardTitle>
-                        </div>
+                      </div>
                       </CardHeader>
                       <CardContent>
                         <p className="text-gray-600">{capability.description}</p>
