@@ -101,13 +101,14 @@ export default function Team() {
                       <div className="grid md:grid-cols-3 gap-8 p-8">
                         {/* Profile Image */}
                         <div className="md:col-span-1">
-                          <div className="aspect-square rounded-[20px] overflow-hidden relative bg-gray-100">
+                          <div className="aspect-square rounded-[20px] overflow-hidden relative bg-gray-100" suppressHydrationWarning>
                             <Image
                               src={member.image}
                               alt={`${member.name} - ${member.role}`}
                               fill
                               className="object-cover object-top"
                               sizes="(max-width: 768px) 100vw, 33vw"
+                              suppressHydrationWarning
                             />
                           </div>
                         </div>
