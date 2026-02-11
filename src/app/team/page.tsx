@@ -4,12 +4,11 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { RevealOnScroll, StaggerReveal } from '@/components/motion/Reveals';
 import { MotionDiv, staggerItem } from '@/components/motion/MotionPrimitives';
-import { AnimatedButton } from '@/components/motion/AnimatedButton';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   Mail,
   Phone,
-  Linkedin,
   ArrowRight,
   Building2,
   Users,
@@ -19,20 +18,31 @@ import {
 
 const team = [
   {
-    name: "George Tofa",
-    role: "Founder | Project Director",
-    bio: "George leads TOFA Group's project delivery and client relationships, overseeing construction projects across Australia. With a strong focus on quality, timelines, and compliance, George ensures every project meets TOFA Group's standards from start to finish.",
+    name: "Aaron Tofa",
+    role: "Director | Head of Operations",
+    bio: "Aaron drives TOFA Group's day-to-day operations and strategic growth, overseeing project pipelines, builder partnerships, and business development across Australia. With a hands-on approach and deep industry knowledge, Aaron ensures every project runs efficiently from start to finish — on time, on budget, and to the highest standard.",
     expertise: [
-      "Project delivery and oversight",
-      "Client relationship management",
-      "Quality and compliance management",
-      "Construction planning and execution"
+      "Operations and business strategy",
+      "Builder and trade partnerships",
+      "Project pipeline management",
+      "Business development and growth"
     ],
-    image: "/team/george-tofa.jpg", // Placeholder
-    linkedin: "#",
-    email: "george@tofagroup.com.au"
+    image: "/019a0438-409c-7003-9470-e8340a0ff5fc.JPEG",
+    email: "info@tofagroup.com.au"
+  },
+  {
+    name: "Tara Tofa",
+    role: "Director | Head of Client Relations & Administration",
+    bio: "Tara oversees TOFA Group's client experience, administration, and financial coordination. From initial consultations through to project handover, Tara ensures clients receive clear communication, timely updates, and a seamless experience. Her attention to detail and organisational expertise keep every project on track behind the scenes.",
+    expertise: [
+      "Client relationship management",
+      "Project administration and coordination",
+      "Financial planning and oversight",
+      "Compliance and documentation"
+    ],
+    image: "/IMG_6976.JPG",
+    email: "info@tofagroup.com.au"
   }
-  // Additional team members can be added here as they join
 ];
 
 const values = [
@@ -73,7 +83,7 @@ export default function Team() {
                   Meet the Team
                 </h1>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  The leadership behind TOFA Group's construction delivery across Australia
+                  The leadership behind TOFA Group&apos;s construction delivery across Australia
                 </p>
               </div>
             </RevealOnScroll>
@@ -91,13 +101,14 @@ export default function Team() {
                       <div className="grid md:grid-cols-3 gap-8 p-8">
                         {/* Profile Image */}
                         <div className="md:col-span-1">
-                          <div className="aspect-square bg-gradient-to-br from-gtb-navy to-gtb-navy/80 rounded-[20px] flex items-center justify-center text-white">
-                            <div className="text-center">
-                              <div className="text-6xl font-bold mb-2">
-                                {member.name.split(' ').map(n => n[0]).join('')}
-                              </div>
-                              <p className="text-sm text-white/80">Photo coming soon</p>
-                            </div>
+                          <div className="aspect-square rounded-[20px] overflow-hidden relative bg-gray-100">
+                            <Image
+                              src={member.image}
+                              alt={`${member.name} - ${member.role}`}
+                              fill
+                              className="object-cover object-top"
+                              sizes="(max-width: 768px) 100vw, 33vw"
+                            />
                           </div>
                         </div>
 
@@ -131,14 +142,12 @@ export default function Team() {
                                 Email
                               </a>
                             </Button>
-                            {member.linkedin && (
-                              <Button asChild variant="outline" size="sm">
-                                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
-                                  <Linkedin className="h-4 w-4 mr-2" />
-                                  LinkedIn
-                                </a>
-                              </Button>
-                            )}
+                            <Button asChild variant="outline" size="sm">
+                              <a href="tel:1300000685" className="inline-flex items-center">
+                                <Phone className="h-4 w-4 mr-2" />
+                                Call
+                              </a>
+                            </Button>
                           </div>
                         </div>
                       </div>
@@ -180,30 +189,6 @@ export default function Team() {
           </div>
         </section>
 
-        {/* Careers Section */}
-        <section className="py-16">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <RevealOnScroll>
-              <Card className="bg-gradient-to-br from-gtb-navy to-gtb-navy/90 text-white p-8 md:p-12">
-                <div className="text-center">
-                  <h2 className="text-3xl font-bold mb-4">Join Our Team</h2>
-                  <p className="text-xl mb-6 text-white/90">
-                    TOFA Group is growing. We're looking for talented professionals to join our construction delivery team across Australia.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <AnimatedButton asChild size="lg">
-                      <Link href="/contact" className="inline-flex items-center">
-                        Get in Touch
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                      </Link>
-                    </AnimatedButton>
-                  </div>
-                </div>
-              </Card>
-            </RevealOnScroll>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-br from-gtb-navy to-gtb-navy-light text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -236,4 +221,3 @@ export default function Team() {
     </div>
   );
 }
-
