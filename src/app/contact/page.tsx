@@ -12,6 +12,7 @@ import { RevealOnScroll } from '@/components/motion/Reveals';
 import { MotionH2, MotionP } from '@/components/motion/MotionPrimitives';
 import Testimonials from '@/components/marketing/Testimonials';
 import PartnerLogos from '@/components/marketing/PartnerLogos';
+import Link from 'next/link';
 import { 
   Phone, 
   Mail, 
