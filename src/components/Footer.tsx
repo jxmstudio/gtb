@@ -141,14 +141,18 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex space-x-6">
               <a
-                href="#"
+                href="https://www.facebook.com/groups/1680469966691932/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white hover:text-gtb-aero transition-colors duration-200"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/thetofagroup/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white hover:text-gtb-aero transition-colors duration-200"
                 aria-label="Instagram"
               >
