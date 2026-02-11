@@ -2,11 +2,18 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { Logo } from './Logo';
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const footerLinks = {
+  quickLinks: [
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Projects', href: '/projects' },
+    { name: 'Meet the Team', href: '/team' },
+    { name: 'FAQs', href: '/faqs' },
+    { name: 'Contact', href: '/contact' },
+  ],
   services: [
     { name: 'Residential Construction', href: '/services' },
     { name: 'Commercial Construction', href: '/services' },
@@ -14,17 +21,10 @@ const footerLinks = {
     { name: 'Design & Build', href: '/services' },
     { name: 'Build Now, Pay Later', href: '/build-now-pay-later' },
   ],
-  company: [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Projects', href: '/projects' },
-    { name: 'Meet the Team', href: '/team' },
-    { name: 'FAQs', href: '/faqs' },
-    { name: 'Contact', href: '/contact' },
-  ],
-  resources: [
+  forClients: [
     { name: 'First Home Buyers', href: '/first-home-buyers' },
     { name: 'Investors', href: '/investors' },
-    { name: 'Services', href: '/services' },
+    { name: 'Services Overview', href: '/services' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },
@@ -70,10 +70,27 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Services</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
             <ul className="space-y-2">
+              {footerLinks.quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-white hover:text-gtb-aero text-sm transition-colors duration-200"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services & For Clients Combined */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-white">Our Services</h3>
+            <ul className="space-y-2 mb-6">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link
@@ -85,13 +102,10 @@ export const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </div>
 
-          {/* Company */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">For Clients</h3>
             <ul className="space-y-2">
-              {footerLinks.company.map((link) => (
+              {footerLinks.forClients.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -104,22 +118,8 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Resources & Legal */}
+          {/* Legal */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Resources</h3>
-            <ul className="space-y-2 mb-6">
-              {footerLinks.resources.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-white hover:text-gtb-aero text-sm transition-colors duration-200"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
             <h3 className="text-lg font-semibold mb-4 text-white">Legal</h3>
             <ul className="space-y-2">
               {footerLinks.legal.map((link) => (
