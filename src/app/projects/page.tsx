@@ -181,7 +181,7 @@ export default function Projects() {
           {/* Subtle photo texture behind */}
           <div className="absolute inset-0 bg-[url('/tofaphotos/Verv_PROJECTS_Terano.jpg')] bg-cover bg-center opacity-10 pointer-events-none" />
 
-          <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Header */}
             <div className="text-center mb-10">
               <div className="text-xs font-bold text-gtb-aero mb-3 tracking-widest uppercase">
@@ -195,21 +195,23 @@ export default function Projects() {
               </p>
             </div>
 
-            {/* Video player */}
-            <div className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
-              <video
-                controls
-                playsInline
-                preload="metadata"
-                className="w-full block bg-black"
-              >
-                <source src="/Final_TOFA%20Group%20Testimonial.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+            {/* YouTube Shorts embed — portrait layout */}
+            <div className="flex justify-center">
+              <div className="w-full max-w-[340px]">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10" style={{ paddingTop: '177.78%' }}>
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src="https://www.youtube.com/embed/LTrCA-GEUHs"
+                    title="TOFA Group Client Testimonial"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
             </div>
 
             {/* Caption */}
-            <p className="text-center text-white/40 text-xs mt-5 tracking-wide">
+            <p className="text-center text-white/40 text-xs mt-6 tracking-wide">
               TOFA Group — Melbourne&apos;s Northwest Builder
             </p>
           </div>
