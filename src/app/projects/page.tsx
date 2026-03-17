@@ -13,7 +13,6 @@ import {
   ArrowRight,
   CheckCircle
 } from 'lucide-react';
-import VideoFacade from '@/components/VideoFacade';
 
 // Placeholder project data - will be replaced with real projects
 const projects = [
@@ -196,14 +195,18 @@ export default function Projects() {
               </p>
             </div>
 
-            {/* YouTube Shorts — facade hides channel until play */}
+            {/* Native video — no branding, full control */}
             <div className="flex justify-center">
-              <div className="w-full max-w-[340px]">
-                <VideoFacade
-                  videoId="LTrCA-GEUHs"
-                  title="TOFA Group Client Testimonial"
-                  aspectPadding="177.78%"
-                />
+              <div className="w-full max-w-[340px] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+                <video
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="w-full block bg-black"
+                  style={{ aspectRatio: '9/16' }}
+                >
+                  <source src="/tofa-testimonial.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
 
