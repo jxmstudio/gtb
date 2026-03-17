@@ -52,7 +52,7 @@ const contactInfo = [
     icon: <MapPin className="h-6 w-6 text-gtb-aero" />,
     title: "Office",
     details: "PO BOX 256, Avondale Heights, VIC 3034",
-    description: "Delivering projects Australia-wide"
+    description: "Serving Melbourne's northwest and beyond"
   },
   {
     icon: <Clock className="h-6 w-6 text-gtb-aero" />,
@@ -333,11 +333,26 @@ export default function Contact() {
                     <Clock className="h-8 w-8 text-gtb-aero mx-auto mb-2" />
                     <h3 className="font-semibold text-gtb-navy mb-1">Quick Response</h3>
                     <p className="text-sm text-gray-600">
-                      We typically respond to all inquiries within 2-4 hours during business hours.
+                      We typically respond to all inquiries within 1 business day.
                     </p>
+                    <p className="text-xs text-gray-400 mt-1">We never share your details.</p>
                   </div>
                 </CardContent>
               </Card>
+
+              {/* Google Maps Embed */}
+              <div className="rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+                <iframe
+                  title="TOFA Group — Avondale Heights VIC"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0!2d144.8642!3d-37.7478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zAvondale+Heights+VIC+3034!5e0!3m2!1sen!2sau!4v1"
+                  width="100%"
+                  height="220"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
             </div>
           </div>
         </div>
