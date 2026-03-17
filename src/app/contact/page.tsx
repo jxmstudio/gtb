@@ -83,29 +83,32 @@ export default function Contact() {
     }));
   };
 
+  const [submitError, setSubmitError] = useState('');
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        enquiryType: '',
-        message: '',
-        newsletter: false
+    setSubmitError('');
+
+    try {
+      const res = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
       });
-    }, 3000);
+
+      if (!res.ok) throw new Error('Submission failed');
+
+      setIsSubmitted(true);
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({ firstName: '', lastName: '', email: '', phone: '', enquiryType: '', message: '', newsletter: false });
+      }, 4000);
+    } catch {
+      setSubmitError('Something went wrong. Please try again or call us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -243,6 +246,10 @@ export default function Contact() {
                           Subscribe to our newsletter for updates on new packages and market insights
                         </Label>
                       </div>
+
+                      {submitError && (
+                        <p className="text-red-600 text-sm">{submitError}</p>
+                      )}
 
                       <button
                         type="submit"
