@@ -13,6 +13,7 @@ import {
   ArrowRight,
   CheckCircle
 } from 'lucide-react';
+import VideoFacade from '@/components/VideoFacade';
 
 // Placeholder project data - will be replaced with real projects
 const projects = [
@@ -195,18 +196,14 @@ export default function Projects() {
               </p>
             </div>
 
-            {/* YouTube Shorts embed — portrait layout */}
+            {/* YouTube Shorts — facade hides channel until play */}
             <div className="flex justify-center">
               <div className="w-full max-w-[340px]">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10" style={{ paddingTop: '177.78%' }}>
-                  <iframe
-                    className="absolute inset-0 w-full h-full"
-                    src="https://www.youtube.com/embed/LTrCA-GEUHs"
-                    title="TOFA Group Client Testimonial"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  />
-                </div>
+                <VideoFacade
+                  videoId="LTrCA-GEUHs"
+                  title="TOFA Group Client Testimonial"
+                  aspectPadding="177.78%"
+                />
               </div>
             </div>
 
