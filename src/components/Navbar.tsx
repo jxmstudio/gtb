@@ -4,25 +4,41 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Logo } from './Logo';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Phone } from 'lucide-react';
 
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { 
-    name: 'Services', 
+  {
+    name: 'Services',
     href: '/services',
     dropdown: [
-      { name: 'Residential Construction', href: '/services#residential' },
-      { name: 'Commercial Construction', href: '/services#commercial' },
-      { name: 'Design & Build', href: '/services#design-build' },
+      { name: 'Residential Construction', href: '/services/residential-construction' },
+      { name: 'Commercial Construction', href: '/services/commercial-construction' },
+      { name: 'Knockdown Rebuild', href: '/services/knockdown-rebuild' },
+      { name: 'Renovations & Extensions', href: '/services/renovations-extensions' },
+      { name: 'Design & Build', href: '/services/design-and-build' },
+      { name: 'Project Management', href: '/services/project-management' },
       { name: 'Build Now, Pay Later', href: '/build-now-pay-later' },
     ]
   },
   { name: 'Projects', href: '/projects' },
-  { 
-    name: 'Resources', 
-    href: '#',
+  {
+    name: 'Locations',
+    href: '/locations',
+    dropdown: [
+      { name: 'Melbourne', href: '/locations/melbourne' },
+      { name: 'Essendon', href: '/locations/essendon' },
+      { name: 'Moonee Ponds', href: '/locations/moonee-ponds' },
+      { name: 'Avondale Heights', href: '/locations/avondale-heights' },
+      { name: 'Keilor', href: '/locations/keilor' },
+      { name: 'Taylors Lakes', href: '/locations/taylors-lakes' },
+      { name: 'View All Locations →', href: '/locations' },
+    ]
+  },
+  {
+    name: 'Resources',
+    href: '/faqs',
     dropdown: [
       { name: 'First Home Buyers', href: '/first-home-buyers' },
       { name: 'Investors', href: '/investors' },
@@ -31,7 +47,7 @@ const navigation = [
     ]
   },
   { name: 'Contact', href: '/contact' },
-] as const;
+];
 
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -130,13 +146,20 @@ export const Navbar: React.FC = () => {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Link 
+          {/* Phone + CTA */}
+          <div className="hidden lg:flex items-center gap-4">
+            <a
+              href="tel:1300000685"
+              className="flex items-center gap-1.5 text-sm font-semibold text-gtb-navy hover:text-gtb-aero transition-colors"
+            >
+              <Phone className="h-4 w-4" />
+              1300 000 685
+            </a>
+            <Link
               href="/contact"
               className="bg-gtb-aero hover:bg-gtb-aero-light text-white rounded-lg px-6 py-2.5 font-medium transition-colors duration-200"
             >
-              Free Consultation
+              Free Quote
             </Link>
           </div>
 
@@ -206,13 +229,20 @@ export const Navbar: React.FC = () => {
                   </div>
                 );
               })}
-              <div className="pt-4">
-                <Link 
+              <div className="pt-4 space-y-2">
+                <a
+                  href="tel:1300000685"
+                  className="flex items-center justify-center gap-2 w-full border-2 border-gtb-navy text-gtb-navy hover:bg-gtb-navy hover:text-white rounded-lg px-6 py-2.5 font-semibold transition-colors duration-200"
+                >
+                  <Phone className="h-4 w-4" />
+                  Call 1300 000 685
+                </a>
+                <Link
                   href="/contact"
                   className="block w-full text-center bg-gtb-aero hover:bg-gtb-aero-light text-white rounded-lg px-6 py-2.5 font-medium transition-colors duration-200"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Free Consultation
+                  Get a Free Quote
                 </Link>
               </div>
             </div>

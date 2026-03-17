@@ -26,6 +26,15 @@ const footerLinks = {
     { name: 'Investors', href: '/investors' },
     { name: 'Services Overview', href: '/services' },
   ],
+  locations: [
+    { name: 'Melbourne', href: '/locations/melbourne' },
+    { name: 'Essendon', href: '/locations/essendon' },
+    { name: 'Moonee Ponds', href: '/locations/moonee-ponds' },
+    { name: 'Avondale Heights', href: '/locations/avondale-heights' },
+    { name: 'Keilor', href: '/locations/keilor' },
+    { name: 'Taylors Lakes', href: '/locations/taylors-lakes' },
+    { name: 'View All Locations', href: '/locations' },
+  ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
@@ -118,8 +127,22 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Locations + Legal */}
           <div>
+            <h3 className="text-lg font-semibold mb-4 text-white">Locations</h3>
+            <ul className="space-y-2 mb-6">
+              {footerLinks.locations.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-white hover:text-gtb-aero text-sm transition-colors duration-200"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
             <h3 className="text-lg font-semibold mb-4 text-white">Legal</h3>
             <ul className="space-y-2">
               {footerLinks.legal.map((link) => (

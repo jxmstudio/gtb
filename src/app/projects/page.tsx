@@ -5,8 +5,7 @@ import { Button } from '@/components/ui/button';
 import { RevealOnScroll, StaggerReveal } from '@/components/motion/Reveals';
 import { MotionDiv, staggerItem } from '@/components/motion/MotionPrimitives';
 import Link from 'next/link';
-import Image from 'next/image';
-import { 
+import {
   Building2,
   Home as HomeIcon,
   MapPin,
@@ -24,34 +23,34 @@ const projects = [
     completion: "2024",
     description: "4-bedroom contemporary family home with open-plan living and quality finishes throughout.",
     features: ["4 Bedrooms", "2.5 Bathrooms", "Double Garage", "Outdoor Entertainment"],
-    image: "/projects/placeholder-1.jpg"
+    image: "/tofaphotos/Verv_PROJECTS_Acacia.jpg"
   },
   {
     title: "Townhouse Development",
-    location: "Brisbane, QLD",
+    location: "Essendon, VIC",
     type: "Residential - Multi-Unit",
     completion: "2024",
     description: "6-unit townhouse development featuring modern design and premium specifications.",
     features: ["6 Units", "3 Bedrooms Each", "Quality Finishes", "Landscaped Gardens"],
-    image: "/projects/placeholder-2.jpg"
+    image: "/tofaphotos/Verv_PROJECTS_Alma.jpg"
   },
   {
     title: "Commercial Fit-Out",
-    location: "Sydney, NSW",
+    location: "Moonee Ponds, VIC",
     type: "Commercial",
     completion: "2023",
     description: "Professional office fit-out with contemporary design and functional workspace solutions.",
     features: ["500sqm", "Modern Finishes", "Meeting Rooms", "Kitchen Facilities"],
-    image: "/projects/placeholder-3.jpg"
+    image: "/tofaphotos/Verv_PROJECTS_Amara.jpg"
   },
   {
     title: "Luxury Residence",
-    location: "Perth, WA",
+    location: "Avondale Heights, VIC",
     type: "Residential",
     completion: "2023",
     description: "High-end custom residence featuring premium materials and architectural excellence.",
     features: ["5 Bedrooms", "Pool & Spa", "Home Theater", "Wine Cellar"],
-    image: "/projects/placeholder-4.jpg"
+    image: "/tofaphotos/Verv_PROJECTS_Clara.jpg"
   }
 ];
 
@@ -122,10 +121,12 @@ export default function Projects() {
                   <MotionDiv key={index} variants={staggerItem}>
                     <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 h-full">
                       {/* Project Image */}
-                      <div className="aspect-video bg-gradient-to-br from-gtb-navy/10 to-gtb-aero/10 relative overflow-hidden">
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <Building2 className="h-24 w-24 text-gtb-navy/20" />
-                        </div>
+                      <div className="aspect-video relative overflow-hidden">
+                        <div
+                          className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                          style={{ backgroundImage: `url(${project.image})` }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-gtb-navy/80 to-transparent" />
                         <div className="absolute top-4 left-4">
                           <span className="bg-gtb-navy text-white px-4 py-2 rounded-full text-sm font-medium">
                             {project.type}
