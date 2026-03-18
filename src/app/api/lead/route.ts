@@ -25,15 +25,25 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Server misconfiguration' }, { status: 500 });
   }
 
-  const res = await fetch(webhookUrl, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(parsed.data),
-  });
+  try {
+    const res = await fetch(webhookUrl, {
+      method: 'POST',
+      redirect: 'follow', // Google Apps Script returns a 302 — follow it
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        timestamp: new Date().toISOString(), // Apps Script expects this field
+        ...parsed.data,
+      }),
+    });
 
-  if (!res.ok) {
-    console.error('Google Sheets webhook failed', await res.text());
-    return NextResponse.json({ error: 'Failed to save submission' }, { status: 502 });
+    if (!res.ok) {
+      const text = await res.text();
+      console.error('Google Sheets webhook failed', res.status, text);
+      return NextResponse.json({ error: 'Failed to save submission' }, { status: 502 });
+    }
+  } catch (err) {
+    console.error('Google Sheets fetch error', err);
+    return NextResponse.json({ error: 'Failed to reach webhook' }, { status: 502 });
   }
 
   return NextResponse.json({ success: true });
