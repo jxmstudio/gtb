@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://georgethebroker.com.au/sitemap.xml
-
+Sitemap: https://tofagroup.com.au/sitemap.xml
