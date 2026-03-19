@@ -134,7 +134,7 @@ export default function Home() {
               {/* Photo */}
               <div className="relative h-[500px] lg:h-[580px] rounded-2xl overflow-hidden shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-gtb-navy/70 to-gtb-navy/30 z-10"></div>
-                <div className="absolute inset-0 bg-[url('/tofaphotos/Verv_PROJECTS_Terano.jpg')] bg-cover bg-center"></div>
+                <div className="absolute inset-0 bg-[url('/3-Bridget-St-Glen-Waverley_001.jpg')] bg-cover bg-center"></div>
                 <div className="absolute bottom-8 left-8 z-20 text-white">
                   <div className="bg-gtb-aero text-white px-4 py-1.5 rounded text-xs font-bold inline-block mb-3 tracking-wider uppercase">
                     Residential Construction

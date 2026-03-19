@@ -52,14 +52,16 @@ export default function CommercialConstruction() {
 
       <main>
         {/* Hero */}
-        <section className="bg-gradient-to-br from-gray-50 to-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative bg-gtb-navy py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-[url('/tofaphotos/Verv_PROJECTS_Terano.jpg')] bg-cover bg-center" />
+          <div className="absolute inset-0 bg-gtb-navy/75" />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-4xl">
               <div className="text-sm font-bold text-gtb-aero mb-4 tracking-wider uppercase">Commercial Construction</div>
-              <h1 className="text-4xl lg:text-6xl font-bold text-gtb-navy mb-6 leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Commercial Builder in Melbourne
               </h1>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-xl text-white/75 mb-8 leading-relaxed">
                 TOFA Group delivers commercial construction projects across Melbourne — from office fit-outs and retail builds
                 to industrial facilities and mixed-use developments. We manage every stage of your commercial project
                 with rigorous compliance, timeline control, and transparent communication.
@@ -74,7 +76,7 @@ export default function CommercialConstruction() {
                 </Link>
                 <a
                   href="tel:1300000685"
-                  className="border-2 border-gtb-navy text-gtb-navy hover:bg-gtb-navy hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all inline-flex items-center justify-center"
+                  className="border-2 border-white/50 text-white hover:bg-white hover:text-gtb-navy px-8 py-4 rounded-lg font-bold text-lg transition-all inline-flex items-center justify-center"
                 >
                   <Phone className="mr-2 h-5 w-5" />
                   1300 000 685

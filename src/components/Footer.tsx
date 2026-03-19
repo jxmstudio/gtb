@@ -49,7 +49,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <Logo size="lg" variant="inverted" />
+            <Logo size="lg" />
             <p className="text-white text-sm leading-relaxed">
               TOFA Group delivers high-quality residential and commercial construction projects across Australia.
             </p>
