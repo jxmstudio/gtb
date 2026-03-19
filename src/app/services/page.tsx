@@ -160,30 +160,16 @@ export default function Services() {
       
       <main>
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-gray-50 via-white to-blue-50/20 py-20 overflow-hidden">
-          <motion.div 
-            className="absolute inset-0"
-            animate={{
-              background: [
-                "radial-gradient(ellipse at top right, rgba(107, 142, 35, 0.08), transparent)",
-                "radial-gradient(ellipse at top right, rgba(107, 142, 35, 0.04), transparent)",
-                "radial-gradient(ellipse at top right, rgba(107, 142, 35, 0.08), transparent)",
-              ]
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-          
+        <section className="relative bg-gtb-navy py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-[url('/tofaphotos/Verv_PROJECTS_Amara.jpg')] bg-cover bg-center" />
+          <div className="absolute inset-0 bg-gtb-navy/75" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <RevealOnScroll>
               <div className="text-center mb-12">
-                <h1 className="text-4xl md:text-5xl font-bold text-gtb-navy mb-6">
+                <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   Our Construction Services
                 </h1>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className="text-xl text-white/75 max-w-3xl mx-auto">
                   TOFA Group delivers comprehensive construction services across Australia. From planning to completion, we manage every stage of your project.
                 </p>
               </div>

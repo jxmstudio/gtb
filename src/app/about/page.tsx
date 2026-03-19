@@ -71,14 +71,16 @@ export default function About() {
       
       <main>
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-gray-50 to-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative bg-gtb-navy py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-[url('/tofaphotos/Verv_PROJECTS_Terano.jpg')] bg-cover bg-center" />
+          <div className="absolute inset-0 bg-gtb-navy/75" />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <RevealOnScroll>
               <div className="text-center mb-12">
-                <h1 className="text-4xl md:text-5xl font-bold text-gtb-navy mb-6">
+                <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   About TOFA Group
                 </h1>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className="text-xl text-white/75 max-w-3xl mx-auto">
                   Delivering quality residential and commercial construction projects across Australia
                 </p>
               </div>
