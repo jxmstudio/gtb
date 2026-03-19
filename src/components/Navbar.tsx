@@ -8,7 +8,14 @@ import { Menu, X, ChevronDown, Phone } from 'lucide-react';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
+  {
+    name: 'About',
+    href: '/about',
+    dropdown: [
+      { name: 'About TOFA', href: '/about' },
+      { name: 'Meet the Team', href: '/team' },
+    ]
+  },
   {
     name: 'Services',
     href: '/services',
@@ -42,7 +49,6 @@ const navigation = [
     dropdown: [
       { name: 'First Home Buyers', href: '/first-home-buyers' },
       { name: 'Investors', href: '/investors' },
-      { name: 'Meet the Team', href: '/team' },
       { name: 'FAQs', href: '/faqs' },
     ]
   },

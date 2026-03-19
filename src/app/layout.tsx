@@ -21,7 +21,7 @@ const localBusinessSchema = {
   "@type": ["LocalBusiness", "GeneralContractor"],
   "@id": "https://tofagroup.com.au/#business",
   "name": "TOFA Group",
-  "description": "Licensed residential and commercial builder in Melbourne's northwest, specialising in custom homes, knockdown rebuilds, renovations, and commercial construction.",
+  "description": "Licensed residential and commercial builder serving Melbourne & surrounds, specialising in custom homes, knockdown rebuilds, renovations, and commercial construction.",
   "url": "https://tofagroup.com.au",
   "telephone": "+611300000685",
   "email": "info@tofagroup.com.au",
@@ -61,11 +61,11 @@ export const metadata: Metadata = {
     default: "TOFA Group | Custom Home Builder Melbourne",
     template: "%s | TOFA Group"
   },
-  description: "Melbourne's trusted custom home builder. TOFA Group delivers residential and commercial construction across Melbourne's northwest — Avondale Heights, Essendon, Moonee Ponds and beyond. Licensed, insured, on time.",
+  description: "Melbourne's trusted custom home builder. TOFA Group delivers residential and commercial construction across Melbourne & surrounds — Avondale Heights, Essendon, Moonee Ponds and beyond. Licensed, insured, on time.",
   keywords: [
     "home builder Melbourne",
     "custom home builder Melbourne",
-    "residential builder Melbourne northwest",
+    "residential builder Melbourne",
     "commercial builder Melbourne",
     "builder Avondale Heights",
     "builder Essendon",

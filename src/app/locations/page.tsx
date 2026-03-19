@@ -5,15 +5,15 @@ import Link from 'next/link';
 import { ArrowRight, Phone, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Locations | TOFA Group Builds Across Melbourne's Northwest",
-  description: "TOFA Group builds custom homes and commercial projects across Melbourne's northwest — Avondale Heights, Essendon, Moonee Ponds, Keilor, Taylors Lakes and beyond. Find your local builder.",
+  title: "Locations | TOFA Group Builds Across Melbourne & Surrounds",
+  description: "TOFA Group builds custom homes and commercial projects across Melbourne & surrounds — Avondale Heights, Essendon, Moonee Ponds, Keilor, Taylors Lakes and beyond. Find your local builder.",
 };
 
 const locations = [
   {
     name: "Melbourne",
     badge: "Greater Melbourne",
-    description: "Licensed residential and commercial builder serving all of Melbourne, with deep expertise in the northwest corridor.",
+    description: "Licensed residential and commercial builder serving all of Melbourne & surrounds.",
     href: "/locations/melbourne",
     photo: "/tofaphotos/Verv_PROJECTS_Acacia.jpg",
   },
@@ -65,14 +65,14 @@ export default function LocationsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="flex items-center justify-center gap-2 text-sm font-bold text-gtb-aero mb-4 tracking-wider uppercase">
               <MapPin className="h-4 w-4" />
-              Melbourne&apos;s Northwest
+              Melbourne &amp; Surrounds
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              We Build Across Melbourne&apos;s Northwest
+              We Build Across Melbourne &amp; Surrounds
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
               Based in Avondale Heights, TOFA Group delivers quality residential and commercial construction across
-              Melbourne&apos;s northwest suburbs. Select your suburb to learn more about building in your area.
+              Melbourne &amp; surrounds. Select your suburb to learn more about building in your area.
             </p>
           </div>
         </section>

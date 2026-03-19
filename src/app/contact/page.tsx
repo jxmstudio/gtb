@@ -52,7 +52,7 @@ const contactInfo = [
     icon: <MapPin className="h-6 w-6 text-gtb-aero" />,
     title: "Office",
     details: "PO BOX 256, Avondale Heights, VIC 3034",
-    description: "Serving Melbourne's northwest and beyond"
+    description: "Serving Melbourne & surrounds"
   },
   {
     icon: <Clock className="h-6 w-6 text-gtb-aero" />,

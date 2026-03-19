@@ -16,12 +16,12 @@ import {
   Home as HomeIcon,
   Wrench,
   Layers,
-  ClipboardList,
+  Users,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: "Custom Home Builder Melbourne | TOFA Group",
-  description: "Melbourne's trusted custom home builder. TOFA Group builds quality homes and commercial projects across Melbourne's northwest — Avondale Heights, Essendon, Moonee Ponds, Keilor and beyond. Free consultation.",
+  description: "Melbourne's trusted custom home builder. TOFA Group builds quality homes and commercial projects across Melbourne & surrounds — Avondale Heights, Essendon, Moonee Ponds, Keilor and beyond. Free consultation.",
 };
 
 const services = [
@@ -59,19 +59,19 @@ const services = [
   },
   {
     index: '05',
-    icon: Building2,
-    title: 'Commercial',
-    badge: 'Commercial',
-    desc: 'Office fit-outs, retail spaces, industrial facilities — delivered on time with the same rigour as residential.',
-    href: '/services/commercial-construction',
+    icon: HomeIcon,
+    title: 'Turnkey Homes',
+    badge: 'Turnkey',
+    desc: 'Fully finished homes ready to move in — we handle everything from design to handover.',
+    href: '/services/residential-construction',
   },
   {
     index: '06',
-    icon: ClipboardList,
-    title: 'Project Management',
-    badge: 'PM',
-    desc: 'Already have a design? We manage every trade, every inspection, every milestone from slab to handover.',
-    href: '/services/project-management',
+    icon: Users,
+    title: 'Co-Living',
+    badge: 'Co-Living',
+    desc: 'Purpose-built co-living and multi-unit developments designed for modern shared living.',
+    href: '/services/residential-construction',
   },
 ];
 
@@ -112,7 +112,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex flex-wrap justify-center md:justify-between items-center gap-x-8 gap-y-3">
               {[
-                { icon: Shield, label: 'Licensed Builder VIC' },
+                { icon: Shield, label: 'Working with Licensed Builders' },
                 { icon: Award, label: 'Registered Building Practitioner' },
                 { icon: CheckCircle, label: 'Fully Insured' },
                 { icon: Clock, label: 'On-Time Delivery Guarantee' },
@@ -140,7 +140,7 @@ export default function Home() {
                     Residential Construction
                   </div>
                   <h3 className="text-3xl font-bold mb-1">Modern Family Homes</h3>
-                  <p className="text-white/80 text-sm">Quality builds across Melbourne&apos;s northwest</p>
+                  <p className="text-white/80 text-sm">Quality builds across Melbourne &amp; surrounds</p>
                 </div>
               </div>
 
@@ -148,7 +148,7 @@ export default function Home() {
               <div>
                 <div className="text-xs font-bold text-gtb-aero mb-4 tracking-widest uppercase">Our Expertise</div>
                 <h2 className="text-4xl lg:text-5xl font-bold text-gtb-navy mb-6 leading-tight">
-                  Building Excellence Across Melbourne&apos;s Northwest
+                  Building Excellence Across Melbourne &amp; Surrounds
                 </h2>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                   TOFA Group delivers quality residential and commercial construction across Avondale Heights,
@@ -228,6 +228,11 @@ export default function Home() {
         </section>
 
         {/* Project Photo Strip */}
+        <section className="bg-stone-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+            <div className="text-xs font-bold text-gtb-aero mb-3 tracking-widest uppercase">Our Work</div>
+            <h2 className="text-4xl font-bold text-gtb-navy">Recent Projects</h2>
+          </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 h-[260px] lg:h-[320px]">
           {[
             { src: '/tofaphotos/Verv_PROJECTS_Terano.jpg', label: 'Terano' },
@@ -247,6 +252,7 @@ export default function Home() {
             </div>
           ))}
         </div>
+        </section>
 
         {/* Our Process */}
         <section className="py-16 bg-gtb-navy">
