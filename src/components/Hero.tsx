@@ -9,7 +9,7 @@ interface HeroProps {
 
 export function Hero({
   headline = "Melbourne's Trusted Custom Home Builder",
-  subline = "From Avondale Heights to Essendon, Moonee Ponds to Keilor — TOFA Group builds quality homes and commercial projects across Melbourne's northwest. On time, on budget, and built to last.",
+  subline = "From Avondale Heights to Essendon, Moonee Ponds to Keilor — TOFA Group builds quality homes across Melbourne & surrounds. On time, on budget, and built to last.",
   showTrustIndicators = true,
 }: HeroProps) {
   return (
@@ -18,7 +18,7 @@ export function Hero({
       {/* Background photo */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/tofaphotos/Verv_PROJECTS_Acacia.jpg')" }}
+        style={{ backgroundImage: "url('/3-Bridget-St-Glen-Waverley_001.jpg')" }}
       />
 
       {/* Overlay — left heavy for legibility, right opens up so photo breathes */}
@@ -33,7 +33,7 @@ export function Hero({
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-2 bg-white/10 text-gtb-aero border border-white/20 px-3 py-1.5 rounded-full text-sm font-semibold mb-6 tracking-wide">
               <span className="w-1.5 h-1.5 bg-gtb-aero rounded-full"></span>
-              Avondale Heights · Melbourne&apos;s Northwest
+              Avondale Heights · Melbourne &amp; Surrounds
             </div>
 
             {/* Headline */}
@@ -87,7 +87,7 @@ export function Hero({
             <div className="bg-white rounded-2xl p-8 mb-4 text-center shadow-2xl">
               <div className="text-6xl font-bold text-gtb-navy mb-1 font-brand">500+</div>
               <div className="text-gtb-aero font-semibold text-sm uppercase tracking-widest mb-1">Projects Completed</div>
-              <p className="text-gray-400 text-sm">Across Melbourne&apos;s northwest suburbs</p>
+              <p className="text-gray-400 text-sm">Across Melbourne &amp; surrounds</p>
             </div>
 
             {/* Secondary stats */}
