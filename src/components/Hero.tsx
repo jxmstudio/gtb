@@ -15,11 +15,21 @@ export function Hero({
   return (
     <section className="relative overflow-hidden min-h-[620px] lg:min-h-[680px]">
 
-      {/* Background photo */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/3-Bridget-St-Glen-Waverley_001.jpg')" }}
-      />
+      {/* Background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/vertical-logo-compressed.mp4" type="video/mp4" />
+        {/* Fallback photo if video fails */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/3-Bridget-St-Glen-Waverley_001.jpg')" }}
+        />
+      </video>
 
       {/* Overlay — left heavy for legibility, right opens up so photo breathes */}
       <div className="absolute inset-0 bg-gradient-to-r from-gtb-navy/92 via-gtb-navy/75 to-gtb-navy/40" />
