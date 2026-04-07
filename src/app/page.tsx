@@ -302,6 +302,21 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Brand Logo Video */}
+        <section className="bg-gtb-navy py-16">
+          <div className="flex justify-center px-4">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full max-w-[280px] sm:max-w-xs"
+            >
+              <source src="/vertical-logo.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </section>
+
         {/* Partner Logos */}
         <PartnerLogos />
 
