@@ -78,6 +78,24 @@ export const metadata: Metadata = {
     siteName: "TOFA Group",
     locale: "en_AU",
     type: "website",
+    title: "TOFA Group | Custom Home Builder Melbourne",
+    description: "Melbourne's trusted custom home builder — 500+ projects delivered. Custom homes, knockdown rebuilds, renovations, and commercial construction across Melbourne & surrounds.",
+    url: "https://www.tofagroup.com.au",
+    images: [
+      {
+        url: "https://www.tofagroup.com.au/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "TOFA Group — Melbourne's Trusted Custom Home Builder",
+        type: "image/jpeg",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TOFA Group | Custom Home Builder Melbourne",
+    description: "Melbourne's trusted custom home builder — 500+ projects delivered. Custom homes, knockdown rebuilds, renovations & commercial construction.",
+    images: ["https://www.tofagroup.com.au/og-image.jpg"],
   },
   alternates: {
     canonical: 'https://www.tofagroup.com.au',
