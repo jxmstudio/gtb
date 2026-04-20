@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "Building FAQs | Custom Home Builder Melbourne | TOFA Group",
   description: "Answers to common questions about building a custom home in Melbourne. Timelines, costs, knockdown rebuilds, renovations, financing — answered by TOFA Group's expert builders.",
-  alternates: { canonical: 'https://tofagroup.com.au/faqs' },
+  alternates: { canonical: 'https://www.tofagroup.com.au/faqs' },
 };
 
 const faqSchema = {
