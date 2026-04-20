@@ -19,10 +19,10 @@ const playfairDisplay = Playfair_Display({
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "GeneralContractor"],
-  "@id": "https://tofagroup.com.au/#business",
+  "@id": "https://www.tofagroup.com.au/#business",
   "name": "TOFA Group",
   "description": "Licensed residential and commercial builder serving Melbourne & surrounds, specialising in custom homes, knockdown rebuilds, renovations, and commercial construction.",
-  "url": "https://tofagroup.com.au",
+  "url": "https://www.tofagroup.com.au",
   "telephone": "+611300000685",
   "email": "info@tofagroup.com.au",
   "address": {
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   alternates: {
-    canonical: 'https://tofagroup.com.au',
+    canonical: 'https://www.tofagroup.com.au',
   },
   robots: {
     index: true,
