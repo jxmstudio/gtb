@@ -63,19 +63,24 @@ export const metadata: Metadata = {
   },
   description: "Melbourne's trusted custom home builder. TOFA Group delivers residential and commercial construction across Melbourne & surrounds — Avondale Heights, Essendon, Moonee Ponds and beyond. Licensed, insured, on time.",
   keywords: [
-    "home builder Melbourne",
     "custom home builder Melbourne",
-    "residential builder Melbourne",
-    "commercial builder Melbourne",
+    "luxury home builder Melbourne",
+    "home builder Melbourne",
+    "builder Keilor",
     "builder Avondale Heights",
     "builder Essendon",
     "knockdown rebuild Melbourne",
-    "renovation builder Melbourne"
+    "renovation builder Melbourne",
+    "residential builder Melbourne",
+    "commercial builder Melbourne"
   ],
   openGraph: {
     siteName: "TOFA Group",
     locale: "en_AU",
     type: "website",
+  },
+  alternates: {
+    canonical: 'https://tofagroup.com.au',
   },
   robots: {
     index: true,
