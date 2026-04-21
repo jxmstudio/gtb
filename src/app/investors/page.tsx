@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -7,16 +8,22 @@ import { MotionDiv, MotionH2, MotionP, staggerContainer, staggerItem } from '@/c
 import Testimonials from '@/components/marketing/Testimonials';
 import PartnerLogos from '@/components/marketing/PartnerLogos';
 import Link from 'next/link';
-import { 
-  TrendingUp, 
-  DollarSign, 
-  Home as HomeIcon, 
+import {
+  TrendingUp,
+  DollarSign,
+  Home as HomeIcon,
   BarChart3,
   ArrowRight,
   Calendar,
   Phone,
   CheckCircle
 } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: "Property Investors Melbourne | Investment Home Builder | TOFA Group",
+  description: "Building for investment in Melbourne? TOFA Group delivers rental-ready new homes, dual-occupancy developments, and multi-dwelling builds designed for strong yield and capital growth.",
+  alternates: { canonical: 'https://www.tofagroup.com.au/investors' },
+};
 
 const investmentStrategies = [
   {

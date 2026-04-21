@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -13,6 +14,12 @@ import {
   ArrowRight,
   CheckCircle
 } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: "Our Projects | Melbourne Custom Home Builder Portfolio | TOFA Group",
+  description: "Explore TOFA Group's portfolio of residential and commercial projects across Melbourne — custom homes, knockdown rebuilds, renovations, and commercial builds.",
+  alternates: { canonical: 'https://www.tofagroup.com.au/projects' },
+};
 
 // Placeholder project data - will be replaced with real projects
 const projects = [

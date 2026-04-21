@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -6,7 +7,7 @@ import { RevealOnScroll, StaggerReveal } from '@/components/motion/Reveals';
 import { MotionDiv, staggerItem } from '@/components/motion/MotionPrimitives';
 import Link from 'next/link';
 import Image from 'next/image';
-import { 
+import {
   Mail,
   Phone,
   ArrowRight,
@@ -15,6 +16,12 @@ import {
   Award,
   Target
 } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: "Meet Our Team | Melbourne Custom Home Builder | TOFA Group",
+  description: "Meet the TOFA Group team — experienced Melbourne builders, project managers, and support staff delivering quality residential and commercial construction.",
+  alternates: { canonical: 'https://www.tofagroup.com.au/team' },
+};
 
 const team = [
   {

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { Card } from '@/components/ui/card';
@@ -6,16 +7,22 @@ import { MotionDiv, MotionH2, MotionP, staggerItem } from '@/components/motion/M
 import Testimonials from '@/components/marketing/Testimonials';
 import PartnerLogos from '@/components/marketing/PartnerLogos';
 import Link from 'next/link';
-import { 
-  Home as HomeIcon, 
-  DollarSign, 
-  MapPin, 
+import {
+  Home as HomeIcon,
+  DollarSign,
+  MapPin,
   Calendar,
   Star,
   ArrowRight,
   CheckCircle,
   TrendingUp
 } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: "Home Building Packages Melbourne | Fixed-Price Builds | TOFA Group",
+  description: "Explore TOFA Group's fixed-price home building packages across Melbourne. Transparent inclusions, quality finishes, and flexible designs for first home buyers, families, and investors.",
+  alternates: { canonical: 'https://www.tofagroup.com.au/packages' },
+};
 
 const packages = [
   {

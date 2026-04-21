@@ -25,6 +25,18 @@ const localBusinessSchema = {
   "url": "https://www.tofagroup.com.au",
   "telephone": "+611300000685",
   "email": "info@tofagroup.com.au",
+  "foundingDate": "2010",
+  "image": [
+    "https://www.tofagroup.com.au/tofaphotos/Verv_PROJECTS_Terano.jpg",
+    "https://www.tofagroup.com.au/tofaphotos/Verv_PROJECTS_Acacia.jpg",
+    "https://www.tofagroup.com.au/tofaphotos/Verv_PROJECTS_Clara.jpg"
+  ],
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.tofagroup.com.au/TofaGroup_Logo_Green_Web_1920px.png",
+    "width": 1920,
+    "height": 640
+  },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "PO BOX 256",
@@ -50,6 +62,74 @@ const localBusinessSchema = {
   ],
   "priceRange": "$$$$",
   "openingHours": "Mo-Fr 09:00-18:00",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "TOFA Group Construction Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Residential Construction",
+          "description": "Custom home construction across Melbourne — single and double-storey new builds delivered to client brief.",
+          "url": "https://www.tofagroup.com.au/services/residential-construction"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Commercial Construction",
+          "description": "Office, retail, industrial, medical, and mixed-use commercial builds and fit-outs across Melbourne.",
+          "url": "https://www.tofagroup.com.au/services/commercial-construction"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Knockdown Rebuild",
+          "description": "End-to-end knockdown rebuild service — demolition permits, design, and construction of a brand-new home on your existing block.",
+          "url": "https://www.tofagroup.com.au/services/knockdown-rebuild"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Renovations & Extensions",
+          "description": "Home renovations, extensions, and second-storey additions across Melbourne's northwest.",
+          "url": "https://www.tofagroup.com.au/services/renovations-extensions"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Design & Build",
+          "description": "Integrated design and construction under one contract — single point of accountability from concept to handover.",
+          "url": "https://www.tofagroup.com.au/services/design-and-build"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Project Management",
+          "description": "Independent construction project management and owner-builder support services across Melbourne.",
+          "url": "https://www.tofagroup.com.au/services/project-management"
+        }
+      }
+    ]
+  },
   "sameAs": [
     "https://www.facebook.com/groups/1680469966691932/",
     "https://www.instagram.com/thetofagroup/"

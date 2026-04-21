@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -7,15 +8,21 @@ import { MotionDiv, MotionH2, MotionP, staggerContainer, staggerItem } from '@/c
 import Testimonials from '@/components/marketing/Testimonials';
 import PartnerLogos from '@/components/marketing/PartnerLogos';
 import Link from 'next/link';
-import { 
-  CheckCircle, 
-  DollarSign, 
-  Home as HomeIcon, 
+import {
+  CheckCircle,
+  DollarSign,
+  Home as HomeIcon,
   Users,
   ArrowRight,
   Calendar,
   Phone
 } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: "First Home Buyers Melbourne | New Home Builder | TOFA Group",
+  description: "Building your first home in Melbourne? TOFA Group guides first home buyers through design, grants, finance partners, and construction — from deposit to handover.",
+  alternates: { canonical: 'https://www.tofagroup.com.au/first-home-buyers' },
+};
 
 const steps = [
   {
