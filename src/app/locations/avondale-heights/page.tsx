@@ -8,6 +8,7 @@ import { CheckCircle, ArrowRight, Phone, MapPin } from 'lucide-react';
 export const metadata: Metadata = {
   title: "Builder Avondale Heights | Home Construction, Renovations & Extensions",
   description: "TOFA Group is based in Avondale Heights and builds custom homes, knockdown rebuilds, and renovations throughout the suburb. Local builder, local knowledge — free consultation.",
+  alternates: { canonical: 'https://www.tofagroup.com.au/locations/avondale-heights' },
 };
 
 export default function AvondalHeightsPage() {

@@ -8,6 +8,7 @@ import { CheckCircle, ArrowRight, Phone, MapPin } from 'lucide-react';
 export const metadata: Metadata = {
   title: "Builder Taylors Lakes | Custom Homes, New Builds & Renovations",
   description: "TOFA Group builds custom homes, new builds, and renovations in Taylors Lakes, VIC. Licensed builder in Taylors Lakes — quality construction, fixed price, no surprises. Free consultation.",
+  alternates: { canonical: 'https://www.tofagroup.com.au/locations/taylors-lakes' },
 };
 
 const localPageSchema = {

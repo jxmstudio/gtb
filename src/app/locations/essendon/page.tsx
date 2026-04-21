@@ -8,6 +8,7 @@ import { CheckCircle, ArrowRight, Phone, MapPin } from 'lucide-react';
 export const metadata: Metadata = {
   title: "Home Builder Essendon | Custom Homes, Knockdown Rebuild & Renovations",
   description: "TOFA Group builds custom homes, knockdown rebuilds, and renovations in Essendon, VIC. Licensed builder in Essendon — quality construction, fixed price, no surprises. Free consultation.",
+  alternates: { canonical: 'https://www.tofagroup.com.au/locations/essendon' },
 };
 
 const localPageSchema = {

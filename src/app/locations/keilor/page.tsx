@@ -8,6 +8,7 @@ import { CheckCircle, ArrowRight, Phone, MapPin } from 'lucide-react';
 export const metadata: Metadata = {
   title: "Builder Keilor | Custom Homes, Knockdown Rebuild & Renovations",
   description: "TOFA Group builds custom homes, knockdown rebuilds, and renovations in Keilor, VIC. Licensed builder in Keilor — quality construction, fixed price, no surprises. Based 5 minutes away in Avondale Heights. Free consultation.",
+  alternates: { canonical: 'https://www.tofagroup.com.au/locations/keilor' },
 };
 
 const localPageSchema = {

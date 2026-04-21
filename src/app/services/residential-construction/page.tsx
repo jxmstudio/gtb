@@ -8,6 +8,7 @@ import { CheckCircle, ArrowRight, Phone } from 'lucide-react';
 export const metadata: Metadata = {
   title: "Residential Home Builder Melbourne | Custom Homes & New Builds",
   description: "TOFA Group is Melbourne's trusted residential home builder. We build custom homes, new builds, and multi-dwelling developments across Melbourne's northwest — Avondale Heights, Essendon, Moonee Ponds and beyond.",
+  alternates: { canonical: 'https://www.tofagroup.com.au/services/residential-construction' },
 };
 
 const faqSchema = {

@@ -7,6 +7,7 @@ import { ArrowRight, Phone, MapPin } from 'lucide-react';
 export const metadata: Metadata = {
   title: "Locations | TOFA Group Builds Across Melbourne & Surrounds",
   description: "TOFA Group builds custom homes and commercial projects across Melbourne & surrounds — Avondale Heights, Essendon, Moonee Ponds, Keilor, Taylors Lakes and beyond. Find your local builder.",
+  alternates: { canonical: 'https://www.tofagroup.com.au/locations' },
 };
 
 const locations = [

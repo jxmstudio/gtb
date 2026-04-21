@@ -8,6 +8,7 @@ import { CheckCircle, ArrowRight, Phone } from 'lucide-react';
 export const metadata: Metadata = {
   title: "Commercial Builder Melbourne | Office, Retail & Industrial Construction",
   description: "TOFA Group is a licensed commercial builder in Melbourne. We deliver office, retail, industrial, and fit-out projects across Melbourne's northwest — on time and on budget.",
+  alternates: { canonical: 'https://www.tofagroup.com.au/services/commercial-construction' },
 };
 
 const faqSchema = {

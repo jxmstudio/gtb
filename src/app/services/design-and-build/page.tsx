@@ -8,6 +8,7 @@ import { CheckCircle, ArrowRight, Phone } from 'lucide-react';
 export const metadata: Metadata = {
   title: "Design and Build Melbourne | Integrated Design & Construction",
   description: "TOFA Group offers design and build services in Melbourne — one team, one contract, one point of contact for your entire project. From concept to construction across Melbourne's northwest.",
+  alternates: { canonical: 'https://www.tofagroup.com.au/services/design-and-build' },
 };
 
 export default function DesignAndBuild() {

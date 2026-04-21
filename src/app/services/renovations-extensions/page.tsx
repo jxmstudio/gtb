@@ -8,6 +8,7 @@ import { CheckCircle, ArrowRight, Phone } from 'lucide-react';
 export const metadata: Metadata = {
   title: "Home Renovations & Extensions Melbourne | TOFA Group",
   description: "TOFA Group delivers quality home renovations and house extensions across Melbourne's northwest — Avondale Heights, Essendon, Moonee Ponds. Kitchen, bathroom, second storey, rear extension. Free quote.",
+  alternates: { canonical: 'https://www.tofagroup.com.au/services/renovations-extensions' },
 };
 
 export default function RenovationsExtensions() {

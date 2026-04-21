@@ -8,6 +8,7 @@ import { CheckCircle, ArrowRight, Phone, MapPin } from 'lucide-react';
 export const metadata: Metadata = {
   title: "Builder Moonee Ponds | Home Construction, Knockdown Rebuild & Renovations",
   description: "TOFA Group builds custom homes, knockdown rebuilds, and renovations in Moonee Ponds, VIC. Licensed builder in Moonee Ponds — quality construction, fixed price. Free consultation.",
+  alternates: { canonical: 'https://www.tofagroup.com.au/locations/moonee-ponds' },
 };
 
 export default function MooneePondsPage() {

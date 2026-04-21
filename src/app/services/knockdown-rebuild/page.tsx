@@ -8,6 +8,7 @@ import { CheckCircle, ArrowRight, Phone } from 'lucide-react';
 export const metadata: Metadata = {
   title: "Knockdown Rebuild Melbourne | Demolish & Build New Home",
   description: "TOFA Group specialises in knockdown rebuilds across Melbourne's northwest. Demolish your old home and build your dream new home on the same block. Free consultation — Essendon, Moonee Ponds, Avondale Heights.",
+  alternates: { canonical: 'https://www.tofagroup.com.au/services/knockdown-rebuild' },
 };
 
 const faqSchema = {

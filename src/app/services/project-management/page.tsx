@@ -8,6 +8,7 @@ import { CheckCircle, ArrowRight, Phone } from 'lucide-react';
 export const metadata: Metadata = {
   title: "Construction Project Management Melbourne | TOFA Group",
   description: "TOFA Group provides construction project management services in Melbourne. From owner-builder support to full lifecycle management — we keep your build on time, on budget, and compliant.",
+  alternates: { canonical: 'https://www.tofagroup.com.au/services/project-management' },
 };
 
 export default function ProjectManagement() {

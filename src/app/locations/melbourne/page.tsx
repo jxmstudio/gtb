@@ -8,6 +8,7 @@ import { CheckCircle, ArrowRight, Phone, MapPin } from 'lucide-react';
 export const metadata: Metadata = {
   title: "Home Builder Melbourne | New Homes, Renovations & Commercial Construction",
   description: "TOFA Group is a licensed home builder in Melbourne. We deliver custom homes, knockdown rebuilds, renovations, and commercial construction projects across Melbourne. Free consultation.",
+  alternates: { canonical: 'https://www.tofagroup.com.au/locations/melbourne' },
 };
 
 const localPageSchema = {
