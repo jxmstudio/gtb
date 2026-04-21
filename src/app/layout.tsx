@@ -195,7 +195,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+  // GA4 measurement ID. Can be overridden via NEXT_PUBLIC_GA_ID in Vercel env vars;
+  // defaults to the live TOFA Group property so the tag fires without extra config.
+  const gaId = process.env.NEXT_PUBLIC_GA_ID || "G-NZRPTY65HZ";
 
   return (
     <html lang="en" className={`${inter.variable} ${playfairDisplay.variable}`}>
