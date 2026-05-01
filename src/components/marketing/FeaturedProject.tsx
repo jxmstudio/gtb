@@ -28,15 +28,15 @@ export function FeaturedProject() {
           <div className="relative aspect-[4/5] lg:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl bg-gtb-navy">
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-[1.03]"
-              style={{ backgroundImage: "url('/projects/44-yucamane-truganina/hero.jpg')" }}
+              style={{ backgroundImage: "url('/projects/44-yucamane-truganina/featured.jpg')" }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gtb-navy/70 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 z-10 text-white">
               <div className="bg-gtb-aero text-white px-3 py-1 rounded text-xs font-bold inline-block mb-3 tracking-widest uppercase">
                 Featured Build
               </div>
-              <h3 className="text-2xl font-bold leading-tight font-brand">44 Yucamane Drive</h3>
-              <p className="text-white/80 text-sm mt-1">Truganina, VIC</p>
+              <h3 className="text-2xl font-bold leading-tight font-brand">Truganina</h3>
+              <p className="text-white/80 text-sm mt-1">VIC, Melbourne</p>
             </div>
           </div>
 

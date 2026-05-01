@@ -200,7 +200,7 @@ export default function Home() {
 
         {/* CTA */}
         <section className="py-20 lg:py-24 bg-gtb-navy relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/projects/44-yucamane-truganina/hero.jpg')] bg-cover bg-center opacity-20"></div>
+          <div className="absolute inset-0 bg-[url('/projects/glen-waverley/hero.jpg')] bg-cover bg-center opacity-20"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-gtb-navy via-gtb-navy/85 to-gtb-navy/60"></div>
           <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight font-brand">

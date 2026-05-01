@@ -23,7 +23,7 @@ export default function Projects() {
           {/* Background image */}
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('/projects/44-yucamane-truganina/hero.jpg')" }}
+            style={{ backgroundImage: "url('/projects/44-yucamane-truganina/featured.jpg')" }}
             aria-hidden="true"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-gtb-navy/95 via-gtb-navy/80 to-gtb-navy/50" />
