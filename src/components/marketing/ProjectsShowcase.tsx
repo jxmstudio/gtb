@@ -19,6 +19,8 @@ export type ProjectShowcaseItem = {
   service: string;
   blurb: string;
   image: string;
+  /** Optional second photo revealed on hover. Falls back to `image` if absent. */
+  imageHover?: string;
   href: string;
 };
 
@@ -30,6 +32,7 @@ export const featuredProjects: ProjectShowcaseItem[] = [
     service: 'Custom Family Home',
     blurb: 'Four-bedroom build on a 480m² block. 2.7m ceilings, full-stone kitchen, double-glazed throughout. Delivered three weeks ahead of schedule.',
     image: '/projects/44-yucamane-truganina/hero.jpg',
+    imageHover: '/projects/44-yucamane-truganina/alt.jpg',
     href: '/projects',
   },
   {
@@ -39,6 +42,7 @@ export const featuredProjects: ProjectShowcaseItem[] = [
     service: 'Custom Home',
     blurb: 'A growing-family home in Clyde North. Open-plan living, integrated outdoor entertaining, and a streetscape that fits the heritage overlay.',
     image: '/projects/116-mckenzie-clyde-north/hero.jpg',
+    imageHover: '/projects/116-mckenzie-clyde-north/alt.jpg',
     href: '/projects',
   },
   {
@@ -48,6 +52,7 @@ export const featuredProjects: ProjectShowcaseItem[] = [
     service: 'Custom Home — Returning Client',
     blurb: 'A second TOFA build for a returning client. Brief refined from build #1 — bigger pantry, dedicated study, and a quieter master orientation.',
     image: '/projects/10-lena-cr-truganina/hero.jpg',
+    imageHover: '/projects/10-lena-cr-truganina/alt.jpg',
     href: '/projects',
   },
   {
@@ -57,6 +62,7 @@ export const featuredProjects: ProjectShowcaseItem[] = [
     service: 'TOFA Showroom · Commercial',
     blurb: 'Our flagship Ascot Vale showroom. Full retail fit-out and material library — drop in to see finishes, fittings, and signature joinery in person.',
     image: '/projects/268-mt-alexander-ascot-vale-showroom/hero.jpg',
+    imageHover: '/projects/268-mt-alexander-ascot-vale-showroom/alt.jpg',
     href: '/projects',
   },
   {
@@ -104,12 +110,19 @@ export function ProjectsShowcase() {
               className="group block"
             >
               <article className={`grid lg:grid-cols-12 gap-6 lg:gap-10 items-center bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-gtb-aero hover:shadow-xl transition-all ${i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
-                {/* Photo */}
+                {/* Photo — primary always loaded; hover image cross-fades on top */}
                 <div className="lg:col-span-7 relative aspect-[16/10] overflow-hidden bg-gtb-navy">
                   <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                     style={{ backgroundImage: `url('${project.image}')` }}
                   />
+                  {project.imageHover && (
+                    <div
+                      className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105 motion-safe:duration-500"
+                      style={{ backgroundImage: `url('${project.imageHover}')` }}
+                      aria-hidden="true"
+                    />
+                  )}
                 </div>
 
                 {/* Copy */}
