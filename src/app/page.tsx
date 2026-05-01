@@ -5,6 +5,7 @@ import { Footer } from '@/components/Footer';
 import { IntegratedServices } from '@/components/marketing/IntegratedServices';
 import { FeaturedProject } from '@/components/marketing/FeaturedProject';
 import { ProjectsShowcase } from '@/components/marketing/ProjectsShowcase';
+import { MidPageCTA } from '@/components/marketing/MidPageCTA';
 import { VideoTestimonials } from '@/components/marketing/VideoTestimonials';
 import Testimonials from '@/components/marketing/Testimonials';
 import Link from 'next/link';
@@ -155,6 +156,9 @@ export default function Home() {
 
         {/* Projects Showcase — 5 real recent builds */}
         <ProjectsShowcase />
+
+        {/* Mid-page CTA — peak-interest conversion strip */}
+        <MidPageCTA />
 
         {/* Video Testimonials — real customer videos in click-to-play modals */}
         <VideoTestimonials />

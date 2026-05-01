@@ -72,6 +72,7 @@ export const featuredProjects: ProjectShowcaseItem[] = [
     service: 'Knockdown Rebuild',
     blurb: 'Knockdown rebuild on a tight inner-east block. Family kept their suburb, school zone, and street — and got a brand-new home built to their brief.',
     image: '/projects/glen-waverley/hero.jpg',
+    imageHover: '/projects/glen-waverley/alt.jpg',
     href: '/projects',
   },
 ];
