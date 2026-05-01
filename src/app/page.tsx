@@ -33,6 +33,7 @@ const services = [
     badge: 'Residential',
     desc: 'Bespoke residential builds designed around your block, your brief, and your budget. No volume builder compromises.',
     href: '/services/residential-construction',
+    linkLabel: 'Custom homes',
   },
   {
     index: '02',
@@ -41,6 +42,7 @@ const services = [
     badge: 'Knockdown',
     desc: 'Demolish the old, build the new. Stay in the suburb you love with a home built for how you live today.',
     href: '/services/knockdown-rebuild',
+    linkLabel: 'Knockdown rebuilds',
   },
   {
     index: '03',
@@ -49,6 +51,7 @@ const services = [
     badge: 'Renovations',
     desc: 'Second storey additions, rear extensions, full interior renovations — we work around what\'s already there.',
     href: '/services/renovations-extensions',
+    linkLabel: 'Renovations',
   },
   {
     index: '04',
@@ -57,6 +60,7 @@ const services = [
     badge: 'Design',
     desc: 'One team from concept to keys. Our design and construction process eliminates costly handover gaps.',
     href: '/services/design-and-build',
+    linkLabel: 'Design & build',
   },
   {
     index: '05',
@@ -65,6 +69,7 @@ const services = [
     badge: 'Turnkey',
     desc: 'Fully finished homes ready to move in — we handle everything from design to handover.',
     href: '/services/residential-construction',
+    linkLabel: 'Turnkey homes',
   },
   {
     index: '06',
@@ -73,6 +78,7 @@ const services = [
     badge: 'Co-Living',
     desc: 'Purpose-built co-living and multi-unit developments designed for modern shared living.',
     href: '/services/residential-construction',
+    linkLabel: 'Co-living',
   },
 ];
 
@@ -102,6 +108,15 @@ const processSteps = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
+      {/* Preload the hero poster — it's the LCP element above the fold.
+          Hoisted into <head> by Next.js automatically. */}
+      <link
+        rel="preload"
+        as="image"
+        href="/hero/hero-poster.webp"
+        type="image/webp"
+        fetchPriority="high"
+      />
       <Navbar />
 
       <main>
@@ -144,7 +159,7 @@ export default function Home() {
                       href={service.href}
                       className="inline-flex items-center text-gtb-aero text-sm font-semibold group-hover:text-gtb-navy transition-colors"
                     >
-                      Learn more
+                      Explore {service.linkLabel}
                       <ArrowRight className="ml-1.5 h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
                     </Link>
                   </div>
@@ -204,7 +219,7 @@ export default function Home() {
 
         {/* CTA */}
         <section className="py-20 lg:py-24 bg-gtb-navy relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/projects/glen-waverley/hero.jpg')] bg-cover bg-center opacity-20"></div>
+          <div className="absolute inset-0 bg-[url('/projects/glen-waverley/hero.webp')] bg-cover bg-center opacity-20"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-gtb-navy via-gtb-navy/85 to-gtb-navy/60"></div>
           <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4 leading-tight font-brand">

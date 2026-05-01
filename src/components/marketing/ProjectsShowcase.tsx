@@ -8,7 +8,7 @@ import { ArrowRight, MapPin } from 'lucide-react';
  * service-type chip. Vertical stack (not grid) gives each project room to
  * breathe and matches the cadence of Verv's "Our Projects" listing page.
  *
- * Photos source: public/projects/<slug>/hero.jpg (extracted from project
+ * Photos source: public/projects/<slug>/hero.webp (extracted from project
  * walkthrough videos via ffmpeg).
  */
 
@@ -31,8 +31,8 @@ export const featuredProjects: ProjectShowcaseItem[] = [
     suburb: 'Melbourne West, VIC',
     service: 'Custom Family Home',
     blurb: 'Four-bedroom build on a 480m² block. 2.7m ceilings, full-stone kitchen, double-glazed throughout. Delivered three weeks ahead of schedule.',
-    image: '/projects/44-yucamane-truganina/hero.jpg',
-    imageHover: '/projects/44-yucamane-truganina/alt.jpg',
+    image: '/projects/44-yucamane-truganina/hero.webp',
+    imageHover: '/projects/44-yucamane-truganina/alt.webp',
     href: '/projects',
   },
   {
@@ -41,8 +41,8 @@ export const featuredProjects: ProjectShowcaseItem[] = [
     suburb: 'Melbourne South-East, VIC',
     service: 'Custom Home',
     blurb: 'A growing-family home in Clyde North. Open-plan living, integrated outdoor entertaining, and a streetscape that fits the heritage overlay.',
-    image: '/projects/116-mckenzie-clyde-north/hero.jpg',
-    imageHover: '/projects/116-mckenzie-clyde-north/alt.jpg',
+    image: '/projects/116-mckenzie-clyde-north/hero.webp',
+    imageHover: '/projects/116-mckenzie-clyde-north/alt.webp',
     href: '/projects',
   },
   {
@@ -51,8 +51,8 @@ export const featuredProjects: ProjectShowcaseItem[] = [
     suburb: 'Melbourne West, VIC',
     service: 'Custom Home — Returning Client',
     blurb: 'A second TOFA build for a returning client. Brief refined from build #1 — bigger pantry, dedicated study, and a quieter master orientation.',
-    image: '/projects/10-lena-cr-truganina/hero.jpg',
-    imageHover: '/projects/10-lena-cr-truganina/alt.jpg',
+    image: '/projects/10-lena-cr-truganina/hero.webp',
+    imageHover: '/projects/10-lena-cr-truganina/alt.webp',
     href: '/projects',
   },
   {
@@ -61,8 +61,8 @@ export const featuredProjects: ProjectShowcaseItem[] = [
     suburb: 'Melbourne North-West, VIC',
     service: 'TOFA Showroom · Commercial',
     blurb: 'Our flagship Ascot Vale showroom. Full retail fit-out and material library — drop in to see finishes, fittings, and signature joinery in person.',
-    image: '/projects/268-mt-alexander-ascot-vale-showroom/hero.jpg',
-    imageHover: '/projects/268-mt-alexander-ascot-vale-showroom/alt.jpg',
+    image: '/projects/268-mt-alexander-ascot-vale-showroom/hero.webp',
+    imageHover: '/projects/268-mt-alexander-ascot-vale-showroom/alt.webp',
     href: '/projects',
   },
   {
@@ -71,8 +71,8 @@ export const featuredProjects: ProjectShowcaseItem[] = [
     suburb: 'Melbourne South-East, VIC',
     service: 'Knockdown Rebuild',
     blurb: 'Knockdown rebuild on a tight inner-east block. Family kept their suburb, school zone, and street — and got a brand-new home built to their brief.',
-    image: '/projects/glen-waverley/hero.jpg',
-    imageHover: '/projects/glen-waverley/alt.jpg',
+    image: '/projects/glen-waverley/hero.webp',
+    imageHover: '/projects/glen-waverley/alt.webp',
     href: '/projects',
   },
 ];

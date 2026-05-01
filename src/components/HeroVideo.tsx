@@ -31,7 +31,7 @@ export function HeroVideo() {
   return (
     <video
       key={shouldPlay ? 'play' : 'pause'}
-      poster="/hero/hero-poster.jpg"
+      poster="/hero/hero-poster.webp"
       autoPlay={shouldPlay}
       muted
       loop

@@ -32,7 +32,7 @@ const testimonials: Testimonial[] = [
     client: 'George',
     suburb: 'Melbourne, VIC',
     quote: '"Honest, on-time, and zero budget surprises."',
-    poster: '/testimonials/george/poster.jpg',
+    poster: '/testimonials/george/poster.webp',
     video: '/testimonials/george/video.mp4',
   },
   {
@@ -40,7 +40,7 @@ const testimonials: Testimonial[] = [
     client: 'McKenzie Family',
     suburb: 'Clyde North, VIC',
     quote: '"Treated us like family from day one to handover."',
-    poster: '/testimonials/116-mckenzie-clyde-north/poster.jpg',
+    poster: '/testimonials/116-mckenzie-clyde-north/poster.webp',
     video: '/testimonials/116-mckenzie-clyde-north/video.mp4',
   },
   {
@@ -48,7 +48,7 @@ const testimonials: Testimonial[] = [
     client: 'Lena Crescent Family',
     suburb: 'Truganina, VIC',
     quote: '"Came back to TOFA for our second build — that says it all."',
-    poster: '/testimonials/10-lena-cr-truganina/poster.jpg',
+    poster: '/testimonials/10-lena-cr-truganina/poster.webp',
     video: '/testimonials/10-lena-cr-truganina/video.mp4',
   },
 ];
@@ -111,7 +111,6 @@ export function VideoTestimonials() {
                 type="button"
                 onClick={() => handleOpen(t.id, t.client)}
                 className="group relative aspect-[9/16] sm:aspect-[3/4] lg:aspect-[9/14] overflow-hidden rounded-2xl bg-gtb-navy shadow-lg hover:shadow-2xl transition-shadow text-left"
-                aria-label={`Play video testimonial from ${t.client}`}
               >
                 {/* Poster */}
                 <div
@@ -128,7 +127,8 @@ export function VideoTestimonials() {
                 </div>
                 {/* Caption */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <Quote className="h-5 w-5 text-gtb-aero mb-3" />
+                  <Quote className="h-5 w-5 text-gtb-aero mb-3" aria-hidden="true" />
+                  <span className="sr-only">Play video testimonial: </span>
                   <p className="text-base lg:text-lg font-semibold leading-snug mb-3">
                     {t.quote}
                   </p>
