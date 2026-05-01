@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Phone } from 'lucide-react';
+import { HeroVideo } from './HeroVideo';
 
 interface HeroProps {
   headline?: string;
@@ -8,28 +9,15 @@ interface HeroProps {
 }
 
 export function Hero({
-  headline = "Melbourne's Trusted Custom Home Builder",
-  subline = "From Avondale Heights to Essendon, Moonee Ponds to Keilor — TOFA Group builds quality homes across Melbourne & surrounds. On time, on budget, and built to last.",
+  headline = "Built once. Built right.",
+  subline = "TOFA Group designs, builds, and manages premium homes across Melbourne's northwest. One team, one contract, one point of accountability — from concept to handover.",
   showTrustIndicators = true,
 }: HeroProps) {
   return (
     <section className="relative overflow-hidden min-h-[620px] lg:min-h-[680px]">
 
-      {/* Background video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src="/vertical-logo-compressed.mp4" type="video/mp4" />
-        {/* Fallback photo if video fails */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/3-Bridget-St-Glen-Waverley_001.jpg')" }}
-        />
-      </video>
+      {/* Background video — see HeroVideo.tsx for mobile/data-saver strategy */}
+      <HeroVideo />
 
       {/* Overlay — left heavy for legibility, right opens up so photo breathes */}
       <div className="absolute inset-0 bg-gradient-to-r from-gtb-navy/92 via-gtb-navy/75 to-gtb-navy/40" />
@@ -43,7 +31,7 @@ export function Hero({
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-2 bg-white/10 text-gtb-aero border border-white/20 px-3 py-1.5 rounded-full text-sm font-semibold mb-6 tracking-wide">
               <span className="w-1.5 h-1.5 bg-gtb-aero rounded-full"></span>
-              Avondale Heights · Melbourne &amp; Surrounds
+              Melbourne · Custom Homes · Since 2010
             </div>
 
             {/* Headline */}
@@ -62,7 +50,7 @@ export function Hero({
                 href="/contact"
                 className="inline-flex items-center justify-center bg-gtb-aero hover:bg-gtb-aero-light text-white font-semibold px-7 py-3.5 rounded-lg transition-colors group"
               >
-                Book Free Consultation
+                Book a Free Consultation
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
               </Link>
               <a
@@ -78,9 +66,9 @@ export function Hero({
             {showTrustIndicators && (
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 text-sm text-white/70">
                 {[
-                  "Free project consultation & quote",
-                  "Licensed & fully insured",
-                  "Flexible payment options",
+                  "Licensed & insured",
+                  "Fixed-price contracts",
+                  "15+ years building locally",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-gtb-aero flex-shrink-0" />

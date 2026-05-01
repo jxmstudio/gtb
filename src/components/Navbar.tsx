@@ -14,6 +14,7 @@ const navigation = [
     dropdown: [
       { name: 'About TOFA', href: '/about' },
       { name: 'Meet the Team', href: '/team' },
+      { name: 'Our Process', href: '/#process' },
     ]
   },
   {
