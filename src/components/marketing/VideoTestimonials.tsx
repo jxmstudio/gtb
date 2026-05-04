@@ -26,10 +26,19 @@ type Testimonial = {
   video: string;
 };
 
-// Testimonials cleared 2026 — original three (George, McKenzie wife, Lena with
-// George-the-Broker watermark) all removed at client request. Component left
-// intact for fast re-enable once new customer videos are recorded.
-const testimonials: Testimonial[] = [];
+// Testimonials reset 2026 after client request to remove George / George
+// the Broker content. Currently surfacing one TOFA Group brand testimonial
+// while customer-recorded videos are pending.
+const testimonials: Testimonial[] = [
+  {
+    id: 'tofa-group',
+    client: 'TOFA Group',
+    suburb: 'Melbourne, VIC',
+    quote: '"One team. One contract. One point of accountability — from concept to handover."',
+    poster: '/testimonials/tofa-group/poster.webp',
+    video: '/testimonials/tofa-group/video.mp4',
+  },
+];
 
 export function VideoTestimonials() {
   const [openId, setOpenId] = useState<string | null>(null);
@@ -72,23 +81,32 @@ export function VideoTestimonials() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-10 lg:mb-14">
             <div className="text-xs font-bold text-gtb-aero mb-3 tracking-widest uppercase">
-              Testimonials
+              Hear from TOFA
             </div>
             <h2 className="text-3xl lg:text-5xl font-bold text-gtb-navy leading-tight font-brand">
-              What our clients say.
+              The TOFA Group difference.
             </h2>
             <p className="mt-5 text-lg text-gray-600 leading-relaxed">
-              Real homeowners. Real builds. Pressed play instead of pressed PR.
+              One team for design, build, and project management — straight from the people running the
+              business.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            className={
+              testimonials.length === 1
+                ? 'flex justify-center'
+                : 'grid sm:grid-cols-2 lg:grid-cols-3 gap-6'
+            }
+          >
             {testimonials.map((t) => (
               <button
                 key={t.id}
                 type="button"
                 onClick={() => handleOpen(t.id, t.client)}
-                className="group relative aspect-[9/16] sm:aspect-[3/4] lg:aspect-[9/14] overflow-hidden rounded-2xl bg-gtb-navy shadow-lg hover:shadow-2xl transition-shadow text-left"
+                className={`group relative aspect-[9/16] sm:aspect-[3/4] lg:aspect-[9/14] overflow-hidden rounded-2xl bg-gtb-navy shadow-lg hover:shadow-2xl transition-shadow text-left ${
+                  testimonials.length === 1 ? 'w-full max-w-sm lg:max-w-md' : ''
+                }`}
               >
                 {/* Poster */}
                 <div

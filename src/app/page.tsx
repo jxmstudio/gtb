@@ -175,11 +175,10 @@ export default function Home() {
         {/* Mid-page CTA — peak-interest conversion strip */}
         <MidPageCTA />
 
-        {/* Video Testimonials — hidden until new customer videos are recorded.
-            Original 3 (George / wife / Lena-with-broker-watermark) removed at
-            client request. Re-enable by uncommenting and repopulating the
-            testimonials array in VideoTestimonials.tsx. */}
-        {/* <VideoTestimonials /> */}
+        {/* Video Testimonials — currently surfaces one TOFA Group brand
+            testimonial. Add additional customer testimonials to the array in
+            VideoTestimonials.tsx as they're recorded. */}
+        <VideoTestimonials />
 
         {/* Text Testimonials carousel (additional social proof) */}
         <Testimonials />
