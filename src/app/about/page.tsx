@@ -12,6 +12,7 @@ import { Button } from '@/components/ui/button';
 import { RevealOnScroll, StaggerReveal } from '@/components/motion/Reveals';
 import { MotionDiv, MotionH2, MotionP, staggerContainer, staggerItem } from '@/components/motion/MotionPrimitives';
 import Testimonials from '@/components/marketing/Testimonials';
+import { MeetTheTeam } from '@/components/marketing/MeetTheTeam';
 import PartnerLogos from '@/components/marketing/PartnerLogos';
 import Link from 'next/link';
 import { 
@@ -148,6 +149,9 @@ export default function About() {
               </div>
           </div>
         </section>
+
+        {/* Meet the team — Tara Tofa brand-owner video */}
+        <MeetTheTeam />
 
         {/* Our Values */}
         <section className="py-16 bg-gray-50">
