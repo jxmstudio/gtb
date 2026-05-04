@@ -175,8 +175,11 @@ export default function Home() {
         {/* Mid-page CTA — peak-interest conversion strip */}
         <MidPageCTA />
 
-        {/* Video Testimonials — real customer videos in click-to-play modals */}
-        <VideoTestimonials />
+        {/* Video Testimonials — hidden until new customer videos are recorded.
+            Original 3 (George / wife / Lena-with-broker-watermark) removed at
+            client request. Re-enable by uncommenting and repopulating the
+            testimonials array in VideoTestimonials.tsx. */}
+        {/* <VideoTestimonials /> */}
 
         {/* Text Testimonials carousel (additional social proof) */}
         <Testimonials />

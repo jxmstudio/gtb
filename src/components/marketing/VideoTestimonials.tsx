@@ -26,32 +26,10 @@ type Testimonial = {
   video: string;
 };
 
-const testimonials: Testimonial[] = [
-  {
-    id: 'george',
-    client: 'George',
-    suburb: 'Melbourne, VIC',
-    quote: '"Honest, on-time, and zero budget surprises."',
-    poster: '/testimonials/george/poster.webp',
-    video: '/testimonials/george/video.mp4',
-  },
-  {
-    id: '116-mckenzie-clyde-north',
-    client: 'McKenzie Family',
-    suburb: 'Clyde North, VIC',
-    quote: '"Treated us like family from day one to handover."',
-    poster: '/testimonials/116-mckenzie-clyde-north/poster.webp',
-    video: '/testimonials/116-mckenzie-clyde-north/video.mp4',
-  },
-  {
-    id: '10-lena-cr-truganina',
-    client: 'Lena Crescent Family',
-    suburb: 'Truganina, VIC',
-    quote: '"Came back to TOFA for our second build — that says it all."',
-    poster: '/testimonials/10-lena-cr-truganina/poster.webp',
-    video: '/testimonials/10-lena-cr-truganina/video.mp4',
-  },
-];
+// Testimonials cleared 2026 — original three (George, McKenzie wife, Lena with
+// George-the-Broker watermark) all removed at client request. Component left
+// intact for fast re-enable once new customer videos are recorded.
+const testimonials: Testimonial[] = [];
 
 export function VideoTestimonials() {
   const [openId, setOpenId] = useState<string | null>(null);
