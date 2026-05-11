@@ -3,8 +3,6 @@ import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { Footer } from '@/components/Footer';
 import { IntegratedServices } from '@/components/marketing/IntegratedServices';
-import { FeaturedProject } from '@/components/marketing/FeaturedProject';
-import { ProjectsShowcase } from '@/components/marketing/ProjectsShowcase';
 import { MidPageCTA } from '@/components/marketing/MidPageCTA';
 import { VideoTestimonials } from '@/components/marketing/VideoTestimonials';
 import Testimonials from '@/components/marketing/Testimonials';
@@ -126,9 +124,6 @@ export default function Home() {
         {/* Integrated Services Strip — Design / Build / Manage */}
         <IntegratedServices />
 
-        {/* Featured Project — 44 Yucamane Drive, Truganina */}
-        <FeaturedProject />
-
         {/* Services — 6 cards */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -168,9 +163,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* Projects Showcase — 5 real recent builds */}
-        <ProjectsShowcase />
 
         {/* Mid-page CTA — peak-interest conversion strip */}
         <MidPageCTA />
