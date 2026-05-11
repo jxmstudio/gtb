@@ -12,56 +12,12 @@ interface Testimonial {
   project: string;
 }
 
-const testimonials: Testimonial[] = [
-  {
-    id: "1",
-    name: "Sarah & Michael Chen",
-    suburb: "Melbourne, VIC",
-    quote: "TOFA Group delivered our residential project on time and within budget. The quality of workmanship exceeded our expectations and the team was professional throughout the entire build.",
-    rating: 5,
-    project: "Custom 4BR Family Home",
-  },
-  {
-    id: "2",
-    name: "David Rodriguez",
-    suburb: "Sydney, NSW",
-    quote: "Outstanding construction management from start to finish. Every stage was completed to the highest standard and communication was excellent throughout the project.",
-    rating: 5,
-    project: "Commercial Renovation",
-  },
-  {
-    id: "3",
-    name: "Emma Thompson",
-    suburb: "Brisbane, QLD",
-    quote: "The Build Now, Pay Later option made our dream home possible. The flexibility in payment combined with quality construction made all the difference.",
-    rating: 5,
-    project: "New Residential Build",
-  },
-  {
-    id: "4",
-    name: "James & Lisa Wilson",
-    suburb: "Perth, WA",
-    quote: "Professional service from consultation through to handover. TOFA Group's attention to detail and commitment to quality really set them apart.",
-    rating: 5,
-    project: "Luxury Family Home",
-  },
-  {
-    id: "5",
-    name: "Maria Santos",
-    suburb: "Adelaide, SA",
-    quote: "Excellent project management and quality construction. The team handled everything professionally and delivered exactly what was promised.",
-    rating: 5,
-    project: "Duplex Development",
-  },
-  {
-    id: "6",
-    name: "Robert & Jennifer Lee",
-    suburb: "Gold Coast, QLD",
-    quote: "From planning to completion, TOFA Group exceeded our expectations. The build quality is exceptional and we couldn't be happier with the result.",
-    rating: 5,
-    project: "Coastal Property Build",
-  },
-];
+// Cleared 2026 — the previous six entries were placeholder content
+// (fabricated names, interstate suburbs that don't match TOFA's Melbourne
+// service area). Component returns null while the array is empty so all
+// 19 pages that import it silently skip rendering the carousel.
+// Re-populate with real customer feedback as it's collected.
+const testimonials: Testimonial[] = [];
 
 // Each card is 380px wide + 24px gap = 404px per slot.
 // One full set of 6 cards = 6 × 380 + 5 × 24 = 2400px
@@ -82,6 +38,9 @@ function StarRating({ count }: { count: number }) {
 }
 
 export default function Testimonials() {
+  // Hide the entire section while no real testimonials exist.
+  if (testimonials.length === 0) return null;
+
   const duplicated = [...testimonials, ...testimonials];
 
   return (

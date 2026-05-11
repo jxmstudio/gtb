@@ -29,7 +29,7 @@ export function MidPageCTA() {
               Ready when you are
             </div>
             <h3 className="text-2xl lg:text-3xl font-bold text-white leading-tight font-brand">
-              Want a build like these? Get a fixed-price quote in 7 days.
+              Ready to build? Get a fixed-price quote in 7 days.
             </h3>
           </div>
 
