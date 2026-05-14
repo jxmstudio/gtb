@@ -3,9 +3,12 @@ import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { Footer } from '@/components/Footer';
 import { IntegratedServices } from '@/components/marketing/IntegratedServices';
+import { HomesShowcase } from '@/components/marketing/HomesShowcase';
 import { MidPageCTA } from '@/components/marketing/MidPageCTA';
 import { VideoTestimonials } from '@/components/marketing/VideoTestimonials';
 import Testimonials from '@/components/marketing/Testimonials';
+import { HomeContactForm } from '@/components/marketing/HomeContactForm';
+import { FacebookFollow } from '@/components/marketing/FacebookFollow';
 import Link from 'next/link';
 import {
   ArrowRight,
@@ -80,29 +83,6 @@ const services = [
   },
 ];
 
-const processSteps = [
-  {
-    number: '01',
-    title: 'Consultation',
-    desc: 'We come to you. Assess your site, understand your brief, and give you a straight answer on what\'s possible.',
-  },
-  {
-    number: '02',
-    title: 'Design & Quote',
-    desc: 'Detailed drawings, fixed-price contract, full scope of works. No surprises when the slab goes down.',
-  },
-  {
-    number: '03',
-    title: 'Build',
-    desc: 'We manage every trade, every inspection, every milestone. Weekly updates and full site access throughout.',
-  },
-  {
-    number: '04',
-    title: 'Handover',
-    desc: 'Final inspection, keys in hand, warranty documents provided. Our relationship doesn\'t end at completion.',
-  },
-];
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
@@ -164,6 +144,9 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Homes Showcase — 8-photo grid of recent builds */}
+        <HomesShowcase />
+
         {/* Mid-page CTA — peak-interest conversion strip */}
         <MidPageCTA />
 
@@ -174,42 +157,6 @@ export default function Home() {
 
         {/* Text Testimonials carousel (additional social proof) */}
         <Testimonials />
-
-        {/* Our Process */}
-        <section
-          id="process"
-          className="py-20 lg:py-24 bg-gradient-to-br from-gtb-navy to-gtb-navy-light scroll-mt-20"
-        >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-12 lg:mb-16 max-w-3xl">
-              <div className="text-xs font-bold text-gtb-aero mb-3 tracking-widest uppercase">How It Works</div>
-              <h2 className="text-3xl lg:text-5xl font-bold text-white leading-tight font-brand">
-                How we build.
-              </h2>
-              <p className="mt-5 text-lg text-white/70 leading-relaxed">
-                Four steps. One builder. From the day you ring us to the day we hand you the keys —
-                one team is on the hook for every milestone, every trade, every variation.
-              </p>
-            </div>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {processSteps.map((step, i) => (
-                <div key={step.number} className="relative">
-                  {/* Connector line — desktop only, not on last item */}
-                  {i < processSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-7 left-[calc(100%_-_16px)] w-8 h-px bg-gtb-aero/40 z-10" />
-                  )}
-                  <div className="text-5xl font-bold text-gtb-aero mb-3 leading-none font-brand">
-                    {step.number}
-                  </div>
-                  <div className="w-8 h-0.5 bg-gtb-aero mb-4" />
-                  <h3 className="text-lg font-bold text-white mb-2">{step.title}</h3>
-                  <p className="text-sm text-white/60 leading-relaxed">{step.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* CTA */}
         <section className="py-20 lg:py-24 bg-gtb-navy relative overflow-hidden">
@@ -248,6 +195,12 @@ export default function Home() {
             </Link>
           </div>
         </section>
+
+        {/* Inline lead form — posts to /api/lead which writes to Google Sheets */}
+        <HomeContactForm />
+
+        {/* Facebook follow strip before footer */}
+        <FacebookFollow />
       </main>
 
       <Footer />

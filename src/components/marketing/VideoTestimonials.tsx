@@ -38,6 +38,14 @@ const testimonials: Testimonial[] = [
     poster: '/testimonials/tofa-group/poster.webp',
     video: '/testimonials/tofa-group/video.mp4',
   },
+  {
+    id: 'yucamane-walkthrough',
+    client: 'Truganina Build',
+    suburb: 'Melbourne West, VIC',
+    quote: '"See the finishes, the proportions, the light — head to toe on a recent TOFA home."',
+    poster: '/testimonials/yucamane-walkthrough/poster.webp',
+    video: '/testimonials/yucamane-walkthrough/video.mp4',
+  },
 ];
 
 export function VideoTestimonials() {
