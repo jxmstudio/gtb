@@ -46,6 +46,16 @@ const testimonials: Testimonial[] = [
     poster: '/testimonials/yucamane-walkthrough/poster.webp',
     video: '/testimonials/yucamane-walkthrough/video.mp4',
   },
+  {
+    // Reuses the same /team/tara/ assets that the /about page Meet the Team
+    // section uses — no duplicate 14 MB video file on disk.
+    id: 'mckenzie-testimonial',
+    client: 'Tara — TOFA Group',
+    suburb: 'Clyde North, VIC',
+    quote: '"Why we built TOFA the way we did — straight from the family running it."',
+    poster: '/team/tara/poster.webp',
+    video: '/team/tara/video.mp4',
+  },
 ];
 
 export function VideoTestimonials() {
