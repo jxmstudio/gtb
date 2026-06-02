@@ -90,6 +90,46 @@ class Analytics {
   }
 
   /**
+   * Initialise site-wide click delegation for tel: and mailto: links.
+   *
+   * Fires GA4 events `phone_call` and `email_click` automatically on every
+   * <a href="tel:..."> and <a href="mailto:..."> the user activates,
+   * anywhere on the site. Safe to call multiple times (idempotent).
+   *
+   * Call once from a top-level client component (see AnalyticsBootstrap).
+   */
+  private linkTrackingInit = false;
+
+  initLinkTracking() {
+    if (this.linkTrackingInit) return;
+    if (typeof document === 'undefined') return;
+    this.linkTrackingInit = true;
+
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      if (!(target instanceof Element)) return;
+      const a = target.closest('a');
+      if (!a) return;
+      const href = a.getAttribute('href') || '';
+      const linkText = (a.textContent || '').trim().slice(0, 80);
+
+      if (href.startsWith('tel:')) {
+        this.track({
+          action: 'phone_call',
+          category: 'engagement',
+          label: `${href.replace('tel:', '')} · ${linkText}`,
+        });
+      } else if (href.startsWith('mailto:')) {
+        this.track({
+          action: 'email_click',
+          category: 'engagement',
+          label: `${href.replace('mailto:', '')} · ${linkText}`,
+        });
+      }
+    });
+  }
+
+  /**
    * Send to custom analytics endpoint
    */
   private async sendToCustomEndpoint(event: AnalyticsEvent) {

@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { AnalyticsBootstrap } from "@/components/AnalyticsBootstrap";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -210,6 +211,7 @@ export default function RootLayout({
           {children}
         </div>
         {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
+        <AnalyticsBootstrap />
       </body>
     </html>
   );
