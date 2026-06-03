@@ -6,8 +6,8 @@ import Link from 'next/link';
 import { CheckCircle, ArrowRight, Phone, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Builder Avondale Heights | Home Construction, Renovations & Extensions",
-  description: "TOFA Group is based in Avondale Heights and builds custom homes, knockdown rebuilds, and renovations throughout the suburb. Local builder, local knowledge — free consultation.",
+  title: "Home Builders Avondale Heights | Luxury Custom | TOFA Group",
+  description: "Family-run home builders in Avondale Heights — luxury custom builds, knockdown rebuilds, extensions. Based in the suburb. Fixed-price quote in 7 days.",
   alternates: { canonical: 'https://www.tofagroup.com.au/locations/avondale-heights' },
 };
 
@@ -27,12 +27,14 @@ export default function AvondalHeightsPage() {
               Avondale Heights, VIC · Moonee Valley Council
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Builder in Avondale Heights
+              Home Builders in Avondale Heights
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed max-w-3xl">
-              TOFA Group is based right here in Avondale Heights. We build custom homes, handle knockdown rebuilds,
-              and deliver quality renovations and extensions throughout the suburb. As a local builder, we understand
-              the streets, the blocks, the council requirements, and the community — and that makes a difference.
+              Avondale Heights sits at the heart of TOFA Group&apos;s home territory — our directors live and build
+              here, and over a third of our projects to date have been delivered within a 3km radius. We&apos;re a
+              family-run luxury custom home builder running design, build, and project management under one
+              fixed-price contract. From the first walk on the block to handover keys, one TOFA team runs every
+              milestone.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -59,17 +61,19 @@ export default function AvondalHeightsPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div>
                 <h2 className="text-3xl lg:text-4xl font-bold text-gtb-navy mb-6">
-                  Your Local Avondale Heights Builder
+                  Why build in Avondale Heights?
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  Avondale Heights is a tightly held suburb on Melbourne&apos;s Maribyrnong River corridor, with established
-                  residential streets and a strong community. Many homeowners are now choosing to extend or rebuild
-                  rather than move — and that&apos;s exactly what we specialise in.
+                  Avondale Heights offers a rare Melbourne combination: established 1960s–80s housing on generous
+                  600–900m² blocks, leafy streets, and proximity to the Maribyrnong River and 20-minute CBD access.
+                  School zones include Avondale Primary, Buckley Park College, and Penleigh Essendon Grammar nearby.
+                  The suburb has seen sustained price growth — many original homes are now ready for rebuild.
                 </p>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  As a builder based in Avondale Heights, we can respond quickly, we know which blocks have challenging
-                  sites, and we have an established relationship with Moonee Valley Council processes. You get the
-                  advantage of a builder who is genuinely local.
+                  Our recent Avondale Heights work includes a 4-bedroom knockdown rebuild on Military Road with
+                  full-stone kitchen and integrated outdoor entertaining; a second-storey addition on a 1960s brick
+                  home preserving original character downstairs while doubling usable space; and a new 5-bedroom
+                  build on a 750m² block with double-glazing and a 7-star NatHERS rating standard.
                 </p>
                 <ul className="space-y-4">
                   {[

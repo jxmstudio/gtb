@@ -80,6 +80,13 @@ export function HomeContactForm() {
 
       analytics.trackLeadGenerated('home_contact_form');
       analytics.trackFormSubmit('home_contact_form', true);
+      // Meta Pixel Lead event — no-op until NEXT_PUBLIC_META_PIXEL_ID is set
+      // and MetaPixel.tsx has injected window.fbq. Safe to call regardless.
+      // @ts-expect-error fbq is injected at runtime by the Meta Pixel snippet
+      if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
+        // @ts-expect-error fbq is injected at runtime
+        window.fbq('track', 'Lead', { content_name: 'home_contact_form' });
+      }
       setSubmitted(true);
       setTimeout(() => {
         setSubmitted(false);

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { AnalyticsBootstrap } from "@/components/AnalyticsBootstrap";
+import { MetaPixel } from "@/components/MetaPixel";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,7 +21,7 @@ const playfairDisplay = Playfair_Display({
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "GeneralContractor"],
+  "@type": ["LocalBusiness", "HomeAndConstructionBusiness", "GeneralContractor"],
   "@id": "https://www.tofagroup.com.au/#business",
   "name": "TOFA Group",
   "description": "Licensed residential and commercial builder serving Melbourne & surrounds, specialising in custom homes, knockdown rebuilds, renovations, and commercial construction.",
@@ -211,6 +212,7 @@ export default function RootLayout({
           {children}
         </div>
         {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
+        <MetaPixel />
         <AnalyticsBootstrap />
       </body>
     </html>

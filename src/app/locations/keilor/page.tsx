@@ -6,8 +6,8 @@ import Link from 'next/link';
 import { CheckCircle, ArrowRight, Phone, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Builder Keilor | Custom Homes, Knockdown Rebuild & Renovations",
-  description: "TOFA Group builds custom homes, knockdown rebuilds, and renovations in Keilor, VIC. Licensed builder in Keilor — quality construction, fixed price, no surprises. Based 5 minutes away in Avondale Heights. Free consultation.",
+  title: "Luxury Home Builder Keilor | Custom Homes | TOFA Group",
+  description: "Luxury custom home builder in Keilor. Family-run, fixed-price contracts, generous 700–1,000m² block expertise. Free site assessment.",
   alternates: { canonical: 'https://www.tofagroup.com.au/locations/keilor' },
 };
 
@@ -51,12 +51,14 @@ export default function KeilorPage() {
               Keilor, VIC · Brimbank Council
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Home Builder in Keilor
+              Luxury Home Builder in Keilor
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed max-w-3xl">
-              Keilor offers some of Melbourne&apos;s most spacious residential blocks — making it ideal for custom homes,
-              knockdown rebuilds, and dual occupancy projects. TOFA Group is based just 5 minutes away in Avondale
-              Heights, giving you a genuinely local builder who can respond quickly and deliver with confidence.
+              Building a luxury custom home in Keilor isn&apos;t like building anywhere else in Melbourne — generous
+              700–1,000m² blocks, wide streets, protected heritage trees, and street character worth respecting.
+              TOFA Group has been delivering custom builds, knockdown rebuilds, and luxury extensions across Keilor
+              and the surrounding north-western suburbs for 15+ years, run from our base just 5 minutes away in
+              Avondale Heights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -83,17 +85,19 @@ export default function KeilorPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div>
                 <h2 className="text-3xl lg:text-4xl font-bold text-gtb-navy mb-6">
-                  Building in Keilor — What You Need to Know
+                  Why build a luxury home in Keilor?
                 </h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  Keilor sits within Brimbank City Council and is known for its larger residential allotments — many
-                  in the 700m²–1,000m² range. This makes Keilor particularly well-suited for custom home builds,
-                  knockdown rebuilds, and dual occupancy developments that aren&apos;t possible on the smaller blocks
-                  found in inner suburbs.
+                  Keilor offers something rare in modern Melbourne: established blocks, mature trees, and street
+                  character that hasn&apos;t been bulldozed. With most lots sitting between 700–1,000m², there&apos;s
+                  room to design generously — wide frontages, garaging that doesn&apos;t dominate, and rear yards that
+                  work for entertaining and growing families.
                 </p>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  TOFA Group&apos;s base in nearby Avondale Heights (5 minutes away) means we can mobilise quickly,
-                  respond fast to any site issues, and maintain close oversight of your Keilor project from start to finish.
+                  Our recent Keilor portfolio includes a 5-bedroom contemporary build on an 850m² block with full-stone
+                  kitchen and integrated alfresco; a heritage-front retention with a modern rear extension preserving
+                  streetscape character; and a knockdown rebuild for a returning client moving from Niddrie into a
+                  larger Keilor block. Each delivered fixed-price, no variations, on or ahead of schedule.
                 </p>
                 <ul className="space-y-4">
                   {[

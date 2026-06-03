@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact TOFA Group | Free Consultation | Melbourne Home Builder",
-  description: "Book a free, no-obligation consultation with TOFA Group — Melbourne's trusted custom home builder. Call 1300 000 685 or enquire online. Servicing Avondale Heights, Essendon, Keilor, Moonee Ponds & surrounds.",
+  title: "Contact TOFA Group | Free Quote · Melbourne Home Builder",
+  description: "Talk to Melbourne's luxury custom home builder. Free 30-min consultation, fixed-price quote in 7 days. Call 1300 000 685 or enquire online.",
   alternates: { canonical: 'https://www.tofagroup.com.au/contact' },
 };
 

@@ -21,8 +21,8 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Custom Home Builder Melbourne | TOFA Group",
-  description: "Melbourne's trusted custom home builder. TOFA Group builds quality homes and commercial projects across Melbourne & surrounds — Avondale Heights, Essendon, Moonee Ponds, Keilor and beyond. Free consultation.",
+  title: "Luxury Home Builder Melbourne | TOFA Group",
+  description: "Luxury custom home builder in Melbourne's west — Keilor, Avondale Heights, Essendon, Moonee Ponds. Fixed-price contracts. Book a free consultation.",
   alternates: { canonical: 'https://www.tofagroup.com.au' },
 };
 

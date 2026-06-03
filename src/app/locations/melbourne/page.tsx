@@ -6,8 +6,8 @@ import Link from 'next/link';
 import { CheckCircle, ArrowRight, Phone, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Home Builder Melbourne | New Homes, Renovations & Commercial Construction",
-  description: "TOFA Group is a licensed home builder in Melbourne. We deliver custom homes, knockdown rebuilds, renovations, and commercial construction projects across Melbourne. Free consultation.",
+  title: "Luxury Home Builder Melbourne | Custom Homes | TOFA Group",
+  description: "Custom luxury home builder serving Melbourne's west — Keilor, Avondale Heights, Essendon. Free site assessment & fixed-price quote.",
   alternates: { canonical: 'https://www.tofagroup.com.au/locations/melbourne' },
 };
 

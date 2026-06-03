@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { Navbar } from '@/components/Navbar';
 
 export const metadata: Metadata = {
-  title: "About TOFA Group | Melbourne Custom Home Builder",
-  description: "15+ years building quality homes across Melbourne. TOFA Group has delivered 500+ residential and commercial projects across Avondale Heights, Essendon, Keilor & surrounds. Licensed, insured, trusted.",
+  title: "About TOFA Group | Melbourne's Family-Run Luxury Builder",
+  description: "15+ years building luxury custom homes across Melbourne. Family-run, fixed-price contracts, one team from design to handover. Meet TOFA.",
   alternates: { canonical: 'https://www.tofagroup.com.au/about' },
 };
 import { Footer } from '@/components/Footer';
