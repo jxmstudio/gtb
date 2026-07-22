@@ -119,8 +119,8 @@ export default function BuildNowPayLater() {
           {/* Background image */}
           <div className="absolute inset-0">
             <Image
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=2000"
-              alt="Modern construction project"
+              src="/images/tofa-homes/home-01.avif"
+              alt="Recent TOFA Group custom home"
               fill
               className="object-cover"
               priority
@@ -375,8 +375,8 @@ export default function BuildNowPayLater() {
           {/* Background */}
           <div className="absolute inset-0">
             <Image
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"
-              alt="Modern building"
+              src="/images/tofa-homes/home-05.avif"
+              alt="Completed TOFA Group home"
               fill
               className="object-cover"
             />

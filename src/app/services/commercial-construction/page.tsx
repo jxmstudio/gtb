@@ -7,7 +7,7 @@ import { CheckCircle, ArrowRight, Phone } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: "Commercial Builder Melbourne | Office, Retail & Industrial Construction",
-  description: "TOFA Group is a licensed commercial builder in Melbourne. We deliver office, retail, industrial, and fit-out projects across Melbourne's northwest — on time and on budget.",
+  description: "TOFA Group delivers commercial construction in Melbourne with fully licensed builders. Office, retail, industrial, and fit-out projects across Melbourne's northwest — on time and on budget.",
   alternates: { canonical: 'https://www.tofagroup.com.au/services/commercial-construction' },
 };
 
@@ -203,7 +203,7 @@ export default function CommercialConstruction() {
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold mb-4">Ready to Start Your Commercial Project?</h2>
             <p className="text-xl text-white mb-8">
-              Contact TOFA Group for a free project consultation. Melbourne&apos;s commercial builder — licensed, insured, on time.
+              Contact TOFA Group for a free project consultation. Melbourne&apos;s commercial construction group — fully insured, on time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

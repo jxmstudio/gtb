@@ -14,7 +14,7 @@ const locations = [
   {
     name: "Melbourne",
     badge: "Greater Melbourne",
-    description: "Licensed residential and commercial builder serving all of Melbourne & surrounds.",
+    description: "Residential and commercial construction across Melbourne & surrounds — fully insured, working with licensed builders.",
     href: "/locations/melbourne",
     photo: "/tofaphotos/Verv_PROJECTS_Acacia.jpg",
   },

@@ -27,7 +27,7 @@ const localPageSchema = {
     }
   },
   "areaServed": { "@type": "City", "name": "Melbourne" },
-  "description": "Licensed residential and commercial builder serving Melbourne."
+  "description": "Residential and commercial construction group serving Melbourne, working with fully licensed builders."
 };
 
 export default function MelbournePage() {
@@ -53,7 +53,7 @@ export default function MelbournePage() {
               Home Builder in Melbourne
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed max-w-3xl">
-              TOFA Group is a licensed Melbourne home builder delivering residential and commercial construction
+              TOFA Group is a Melbourne home construction group, working with fully licensed builders to deliver residential and commercial construction
               projects across the city and its northwest suburbs. Whether you&apos;re building a new home, undertaking
               a knockdown rebuild, or embarking on a major renovation — we manage every stage of the process.
             </p>
@@ -152,7 +152,7 @@ export default function MelbournePage() {
                 </p>
                 <ul className="space-y-4">
                   {[
-                    "Licensed and insured builder operating in Victoria",
+                    "Works with fully licensed and insured builders in Victoria",
                     "Deep knowledge of Melbourne council requirements",
                     "Fixed-price contracts with no hidden surprises",
                     "Weekly progress updates and full site access",

@@ -29,20 +29,6 @@ const navigation = [
       { name: 'Build Now, Pay Later', href: '/build-now-pay-later' },
     ]
   },
-  { name: 'Projects', href: '/projects' },
-  {
-    name: 'Locations',
-    href: '/locations',
-    dropdown: [
-      { name: 'Melbourne', href: '/locations/melbourne' },
-      { name: 'Essendon', href: '/locations/essendon' },
-      { name: 'Moonee Ponds', href: '/locations/moonee-ponds' },
-      { name: 'Avondale Heights', href: '/locations/avondale-heights' },
-      { name: 'Keilor', href: '/locations/keilor' },
-      { name: 'Taylors Lakes', href: '/locations/taylors-lakes' },
-      { name: 'View All Locations →', href: '/locations' },
-    ]
-  },
   {
     name: 'Resources',
     href: '/faqs',

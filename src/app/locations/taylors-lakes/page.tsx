@@ -7,7 +7,7 @@ import { CheckCircle, ArrowRight, Phone, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: "Builder Taylors Lakes | Custom Homes, New Builds & Renovations",
-  description: "TOFA Group builds custom homes, new builds, and renovations in Taylors Lakes, VIC. Licensed builder in Taylors Lakes — quality construction, fixed price, no surprises. Free consultation.",
+  description: "TOFA Group builds custom homes, new builds, and renovations in Taylors Lakes, VIC. Quality construction — fixed price, fully insured, no surprises. Free consultation.",
   alternates: { canonical: 'https://www.tofagroup.com.au/locations/taylors-lakes' },
 };
 
@@ -28,7 +28,7 @@ const localPageSchema = {
     }
   },
   "areaServed": { "@type": "Suburb", "name": "Taylors Lakes" },
-  "description": "Licensed residential builder serving Taylors Lakes and surrounding Brimbank suburbs."
+  "description": "Residential construction group working with fully licensed builders, serving Taylors Lakes and surrounding Brimbank suburbs."
 };
 
 export default function TaylorsLakesPage() {

@@ -44,7 +44,7 @@ const faqSchema = {
       "name": "Are you a licensed builder in Victoria?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. TOFA Group is a fully licensed and insured builder operating in Victoria. All works are completed in accordance with the Building Act 1993 and Victorian Building Authority requirements."
+        "text": "TOFA Group works with fully licensed and insured builders operating in Victoria. All works are completed in accordance with the Building Act 1993 and Victorian Building Authority requirements."
       }
     }
   ]
@@ -204,7 +204,7 @@ export default function ResidentialConstruction() {
                 },
                 {
                   q: "Are you a licensed builder in Victoria?",
-                  a: "Yes. TOFA Group is a fully licensed and insured builder operating in Victoria. All works are completed in accordance with the Building Act 1993 and Victorian Building Authority requirements."
+                  a: "TOFA Group works with fully licensed and insured builders operating in Victoria. All works are completed in accordance with the Building Act 1993 and Victorian Building Authority requirements."
                 },
                 {
                   q: "Does TOFA Group build in my suburb?",
@@ -243,7 +243,7 @@ export default function ResidentialConstruction() {
                 1300 000 685
               </a>
             </div>
-            <p className="text-sm text-white/70 mt-4">We respond within 1 business day · Licensed & insured · Melbourne's northwest</p>
+            <p className="text-sm text-white/70 mt-4">We respond within 1 business day · Fully insured · Melbourne's northwest</p>
           </div>
         </section>
       </main>

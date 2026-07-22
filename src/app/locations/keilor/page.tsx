@@ -28,7 +28,7 @@ const localPageSchema = {
     }
   },
   "areaServed": { "@type": "Suburb", "name": "Keilor" },
-  "description": "Licensed residential builder serving Keilor and surrounding Brimbank suburbs. Based in Avondale Heights — 5 minutes from Keilor."
+  "description": "Residential construction group working with fully licensed builders, serving Keilor and surrounding Brimbank suburbs. Based in Avondale Heights — 5 minutes from Keilor."
 };
 
 export default function KeilorPage() {

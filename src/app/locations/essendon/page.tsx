@@ -7,7 +7,7 @@ import { CheckCircle, ArrowRight, Phone, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: "Home Builder Essendon | Custom Homes, Knockdown Rebuild & Renovations",
-  description: "TOFA Group builds custom homes, knockdown rebuilds, and renovations in Essendon, VIC. Licensed builder in Essendon — quality construction, fixed price, no surprises. Free consultation.",
+  description: "TOFA Group builds custom homes, knockdown rebuilds, and renovations in Essendon, VIC. Quality construction — fixed price, fully insured, no surprises. Free consultation.",
   alternates: { canonical: 'https://www.tofagroup.com.au/locations/essendon' },
 };
 
@@ -28,7 +28,7 @@ const localPageSchema = {
     }
   },
   "areaServed": { "@type": "Suburb", "name": "Essendon" },
-  "description": "Licensed residential builder serving Essendon and surrounding Moonee Valley suburbs."
+  "description": "Residential construction group working with fully licensed builders, serving Essendon and surrounding Moonee Valley suburbs."
 };
 
 export default function EssendonPage() {
@@ -56,7 +56,7 @@ export default function EssendonPage() {
             <p className="text-xl text-white/90 mb-8 leading-relaxed max-w-3xl">
               Essendon is one of Melbourne&apos;s most desirable northwest suburbs — and it&apos;s an area TOFA Group knows well.
               We build custom homes, manage knockdown rebuilds, and deliver quality renovations and extensions for
-              Essendon homeowners and investors. Licensed, insured, and local.
+              Essendon homeowners and investors. Fully insured and local, working with licensed builders.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link

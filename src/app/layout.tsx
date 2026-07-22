@@ -24,7 +24,7 @@ const localBusinessSchema = {
   "@type": ["LocalBusiness", "HomeAndConstructionBusiness", "GeneralContractor"],
   "@id": "https://www.tofagroup.com.au/#business",
   "name": "TOFA Group",
-  "description": "Licensed residential and commercial builder serving Melbourne & surrounds, specialising in custom homes, knockdown rebuilds, renovations, and commercial construction.",
+  "description": "Residential and commercial construction group serving Melbourne & surrounds, working with fully licensed and insured builders. Specialising in custom homes, knockdown rebuilds, renovations, and commercial construction.",
   "url": "https://www.tofagroup.com.au",
   "telephone": "+611300000685",
   "email": "info@tofagroup.com.au",
@@ -144,7 +144,7 @@ export const metadata: Metadata = {
     default: "TOFA Group | Custom Home Builder Melbourne",
     template: "%s | TOFA Group"
   },
-  description: "Melbourne's trusted custom home builder. 500+ projects delivered across Avondale Heights, Essendon, Keilor & surrounds. Licensed & insured.",
+  description: "Melbourne's trusted custom home builder. 500+ projects delivered across Avondale Heights, Essendon, Keilor & surrounds. Fully insured.",
   keywords: [
     "custom home builder Melbourne",
     "luxury home builder Melbourne",
@@ -162,7 +162,7 @@ export const metadata: Metadata = {
     locale: "en_AU",
     type: "website",
     title: "TOFA Group | Melbourne's Trusted Custom Home Builder",
-    description: "500+ projects delivered across Melbourne. Custom homes, knockdown rebuilds, renovations & commercial construction. Licensed & insured.",
+    description: "500+ projects delivered across Melbourne. Custom homes, knockdown rebuilds, renovations & commercial construction. Fully insured.",
     url: "https://www.tofagroup.com.au",
     images: [
       {
@@ -177,7 +177,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "TOFA Group | Melbourne's Trusted Custom Home Builder",
-    description: "500+ projects delivered across Melbourne. Custom homes, knockdown rebuilds, renovations & commercial construction. Licensed & insured.",
+    description: "500+ projects delivered across Melbourne. Custom homes, knockdown rebuilds, renovations & commercial construction. Fully insured.",
     images: ["https://www.tofagroup.com.au/og-image.jpg"],
   },
   alternates: {
