@@ -189,9 +189,20 @@ export const Footer: React.FC = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
-            <div className="text-sm text-white text-center">
+            <div className="text-sm text-white text-center md:text-right">
               <p className="font-medium">
                 &copy; {new Date().getFullYear()} TOFA Group. All rights reserved.
+              </p>
+              <p className="text-white/70 mt-1">
+                Website by{' '}
+                <a
+                  href="https://www.jxmstudio.com/"
+                  target="_blank"
+                  rel="noopener"
+                  className="text-white hover:text-gtb-aero underline underline-offset-2 transition-colors duration-200"
+                >
+                  JXM Studio
+                </a>
               </p>
             </div>
           </div>
