@@ -8,6 +8,7 @@ import { MidPageCTA } from '@/components/marketing/MidPageCTA';
 import { VideoTestimonials } from '@/components/marketing/VideoTestimonials';
 import Testimonials from '@/components/marketing/Testimonials';
 import { HomeContactForm } from '@/components/marketing/HomeContactForm';
+import { GoogleReviews } from '@/components/marketing/GoogleReviews';
 import { FacebookFollow } from '@/components/marketing/FacebookFollow';
 import Link from 'next/link';
 import {
@@ -163,6 +164,10 @@ export default function Home() {
 
         {/* Text Testimonials carousel (additional social proof) */}
         <Testimonials />
+
+        {/* Google reviews — renders nothing until NEXT_PUBLIC_GBP_PLACE_ID
+            is set (client hasn't claimed their GBP listing yet, see README) */}
+        <GoogleReviews />
 
         {/* CTA */}
         <section className="py-20 lg:py-24 bg-gtb-navy relative overflow-hidden">

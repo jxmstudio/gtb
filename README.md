@@ -35,6 +35,29 @@ A modern, production-ready website for TOFA Group - Residential & Commercial Con
 - Maintain proportions, never stretch
 - White background unless inverted (navy box + white text)
 
+## Google reviews (stubbed)
+
+The homepage has a Google Business Profile reviews section
+(`src/components/marketing/GoogleReviews.tsx`) that is **disabled by
+default** — it renders nothing until the env flag is set, so no empty or
+broken state is ever visible.
+
+To enable it once the client has claimed their Google Business Profile:
+
+1. Get the **Place ID** for the claimed listing (Google's
+   [Place ID finder](https://developers.google.com/maps/documentation/places/web-service/place-id),
+   or from the GBP dashboard URL).
+2. Set the environment variable (in `.env.local` for dev, and in the
+   hosting dashboard, e.g. Vercel, for production):
+
+   ```
+   NEXT_PUBLIC_GBP_PLACE_ID=<place id>
+   ```
+
+3. Redeploy. The section appears on the homepage linking to the profile's
+   Google reviews. A richer embedded-reviews widget can be swapped in
+   later behind the same flag.
+
 ## Getting Started
 
 ### Prerequisites
