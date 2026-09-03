@@ -43,7 +43,9 @@ const testimonials: Testimonial[] = [
     client: 'Truganina Build',
     suburb: 'Melbourne West, VIC',
     quote: '"See the finishes, the proportions, the light — head to toe on a recent TOFA home."',
-    poster: '/testimonials/yucamane-walkthrough/poster.webp',
+    // Poster is a face-visible frame from the video itself (t=1s) — the
+    // previous drone-shot poster showed a house, not a person.
+    poster: '/testimonials/yucamane-walkthrough/poster.jpg',
     video: '/testimonials/yucamane-walkthrough/video.mp4',
   },
   // TODO: swap in new team video when provided. The third card reused

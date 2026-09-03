@@ -13,6 +13,12 @@ import Link from 'next/link';
  * static poster only. When the replacement video arrives, restore the
  * click-to-play modal pattern used in VideoTestimonials.tsx (this file
  * previously mirrored it — see git history).
+ *
+ * NOTE: the old /team/tara/video.mp4 is actually a *customer* testimonial
+ * (speaker talks about renting/saving), not Tara — it was mislabeled,
+ * which is likely why it was reported "broken". Don't reuse its frames
+ * under Tara's name. The poster below is a neutral build shot until the
+ * real team video/photo arrives.
  */
 
 const POSTER_SRC = '/team/tara/poster.webp';

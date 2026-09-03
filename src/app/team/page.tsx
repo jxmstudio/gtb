@@ -47,6 +47,9 @@ const team = [
       "Financial planning and oversight",
       "Compliance and documentation"
     ],
+    // TODO: swap in replacement team photo when the client supplies it —
+    // this image was flagged for replacement (stock-style, not the real
+    // director). Current file stays as the placeholder until then.
     image: "/IMG_6976.JPG",
     email: "info@tofagroup.com.au"
   }
