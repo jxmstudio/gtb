@@ -19,14 +19,16 @@ const navigation = [
   {
     name: 'Services',
     href: '/services',
+    // Order per client (Sep 2026): finance-led offerings first, then the
+    // residential construction offerings.
     dropdown: [
+      { name: 'Build Now, Pay Later', href: '/build-now-pay-later' },
+      { name: 'Super/KiwiSaver Rollover', href: '/services/super-kiwisaver-rollover' },
+      { name: 'Finance', href: '/services/finance' },
       { name: 'Residential Construction', href: '/services/residential-construction' },
-      { name: 'Commercial Construction', href: '/services/commercial-construction' },
       { name: 'Knockdown Rebuild', href: '/services/knockdown-rebuild' },
       { name: 'Renovations & Extensions', href: '/services/renovations-extensions' },
       { name: 'Design & Build', href: '/services/design-and-build' },
-      { name: 'Project Management', href: '/services/project-management' },
-      { name: 'Build Now, Pay Later', href: '/build-now-pay-later' },
     ]
   },
   { name: 'Projects', href: '/projects' },

@@ -15,11 +15,11 @@ const footerLinks = {
     { name: 'Contact', href: '/contact' },
   ],
   services: [
-    { name: 'Residential Construction', href: '/services' },
-    { name: 'Commercial Construction', href: '/services' },
-    { name: 'Project Management', href: '/services' },
-    { name: 'Design & Build', href: '/services' },
     { name: 'Build Now, Pay Later', href: '/build-now-pay-later' },
+    { name: 'Super/KiwiSaver Rollover', href: '/services/super-kiwisaver-rollover' },
+    { name: 'Finance', href: '/services/finance' },
+    { name: 'Residential Construction', href: '/services/residential-construction' },
+    { name: 'Design & Build', href: '/services/design-and-build' },
   ],
   forClients: [
     { name: 'First Home Buyers', href: '/first-home-buyers' },

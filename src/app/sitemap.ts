@@ -24,8 +24,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/services/knockdown-rebuild`,         lastModified: today, changeFrequency: 'monthly',  priority: 0.8 },
     { url: `${BASE_URL}/services/renovations-extensions`,    lastModified: today, changeFrequency: 'monthly',  priority: 0.8 },
     { url: `${BASE_URL}/services/design-and-build`,          lastModified: today, changeFrequency: 'monthly',  priority: 0.8 },
-    { url: `${BASE_URL}/services/commercial-construction`,   lastModified: today, changeFrequency: 'monthly',  priority: 0.8 },
-    { url: `${BASE_URL}/services/project-management`,        lastModified: today, changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${BASE_URL}/services/super-kiwisaver-rollover`,  lastModified: today, changeFrequency: 'monthly',  priority: 0.8 },
+    { url: `${BASE_URL}/services/finance`,                   lastModified: today, changeFrequency: 'monthly',  priority: 0.8 },
 
     // Locations
     { url: `${BASE_URL}/locations`,                          lastModified: today, changeFrequency: 'monthly',  priority: 0.8 },

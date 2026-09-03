@@ -65,11 +65,58 @@ import {
   CheckCircle,
   ArrowRight,
   Wrench,
-  ClipboardList,
-  Wallet
+  Wallet,
+  PiggyBank,
+  Landmark
 } from 'lucide-react';
 
+// Order per client (Sep 2026): Build Now, Pay Later first, then the new
+// finance-led services, then the existing residential offerings.
 const services = [
+  {
+    title: "Build Now, Pay Later",
+    description: "Flexible construction payment solutions allowing eligible clients to commence projects now and manage payments over time.",
+    features: [
+      "No upfront lump sum required",
+      "Flexible payment structures",
+      "Suitable for residential & commercial",
+      "Subject to eligibility criteria",
+      "Maintain same quality standards"
+    ],
+    href: "/build-now-pay-later",
+    ctaText: "Check Eligibility",
+    icon: <Wallet className="h-6 w-6 text-gtb-aero" />
+  },
+  {
+    // TODO: client to supply final Super/KiwiSaver Rollover copy
+    title: "Super/KiwiSaver Rollover",
+    description: "Use eligible superannuation or KiwiSaver funds towards your build. We guide you through the rollover process with our finance partners.",
+    features: [
+      "Guidance on eligible super/KiwiSaver options",
+      "Works alongside Build Now, Pay Later",
+      "Coordination with licensed advisers",
+      "Subject to eligibility criteria",
+      "General information only — not financial advice"
+    ],
+    href: "/services/super-kiwisaver-rollover",
+    ctaText: "Learn More",
+    icon: <PiggyBank className="h-6 w-6 text-gtb-aero" />
+  },
+  {
+    // TODO: client to supply final Finance copy
+    title: "Finance",
+    description: "Construction finance support from pre-approval to progress payments, coordinated with trusted broker and lender partners.",
+    features: [
+      "Construction loan guidance",
+      "Broker and lender coordination",
+      "Progress payment structuring",
+      "First home buyer and investor options",
+      "General information only — not financial advice"
+    ],
+    href: "/services/finance",
+    ctaText: "Talk Finance",
+    icon: <Landmark className="h-6 w-6 text-gtb-aero" />
+  },
   {
     title: "Residential Construction",
     description: "Quality residential builds across Australia. We manage the full construction lifecycle for single and multi-unit residential projects.",
@@ -83,34 +130,6 @@ const services = [
     href: "/contact",
     ctaText: "Start Your Project",
     icon: <HomeIcon className="h-6 w-6 text-gtb-aero" />
-  },
-  {
-    title: "Commercial Construction",
-    description: "Commercial construction projects managed from design through to completion with full project oversight.",
-    features: [
-      "Office and retail construction",
-      "Commercial fit-outs",
-      "Industrial buildings",
-      "Compliance and safety management",
-      "Timeline and budget control"
-    ],
-    href: "/contact",
-    ctaText: "Discuss Your Project",
-    icon: <Building2 className="h-6 w-6 text-gtb-aero" />
-  },
-  {
-    title: "Project Management",
-    description: "End-to-end project management ensuring quality, compliance, and on-time delivery from planning to handover.",
-    features: [
-      "Full project lifecycle oversight",
-      "Quality and compliance management",
-      "Timeline and milestone tracking",
-      "Transparent communication and reporting",
-      "Risk management and mitigation"
-    ],
-    href: "/contact",
-    ctaText: "Learn More",
-    icon: <ClipboardList className="h-6 w-6 text-gtb-aero" />
   },
   {
     title: "Design & Build",
@@ -140,20 +159,6 @@ const services = [
     ctaText: "Plan Your Renovation",
     icon: <HomeIcon className="h-6 w-6 text-gtb-aero" />
   },
-  {
-    title: "Build Now, Pay Later",
-    description: "Flexible construction payment solutions allowing eligible clients to commence projects now and manage payments over time.",
-    features: [
-      "No upfront lump sum required",
-      "Flexible payment structures",
-      "Suitable for residential & commercial",
-      "Subject to eligibility criteria",
-      "Maintain same quality standards"
-    ],
-    href: "/build-now-pay-later",
-    ctaText: "Check Eligibility",
-    icon: <Wallet className="h-6 w-6 text-gtb-aero" />
-  }
 ];
 
 const process = [
