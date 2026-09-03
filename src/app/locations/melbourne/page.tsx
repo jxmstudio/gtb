@@ -104,9 +104,9 @@ export default function MelbournePage() {
                   href: "/services/renovations-extensions"
                 },
                 {
-                  title: "Commercial Construction",
-                  desc: "Office, retail, industrial, and mixed-use commercial builds in Melbourne.",
-                  href: "/services/commercial-construction"
+                  title: "Build Now, Pay Later",
+                  desc: "Flexible construction payment options for eligible clients — start your build sooner.",
+                  href: "/build-now-pay-later"
                 },
                 {
                   title: "Design & Build",
@@ -114,9 +114,9 @@ export default function MelbournePage() {
                   href: "/services/design-and-build"
                 },
                 {
-                  title: "Project Management",
-                  desc: "Professional construction PM to keep your Melbourne build on track.",
-                  href: "/services/project-management"
+                  title: "Construction Finance",
+                  desc: "Finance support from pre-approval to progress payments, with trusted broker partners.",
+                  href: "/services/finance"
                 },
               ].map((service) => (
                 <Link

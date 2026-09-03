@@ -30,7 +30,10 @@ const pillars = [
     icon: ClipboardCheck,
     title: 'Manage',
     body: 'Independent project management for owner-builders, investors, and clients with their own architect. We run the build; you keep your relationships.',
-    href: '/services/project-management',
+    // Project Management page was removed (Sep 2026) — link to the
+    // services overview instead. TODO: client to confirm whether this
+    // "Manage" pillar copy should change now the PM service is retired.
+    href: '/services',
     cta: 'How we manage',
   },
 ];

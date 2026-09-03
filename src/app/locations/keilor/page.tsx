@@ -123,7 +123,7 @@ export default function KeilorPage() {
                       { name: "New Home Construction", href: "/services/residential-construction" },
                       { name: "Home Renovations & Extensions", href: "/services/renovations-extensions" },
                       { name: "Design & Build", href: "/services/design-and-build" },
-                      { name: "Commercial Construction", href: "/services/commercial-construction" },
+                      { name: "Build Now, Pay Later", href: "/build-now-pay-later" },
                     ].map((s) => (
                       <li key={s.name}>
                         <Link

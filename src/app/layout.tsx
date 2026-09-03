@@ -90,15 +90,6 @@ const localBusinessSchema = {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Commercial Construction",
-          "description": "Office, retail, industrial, medical, and mixed-use commercial builds and fit-outs across Melbourne.",
-          "url": "https://www.tofagroup.com.au/services/commercial-construction"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
           "name": "Knockdown Rebuild",
           "description": "End-to-end knockdown rebuild service — demolition permits, design, and construction of a brand-new home on your existing block.",
           "url": "https://www.tofagroup.com.au/services/knockdown-rebuild"
@@ -126,9 +117,18 @@ const localBusinessSchema = {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Project Management",
-          "description": "Independent construction project management and owner-builder support services across Melbourne.",
-          "url": "https://www.tofagroup.com.au/services/project-management"
+          "name": "Super/KiwiSaver Rollover",
+          "description": "Guidance on using eligible superannuation or KiwiSaver funds towards a new build, coordinated with licensed advisers.",
+          "url": "https://www.tofagroup.com.au/services/super-kiwisaver-rollover"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Construction Finance",
+          "description": "Construction finance support from pre-approval to progress payments, coordinated with broker and lender partners.",
+          "url": "https://www.tofagroup.com.au/services/finance"
         }
       }
     ]

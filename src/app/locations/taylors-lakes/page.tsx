@@ -120,7 +120,7 @@ export default function TaylorsLakesPage() {
                       { name: "New Home Construction", href: "/services/residential-construction" },
                       { name: "Home Renovations & Extensions", href: "/services/renovations-extensions" },
                       { name: "Design & Build", href: "/services/design-and-build" },
-                      { name: "Project Management", href: "/services/project-management" },
+                      { name: "Construction Finance", href: "/services/finance" },
                     ].map((s) => (
                       <li key={s.name}>
                         <Link
