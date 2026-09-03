@@ -29,6 +29,7 @@ const navigation = [
       { name: 'Build Now, Pay Later', href: '/build-now-pay-later' },
     ]
   },
+  { name: 'Projects', href: '/projects' },
   {
     name: 'Resources',
     href: '/faqs',

@@ -35,11 +35,9 @@ const footerLinks = {
     { name: 'Taylors Lakes', href: '/locations/taylors-lakes' },
     { name: 'View All Locations', href: '/locations' },
   ],
-  legal: [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Disclaimer', href: '/disclaimer' },
-  ],
+  // TODO: restore Privacy Policy (/privacy), Terms of Service (/terms) and
+  // Disclaimer (/disclaimer) links once those pages exist — they 404'd.
+  legal: [] as { name: string; href: string }[],
 };
 
 export const Footer: React.FC = () => {
@@ -143,19 +141,23 @@ export const Footer: React.FC = () => {
               ))}
             </ul>
 
-            <h3 className="text-lg font-semibold mb-4 text-white">Legal</h3>
-            <ul className="space-y-2">
-              {footerLinks.legal.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-white hover:text-gtb-aero text-sm transition-colors duration-200"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {footerLinks.legal.length > 0 && (
+              <>
+                <h3 className="text-lg font-semibold mb-4 text-white">Legal</h3>
+                <ul className="space-y-2">
+                  {footerLinks.legal.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        className="text-white hover:text-gtb-aero text-sm transition-colors duration-200"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
           </div>
             </div>
             
