@@ -101,6 +101,15 @@ export default function Home() {
         {/* Hero */}
         <Hero />
 
+        {/* Homes carousel — moved directly under the hero (Sep 2026 mobile
+            UX pass) so the lead form below it is reachable within ~2
+            scrolls on a phone. */}
+        <HomesShowcase />
+
+        {/* Inline lead form — posts to /api/lead which writes to Google
+            Sheets. Placed high on the page for lead generation. */}
+        <HomeContactForm />
+
         {/* Integrated Services Strip — Design / Build / Manage */}
         <IntegratedServices />
 
@@ -143,9 +152,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* Homes Showcase — 8-photo grid of recent builds */}
-        <HomesShowcase />
 
         {/* Mid-page CTA — peak-interest conversion strip */}
         <MidPageCTA />
@@ -195,9 +201,6 @@ export default function Home() {
             </Link>
           </div>
         </section>
-
-        {/* Inline lead form — posts to /api/lead which writes to Google Sheets */}
-        <HomeContactForm />
 
         {/* Facebook follow strip before footer */}
         <FacebookFollow />

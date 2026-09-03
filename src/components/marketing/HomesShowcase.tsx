@@ -1,17 +1,16 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
+import { HomesCarousel } from './HomesCarousel';
 
 /**
- * HomesShowcase — eight recent TOFA homes shown as a clean photo grid.
+ * HomesShowcase — "Built across Melbourne" section, now a rotating carousel
+ * instead of the previous 8-image stacked grid. The grid made the mobile
+ * page extremely tall (8 full-width images) and pushed the lead form far
+ * below the fold; the carousel keeps the section to one row.
  *
- * Source images: public/images/tofa-homes/home-01.avif .. home-08.avif
- * (8 AVIF files, 124–211 KB each, already well-compressed).
- *
- * Layout: 1-up on mobile, 2-up on small tablets, 4-up on desktop.
- * Uniform aspect-[4/3] crops keep visual rhythm consistent regardless
- * of source orientation. Subtle zoom on hover, no busy overlays — the
- * photos do the work.
+ * Source images: public/images/tofa-homes/home-01.avif .. home-08.avif.
+ * TODO: swap in the client-supplied carousel images when provided — until
+ * then we reuse the existing project photos.
  */
 
 const homes = Array.from({ length: 8 }, (_, i) => {
@@ -24,9 +23,9 @@ const homes = Array.from({ length: 8 }, (_, i) => {
 
 export function HomesShowcase() {
   return (
-    <section className="py-20 lg:py-24 bg-white">
+    <section className="py-16 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 lg:mb-14">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 lg:mb-12">
           <div>
             <div className="text-xs font-bold text-gtb-aero mb-3 tracking-widest uppercase">
               Recent Homes
@@ -48,23 +47,7 @@ export function HomesShowcase() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
-          {homes.map((home, i) => (
-            <div
-              key={home.src}
-              className="group relative aspect-[4/3] overflow-hidden rounded-xl bg-gtb-navy/5 shadow-sm hover:shadow-lg transition-shadow"
-            >
-              <Image
-                src={home.src}
-                alt={home.alt}
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                priority={i < 4}
-              />
-            </div>
-          ))}
-        </div>
+        <HomesCarousel images={homes} />
       </div>
     </section>
   );
