@@ -157,9 +157,9 @@ export default function Home() {
         {/* Mid-page CTA — peak-interest conversion strip */}
         <MidPageCTA />
 
-        {/* Video Testimonials — currently surfaces one TOFA Group brand
-            testimonial. Add additional customer testimonials to the array in
-            VideoTestimonials.tsx as they're recorded. */}
+        {/* Video Testimonials — brand video, walkthrough, and a customer
+            story. Add more to the array in VideoTestimonials.tsx as they're
+            recorded. */}
         <VideoTestimonials />
 
         {/* Text Testimonials carousel (additional social proof) */}

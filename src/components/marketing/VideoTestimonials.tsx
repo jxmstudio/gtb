@@ -27,8 +27,7 @@ type Testimonial = {
 };
 
 // Testimonials reset 2026 after client request to remove George / George
-// the Broker content. Currently surfacing one TOFA Group brand testimonial
-// while customer-recorded videos are pending.
+// the Broker content.
 const testimonials: Testimonial[] = [
   {
     id: 'tofa-group',
@@ -48,17 +47,19 @@ const testimonials: Testimonial[] = [
     poster: '/testimonials/yucamane-walkthrough/poster.jpg',
     video: '/testimonials/yucamane-walkthrough/video.mp4',
   },
-  // TODO: swap in new team video when provided. The third card reused
-  // /team/tara/video.mp4, which the client reported broken — removed until
-  // the replacement video arrives:
-  // {
-  //   id: 'mckenzie-testimonial',
-  //   client: 'Tara — TOFA Group',
-  //   suburb: 'Clyde North, VIC',
-  //   quote: '"Why we built TOFA the way we did — straight from the family running it."',
-  //   poster: '/team/tara/poster.webp',
-  //   video: '/team/tara/video.mp4',
-  // },
+  {
+    id: 'homeowner-story',
+    client: 'TOFA Homeowner',
+    suburb: 'Melbourne, VIC',
+    // Quote assembled from the speaker's own captioned lines in the video.
+    quote: '"I found them very helpful — they made the process easier. Definitely recommend them."',
+    // Video formerly lived at /team/tara/video.mp4 — it's a customer
+    // testimonial that was mislabeled as the team video (hence the client's
+    // "broken video" report). Relocated here with a face-visible poster
+    // frame (t=2s) instead of the old drone shot.
+    poster: '/testimonials/homeowner-story/poster.jpg',
+    video: '/testimonials/homeowner-story/video.mp4',
+  },
 ];
 
 export function VideoTestimonials() {
