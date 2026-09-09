@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, MapPin } from 'lucide-react';
+import { ProjectCardVideo } from './ProjectCardVideo';
 
 /**
  * Projects Showcase — Verv-style vertical project card stack.
@@ -21,6 +22,10 @@ export type ProjectShowcaseItem = {
   image: string;
   /** Optional second photo revealed on hover. Falls back to `image` if absent. */
   imageHover?: string;
+  /** Optional vertical (9:16) walkthrough reel. Replaces the photo in the card; `image` becomes the blurred backdrop. */
+  video?: string;
+  /** Poster frame for `video` (first paint before the reel loads). */
+  videoPoster?: string;
   href: string;
 };
 
@@ -42,7 +47,8 @@ export const featuredProjects: ProjectShowcaseItem[] = [
     service: 'Custom Home',
     blurb: 'A growing-family home in Clyde North. Open-plan living, integrated outdoor entertaining, and a streetscape that fits the heritage overlay.',
     image: '/projects/116-mckenzie-clyde-north/hero.webp',
-    imageHover: '/projects/116-mckenzie-clyde-north/alt.webp',
+    video: '/projects/116-mckenzie-clyde-north/video.mp4',
+    videoPoster: '/projects/116-mckenzie-clyde-north/video-poster.jpg',
     href: '/projects',
   },
   {
@@ -62,7 +68,8 @@ export const featuredProjects: ProjectShowcaseItem[] = [
     service: 'TOFA Showroom · Commercial',
     blurb: 'Our flagship Ascot Vale showroom. Full retail fit-out and material library — drop in to see finishes, fittings, and signature joinery in person.',
     image: '/projects/268-mt-alexander-ascot-vale-showroom/hero.webp',
-    imageHover: '/projects/268-mt-alexander-ascot-vale-showroom/alt.webp',
+    video: '/projects/268-mt-alexander-ascot-vale-showroom/video.mp4',
+    videoPoster: '/projects/268-mt-alexander-ascot-vale-showroom/video-poster.jpg',
     href: '/projects',
   },
   {
@@ -111,18 +118,29 @@ export function ProjectsShowcase() {
               className="group block"
             >
               <article className={`grid lg:grid-cols-12 gap-6 lg:gap-10 items-center bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-gtb-aero hover:shadow-xl transition-all ${i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
-                {/* Photo — primary always loaded; hover image cross-fades on top */}
-                <div className="lg:col-span-7 relative aspect-[16/10] overflow-hidden bg-gtb-navy">
-                  <div
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                    style={{ backgroundImage: `url('${project.image}')` }}
-                  />
-                  {project.imageHover && (
-                    <div
-                      className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105 motion-safe:duration-500"
-                      style={{ backgroundImage: `url('${project.imageHover}')` }}
-                      aria-hidden="true"
+                {/* Media — walkthrough reel where we have one, otherwise photo with hover cross-fade */}
+                <div className={`lg:col-span-7 relative overflow-hidden bg-gtb-navy ${project.video ? 'aspect-[4/5] sm:aspect-[16/10]' : 'aspect-[16/10]'}`}>
+                  {project.video ? (
+                    <ProjectCardVideo
+                      src={project.video}
+                      poster={project.videoPoster ?? project.image}
+                      backdrop={project.image}
+                      label={`${project.name} project walkthrough video`}
                     />
+                  ) : (
+                    <>
+                      <div
+                        className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                        style={{ backgroundImage: `url('${project.image}')` }}
+                      />
+                      {project.imageHover && (
+                        <div
+                          className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105 motion-safe:duration-500"
+                          style={{ backgroundImage: `url('${project.imageHover}')` }}
+                          aria-hidden="true"
+                        />
+                      )}
+                    </>
                   )}
                 </div>
 

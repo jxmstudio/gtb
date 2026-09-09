@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-09-09 — Project walkthrough videos on /projects
+
+- **Two project cards now play client-supplied walkthrough reels** instead
+  of static photos (`ProjectCardVideo.tsx`, wired into
+  `ProjectsShowcase.tsx`):
+  - **Ascot Vale showroom** — 268 Mt Alexander Rd reel (presenter tour).
+  - **Clyde North** — 116 McKenzie Drive walkthrough.
+- Both sources are vertical 9:16 reels; they render contained and centred
+  over a blurred still of the project rather than cropped to the card's
+  16:10 slot. Autoplay muted + loop, pause off-screen
+  (IntersectionObserver), sound toggle overlay (both reels have
+  voiceover). Taller media slot on mobile so the reel isn't tiny.
+- Originals (108MB / 164MB) compressed to ~5.5MB each with ffmpeg
+  (720×1280 H.264, `-crf 27`) at `public/projects/<slug>/video.mp4`, with
+  `video-poster.jpg` poster frames extracted for first paint.
+
 ## 2026-09-04 — Post-meeting website updates (lead gen + mobile UX)
 
 All changes from the Sep 02 client meeting. Each item below was committed
