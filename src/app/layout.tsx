@@ -134,11 +134,10 @@ const localBusinessSchema = {
       }
     ]
   },
-  // LinkedIn is left out while it points at George's personal profile
-  // rather than a TOFA Group company page.
   "sameAs": [
     SOCIAL_LINKS.facebook,
-    SOCIAL_LINKS.instagram
+    SOCIAL_LINKS.instagram,
+    SOCIAL_LINKS.linkedin
   ]
 };
 

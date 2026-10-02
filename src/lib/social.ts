@@ -7,7 +7,6 @@ export const SOCIAL_LINKS = {
   // old private group URL.
   facebook: 'https://www.facebook.com/profile.php?id=61584283230501',
   instagram: 'https://www.instagram.com/thetofagroup/',
-  // No TOFA Group company page exists yet, so this points at George
-  // Tofa's personal profile. Swap for the company page once one is set up.
-  linkedin: 'https://www.linkedin.com/in/george-tofa-64027159/',
+  // TOFA Group LinkedIn supplied by the client (Oct 2026).
+  linkedin: 'https://www.linkedin.com/in/tofa-group-80627439a/',
 } as const;

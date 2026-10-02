@@ -16,10 +16,9 @@
   (address hidden on mobile). Navy gradient, 36px; collapses once the page
   is scrolled so the sticky header stays 64px. The global content offset
   in `layout.tsx` went from `pt-16` to `pt-25` (100px) to allow for it.
-  - LinkedIn points to George's personal profile (from his email
-    signature) because TOFA Group has no company page yet. The footer's
-    LinkedIn icon, previously a dead `#` link, now uses it too. Left out of
-    schema `sameAs` since it isn't an organisation profile.
+  - LinkedIn points to the TOFA Group profile
+    (`linkedin.com/in/tofa-group-80627439a`), also used by the footer
+    icon (previously a dead `#` link) and included in schema `sameAs`.
 
 ## 2026-09-09 — Project walkthrough videos on /projects
 
