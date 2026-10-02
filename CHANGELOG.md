@@ -10,10 +10,12 @@
   home and now has an accessible label.
 - **Header CTA renamed "Free Quote" → "Contact Us"** (desktop button and
   mobile-menu button). In-page "Get a Free Quote" CTAs are unchanged.
-- **Facebook / LinkedIn / Instagram icons added to the header** — in the
-  desktop bar before the phone number, and beside the menu button on
-  mobile. Nav spacing tightened at `lg` so everything fits on one line at
-  1024px.
+- **New top bar above the nav** with Facebook / LinkedIn / Instagram
+  icons, modelled on the reference screenshot George sent (NHD site).
+  Left side shows "Avondale Heights, VIC 3034" | `info@tofagroup.com.au`
+  (address hidden on mobile). Navy gradient, 36px; collapses once the page
+  is scrolled so the sticky header stays 64px. The global content offset
+  in `layout.tsx` went from `pt-16` to `pt-25` (100px) to allow for it.
   - LinkedIn points to George's personal profile (from his email
     signature) because TOFA Group has no company page yet. The footer's
     LinkedIn icon, previously a dead `#` link, now uses it too. Left out of

@@ -211,7 +211,8 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
-        <div className="pt-16">
+        {/* Offset for the fixed Navbar: 36px top bar + 64px main row */}
+        <div className="pt-25">
           {children}
         </div>
         {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
