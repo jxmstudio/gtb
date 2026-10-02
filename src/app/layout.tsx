@@ -4,6 +4,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { AnalyticsBootstrap } from "@/components/AnalyticsBootstrap";
 import { MetaPixel } from "@/components/MetaPixel";
+import { SOCIAL_LINKS } from "@/lib/social";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -133,9 +134,11 @@ const localBusinessSchema = {
       }
     ]
   },
+  // LinkedIn is left out while it points at George's personal profile
+  // rather than a TOFA Group company page.
   "sameAs": [
-    "https://www.facebook.com/groups/1680469966691932/",
-    "https://www.instagram.com/thetofagroup/"
+    SOCIAL_LINKS.facebook,
+    SOCIAL_LINKS.instagram
   ]
 };
 

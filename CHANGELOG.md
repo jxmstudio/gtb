@@ -1,5 +1,24 @@
 # Changelog
 
+## 2026-10-02 — Header edits (George's Oct 1 "edits" email)
+
+- **New Facebook profile linked site-wide.** Footer icon, home-page
+  "Follow us on Facebook" strip and Organization schema `sameAs` now point
+  to `facebook.com/profile.php?id=61584283230501` (was the private group).
+  All social URLs now live in `src/lib/social.ts`.
+- **"Home" removed from the main nav** (desktop + mobile). The logo links
+  home and now has an accessible label.
+- **Header CTA renamed "Free Quote" → "Contact Us"** (desktop button and
+  mobile-menu button). In-page "Get a Free Quote" CTAs are unchanged.
+- **Facebook / LinkedIn / Instagram icons added to the header** — in the
+  desktop bar before the phone number, and beside the menu button on
+  mobile. Nav spacing tightened at `lg` so everything fits on one line at
+  1024px.
+  - LinkedIn points to George's personal profile (from his email
+    signature) because TOFA Group has no company page yet. The footer's
+    LinkedIn icon, previously a dead `#` link, now uses it too. Left out of
+    schema `sameAs` since it isn't an organisation profile.
+
 ## 2026-09-09 — Project walkthrough videos on /projects
 
 - **Two project cards now play client-supplied walkthrough reels** instead

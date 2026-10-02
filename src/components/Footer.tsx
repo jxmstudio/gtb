@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Logo } from './Logo';
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { SOCIAL_LINKS } from '@/lib/social';
 
 const footerLinks = {
   quickLinks: [
@@ -166,7 +167,7 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex space-x-6">
               <a
-                href="https://www.facebook.com/groups/1680469966691932/"
+                href={SOCIAL_LINKS.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-gtb-aero transition-colors duration-200"
@@ -175,7 +176,7 @@ export const Footer: React.FC = () => {
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="https://www.instagram.com/thetofagroup/"
+                href={SOCIAL_LINKS.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-gtb-aero transition-colors duration-200"
@@ -184,7 +185,9 @@ export const Footer: React.FC = () => {
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href={SOCIAL_LINKS.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white hover:text-gtb-aero transition-colors duration-200"
                 aria-label="LinkedIn"
               >

@@ -4,10 +4,11 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Logo } from './Logo';
-import { Menu, X, ChevronDown, Phone } from 'lucide-react';
+import { Menu, X, ChevronDown, Phone, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { SOCIAL_LINKS } from '@/lib/social';
 
+// No "Home" item — the logo links home (client request, Oct 2026).
 const navigation = [
-  { name: 'Home', href: '/' },
   {
     name: 'About',
     href: '/about',
@@ -43,6 +44,29 @@ const navigation = [
   },
   { name: 'Contact', href: '/contact' },
 ];
+
+const socialLinks = [
+  { name: 'Facebook', href: SOCIAL_LINKS.facebook, Icon: Facebook },
+  { name: 'LinkedIn', href: SOCIAL_LINKS.linkedin, Icon: Linkedin },
+  { name: 'Instagram', href: SOCIAL_LINKS.instagram, Icon: Instagram },
+];
+
+const SocialIcons: React.FC = () => (
+  <div className="flex items-center">
+    {socialLinks.map(({ name, href, Icon }) => (
+      <a
+        key={name}
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={name}
+        className="p-2 text-gtb-navy hover:text-gtb-aero transition-colors duration-200"
+      >
+        <Icon className="h-[18px] w-[18px]" />
+      </a>
+    ))}
+  </div>
+);
 
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -83,7 +107,7 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
+          <Link href="/" className="flex-shrink-0" aria-label="TOFA Group home">
             <Logo size="md" />
           </Link>
 
@@ -103,7 +127,7 @@ export const Navbar: React.FC = () => {
                   >
                     <Link
                       href={item.href}
-                      className={`px-4 py-2 text-sm font-medium transition-colors duration-200 relative flex items-center gap-1 ${
+                      className={`px-3 xl:px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors duration-200 relative flex items-center gap-1 ${
                         isActive 
                           ? 'text-gtb-navy' 
                           : 'text-gray-700 hover:text-gtb-navy'
@@ -141,25 +165,27 @@ export const Navbar: React.FC = () => {
             </div>
           </div>
 
-          {/* Phone + CTA */}
-          <div className="hidden lg:flex items-center gap-4">
+          {/* Socials + Phone + CTA */}
+          <div className="hidden lg:flex items-center gap-3 xl:gap-4">
+            <SocialIcons />
             <a
               href="tel:1300000685"
-              className="flex items-center gap-1.5 text-sm font-semibold text-gtb-navy hover:text-gtb-aero transition-colors"
+              className="flex items-center gap-1.5 text-sm font-semibold whitespace-nowrap text-gtb-navy hover:text-gtb-aero transition-colors"
             >
               <Phone className="h-4 w-4" />
               1300 000 685
             </a>
             <Link
               href="/contact"
-              className="bg-gtb-aero hover:bg-gtb-aero-light text-white rounded-lg px-6 py-2.5 font-medium transition-colors duration-200"
+              className="bg-gtb-aero hover:bg-gtb-aero-light text-white rounded-lg px-5 xl:px-6 py-2.5 font-medium whitespace-nowrap transition-colors duration-200"
             >
-              Free Quote
+              Contact Us
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
+          {/* Mobile socials + menu button */}
+          <div className="lg:hidden flex items-center gap-1">
+            <SocialIcons />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-gray-700 hover:text-gtb-navy p-2 transition-colors"
@@ -237,7 +263,7 @@ export const Navbar: React.FC = () => {
                   className="block w-full text-center bg-gtb-aero hover:bg-gtb-aero-light text-white rounded-lg px-6 py-2.5 font-medium transition-colors duration-200"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Get a Free Quote
+                  Contact Us
                 </Link>
               </div>
             </div>
